@@ -6,6 +6,12 @@ nlu:
     - hey
     - hello
     - hi
+    - chào bạn
+    - hello bạn
+    - hi bạn
+    - bot ơi
+    - hannah ơi
+    - cho mình hỏi
     - hello there
     - good morning
     - good evening
@@ -16,25 +22,42 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - xin chào
+    - bạn cảm thấy thế nào
+    - có ai ở đây không
+    - hola
+
+    
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
+    - good bye
+    - bye
+    - goodbye
+    - bye bye
+    - tạm biệt
+    - tạm biệt bạn
+    - tạm biệt bot nhá
+    - tạm biệt hannah
+    - see you later
     - good night
     - bye
     - goodbye
     - have a nice day
     - see you around
-    - bye bye
-    - see you later
+    - hẹn gặp lại
+    - tạm biệt
+    - thật vui khi nói chuyện với bạn
+    - chào nhé
 
 - intent: affirm
   examples: |
     - yes
     - y
-    - indeed
+    - ok
+    - đúng
+    - đúng rồi
+    - được
     - of course
     - that sounds good
     - correct
@@ -42,50 +65,100 @@ nlu:
 - intent: deny
   examples: |
     - no
-    - n
     - never
+    - không
+    - không đúng
+    - không phải vậy
+    - không chắc
+    - chưa phải
+    - sai rồi
+    - sai
     - I don't think so
     - don't like that
     - no way
     - not really
+    - xin lỗi, mình không hiểu
+    - hãy đưa ra thêm thông tin
+    - không chắc là mình hiểu lắm
 
-- intent: mood_great
+- intent: ask_ability
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - bạn có thể làm gì
+    - bạn có chức năng gì
+    - bạn giúp được gì
+    - bạn biết làm gì
+    - cho mình các xem chức năng của bạn
+    - bạn có thể giúp gì cho mình
+    - bạn có thể làm gì
+    - mình cần cung cấp những gì
+    - bạn có thể giúp ích được gì
+    - bạn có thể đưa ra những hỗ trợ được không
 
-- intent: mood_unhappy
+- intent: thankyou
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - cảm ơn
+    - cảm ơn bạn
+    - thank you
+    - thanks
+    - thanks bạn nha
+    - thanks bạn
+    - cảm ơn
+    - thật tốt
+    - tuyệt vời
+    - cảm ơn vì đã giúp
+    - hay
 
-- intent: bot_challenge
+- intent: gas_price
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - giá xăng hôm nay
+    - xăng bao nhiêu 1 lit
+    - xăng tăng hay giảm
+    - giá xăng
+    - xăng
+
+- intent: oil_price
+  examples: |
+  - Giá dầu hôm nay
+  - dầu bao nhiêu 1 lit
+  - dầu tăng hay giảm
+
+- intent: gold_price
+  examples: |
+  - giá vàng hôm nay
+  - vàng hôm nay bao nhiêu
+  - vàng thu lại bao nhiêu
+
+
+- intent: dollar_price
+  examples: |
+  - đô hôm nay bao nhiêu
+  - giá đô hôm nay
+  - đô mua vào bao nhiêu
+
+- intent: pig_price
+  examples: |
+    - giá thịt heo bao nhiêu
+    - bao nhiêu 1 kg thịt heo
+    - giá thịt heo
+    - giá thịt heo dao động bao nhiêu
+    - thịt heo
+
+- intent: cow_price
+  examples: |
+  - giá thịt bò bao nhiêu
+  - bao nhiêu 1 kg thịt bò
+  - giá thịt bò dao động bao nhiêu
+
+- intent: cow_price
+  examples: |
+  - giá thịt vịt bao nhiêu
+  - bao nhiêu 1 con vịt
+  - giá thịt vịt dao động bao nhiêu
+  - nửa con vịt bao nhiêu
+  - 1 con vịt bao nhiêu
+
+- intent: Inflation
+  examples: |
+    - lạm phát là gì
+    - như thế nào là lạm phát
+    - lạm phát
