@@ -37,7 +37,7 @@ stories:
       - action: utter_menu
       - intent: gas_price
       - action: utter_gas_price
-      - intent: goodbue
+      - intent: goodbye
       - action: utter_goodbye
       - intent: oil_price
       - action: utter_oil_price

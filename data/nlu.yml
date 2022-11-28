@@ -118,22 +118,22 @@ nlu:
 
 - intent: oil_price
   examples: |
-  - Giá dầu hôm nay
-  - dầu bao nhiêu 1 lit
-  - dầu tăng hay giảm
+    - Giá dầu hôm nay
+    - dầu bao nhiêu 1 lit
+    - dầu tăng hay giảm
 
 - intent: gold_price
   examples: |
-  - giá vàng hôm nay
-  - vàng hôm nay bao nhiêu
-  - vàng thu lại bao nhiêu
+    - giá vàng hôm nay
+    - vàng hôm nay bao nhiêu
+    - vàng thu lại bao nhiêu
 
 
 - intent: dollar_price
   examples: |
-  - đô hôm nay bao nhiêu
-  - giá đô hôm nay
-  - đô mua vào bao nhiêu
+    - đô hôm nay bao nhiêu
+    - giá đô hôm nay
+    - đô mua vào bao nhiêu
 
 - intent: pig_price
   examples: |
@@ -145,17 +145,17 @@ nlu:
 
 - intent: cow_price
   examples: |
-  - giá thịt bò bao nhiêu
-  - bao nhiêu 1 kg thịt bò
-  - giá thịt bò dao động bao nhiêu
+    - giá thịt bò bao nhiêu
+    - bao nhiêu 1 kg thịt bò
+    - giá thịt bò dao động bao nhiêu
 
-- intent: cow_price
+- intent: duck_price
   examples: |
-  - giá thịt vịt bao nhiêu
-  - bao nhiêu 1 con vịt
-  - giá thịt vịt dao động bao nhiêu
-  - nửa con vịt bao nhiêu
-  - 1 con vịt bao nhiêu
+    - giá thịt vịt bao nhiêu
+    - bao nhiêu 1 con vịt
+    - giá thịt vịt dao động bao nhiêu
+    - nửa con vịt bao nhiêu
+    - 1 con vịt bao nhiêu
 
 - intent: Inflation
   examples: |
