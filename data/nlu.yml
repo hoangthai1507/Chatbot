@@ -108,46 +108,94 @@ nlu:
     - cảm ơn vì đã giúp
     - hay
 
+# - intent: gas_price
+#   examples: |
+#     - giá xăng hôm nay
+#     - xăng bao nhiêu 1 lit
+#     - xăng tăng hay giảm
+#     - giá xăng
+#     - xăng
+
 - intent: gas_price
   examples: |
-    - giá xăng hôm nay
-    - xăng bao nhiêu 1 lit
-    - xăng tăng hay giảm
-    - giá xăng
-    - xăng
+    - giá xăng [hôm nay](how_much)
+    - xăng [bao nhiêu](how_much) 1 lit
+    - xăng [tăng hay giảm](how_much)
+    - giá xăng[?](how_much)
+    - xăng[?](how_much)
+
+# - intent: oil_price
+#   examples: |
+#     - Giá dầu hôm nay
+#     - dầu bao nhiêu 1 lit
+#     - dầu tăng hay giảm
 
 - intent: oil_price
   examples: |
-    - Giá dầu hôm nay
-    - dầu bao nhiêu 1 lit
-    - dầu tăng hay giảm
+    - Giá dầu [hôm nay](how_much)
+    - dầu [bao nhiêu](how_much) 1 lit
+    - dầu tăng hay giảm[?](how_much)
+
+# - intent: gold_price
+#   examples: |
+#     - giá vàng hôm nay
+#     - vàng hôm nay bao nhiêu
+#     - vàng thu lại bao nhiêu
 
 - intent: gold_price
   examples: |
-    - giá vàng hôm nay
-    - vàng hôm nay bao nhiêu
-    - vàng thu lại bao nhiêu
+    - giá vàng [hôm nay](how_much)
+    - vàng hôm nay [bao nhiêu](how_much)
+    - vàng thu lại [bao nhiêu](how_much)
 
+# - intent: dollar_price
+#   examples: |
+#     - đô hôm nay bao nhiêu
+#     - giá đô hôm nay
+#     - đô mua vào bao nhiêu
 
 - intent: dollar_price
   examples: |
-    - đô hôm nay bao nhiêu
-    - giá đô hôm nay
-    - đô mua vào bao nhiêu
+    - đô hôm nay [bao nhiêu](how_much)
+    - giá đô [hôm nay](how_much)
+    - đô mua vào [bao nhiêu](how_much)
+
+# - intent: pig_price
+#   examples: |
+#     - giá thịt heo bao nhiêu
+#     - bao nhiêu 1 kg thịt heo
+#     - giá thịt heo
+#     - giá thịt heo dao động bao nhiêu
+#     - thịt heo
 
 - intent: pig_price
   examples: |
-    - giá thịt heo bao nhiêu
-    - bao nhiêu 1 kg thịt heo
-    - giá thịt heo
-    - giá thịt heo dao động bao nhiêu
-    - thịt heo
+    - giá thịt heo [bao nhiêu](how_much)
+    - [bao nhiêu](how_much) 1 kg thịt heo
+    - [giá](how_much) thịt heo
+    - giá thịt heo dao động [bao nhiêu](how_much)
+    - thịt heo[?](how_much)
+
+
+# - intent: cow_price
+#   examples: |
+#     - giá thịt bò bao nhiêu
+#     - bao nhiêu 1 kg thịt bò
+#     - giá thịt bò dao động bao nhiêu
 
 - intent: cow_price
   examples: |
-    - giá thịt bò bao nhiêu
-    - bao nhiêu 1 kg thịt bò
-    - giá thịt bò dao động bao nhiêu
+    - giá thịt bò [bao nhiêu](how_much)
+    - [bao nhiêu](how_much) 1 kg thịt bò
+    - giá thịt bò dao động [bao nhiêu](how_much)
+    
+# - intent: duck_price
+#   examples: |
+#     - giá thịt vịt bao nhiêu
+#     - bao nhiêu 1 con vịt
+#     - giá thịt vịt dao động bao nhiêu
+#     - nửa con vịt bao nhiêu
+#     - 1 con vịt bao nhiêu
 
 - intent: duck_price
   examples: |
@@ -164,7 +212,7 @@ nlu:
 #     - lạm phát
 
 
-- intent: supply_contact_Inflation
+- intent: Inflation
   examples: |
     - [lạm phát](what) là gì
     - như thế nào là [lạm phát](what)
