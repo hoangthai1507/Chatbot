@@ -115,14 +115,19 @@ nlu:
 #     - xăng tăng hay giảm
 #     - giá xăng
 #     - xăng
-
-- intent: gas_price
+- intent: get_name
   examples: |
-    - giá xăng [hôm nay](how_much)
-    - xăng [bao nhiêu](how_much) 1 lit
-    - xăng [tăng hay giảm](how_much)
-    - giá xăng[?](how_much)
-    - xăng[?](how_much)
+    - tôi tên là [Đạt](name)
+    - [Đạt](name)
+    - mình tên là [Đạt](name)
+
+# - intent: gas_price
+#   examples: |
+#     - giá xăng [hôm nay](how_much)
+#     - xăng [bao nhiêu](how_much) 1 lit
+#     - xăng [tăng hay giảm](how_much)
+#     - giá xăng[?](how_much)
+#     - xăng[?](how_much)
 
 # - intent: oil_price
 #   examples: |
@@ -130,23 +135,29 @@ nlu:
 #     - dầu bao nhiêu 1 lit
 #     - dầu tăng hay giảm
 
-- intent: oil_price
-  examples: |
-    - Giá dầu [hôm nay](how_much)
-    - dầu [bao nhiêu](how_much) 1 lit
-    - dầu tăng hay giảm[?](how_much)
+# - intent: oil_price
+#   examples: |
+#     - Giá dầu [hôm nay](how_much)
+#     - dầu [bao nhiêu](how_much) 1 lit
+#     - dầu tăng hay giảm[?](how_much)
 
+- intent: gas_price
+  example: |
+    - giá [xăng](name) [hôm nay](day)
+    - [xăng](name) bao nhiêu 1 lít
+    - [xăng](name)tăng hay giảm
+    - giá [xăng](name)?
 # - intent: gold_price
 #   examples: |
 #     - giá vàng hôm nay
 #     - vàng hôm nay bao nhiêu
 #     - vàng thu lại bao nhiêu
 
-- intent: gold_price
+- intent: jewels_price
   examples: |
-    - giá vàng [hôm nay](how_much)
-    - vàng hôm nay [bao nhiêu](how_much)
-    - vàng thu lại [bao nhiêu](how_much)
+    - giá [vàng](name) [hôm nay](day)
+    - [vàng](name) [hôm nay](day) bao nhiêu
+    - [vàng](name) thu lại bao nhiêu
 
 # - intent: dollar_price
 #   examples: |
@@ -154,11 +165,11 @@ nlu:
 #     - giá đô hôm nay
 #     - đô mua vào bao nhiêu
 
-- intent: dollar_price
+- intent: money_price
   examples: |
-    - đô hôm nay [bao nhiêu](how_much)
-    - giá đô [hôm nay](how_much)
-    - đô mua vào [bao nhiêu](how_much)
+    - [đô](name) [hôm nay](day) bao nhiêu
+    - giá [đô](name) [hôm nay](day)
+    - [đô](name) mua vào bao nhiêu
 
 # - intent: pig_price
 #   examples: |
@@ -167,14 +178,13 @@ nlu:
 #     - giá thịt heo
 #     - giá thịt heo dao động bao nhiêu
 #     - thịt heo
-
-- intent: pig_price
+- intent: food_price
   examples: |
-    - giá thịt heo [bao nhiêu](how_much)
-    - [bao nhiêu](how_much) 1 kg thịt heo
-    - [giá](how_much) thịt heo
-    - giá thịt heo dao động [bao nhiêu](how_much)
-    - thịt heo[?](how_much)
+    - giá [thịt heo](name) [hôm nay](day)
+    - bao nhiêu 1 kg [thịt heo](name)
+    - giá [thịt heo](name)
+    - giá [thịt heo](name) dao động [hôm nay](day)
+    - [thịt heo](name)?
 
 
 # - intent: cow_price
@@ -183,11 +193,11 @@ nlu:
 #     - bao nhiêu 1 kg thịt bò
 #     - giá thịt bò dao động bao nhiêu
 
-- intent: cow_price
-  examples: |
-    - giá thịt bò [bao nhiêu](how_much)
-    - [bao nhiêu](how_much) 1 kg thịt bò
-    - giá thịt bò dao động [bao nhiêu](how_much)
+# - intent: cow_price
+#   examples: |
+#     - giá thịt bò [bao nhiêu](how_much)
+#     - [bao nhiêu](how_much) 1 kg thịt bò
+#     - giá thịt bò dao động [bao nhiêu](how_much)
     
 # - intent: duck_price
 #   examples: |
@@ -197,13 +207,13 @@ nlu:
 #     - nửa con vịt bao nhiêu
 #     - 1 con vịt bao nhiêu
 
-- intent: duck_price
-  examples: |
-    - giá thịt vịt [bao nhiêu](how_much)
-    - [bao nhiêu](how_much) 1 con vịt
-    - giá thịt vịt dao động [bao nhiêu](how_much)
-    - nửa con vịt [bao nhiêu](how_much)
-    - 1 con vịt [bao nhiêu](how_much)
+# - intent: duck_price
+#   examples: |
+#     - giá thịt vịt [bao nhiêu](how_much)
+#     - [bao nhiêu](how_much) 1 con vịt
+#     - giá thịt vịt dao động [bao nhiêu](how_much)
+#     - nửa con vịt [bao nhiêu](how_much)
+#     - 1 con vịt [bao nhiêu](how_much)
 
 # - intent: Inflation
 #   examples: |
@@ -220,11 +230,11 @@ nlu:
 
 
 
-- intent: supply_contact_info 
-  examples: |
-    - Tôi tên là [Thanh] (name). email's [20127072@student.hcmus.edu.com] (email)
-    - Tôi tên: [Đạt] (name) email: [20127134@student.hcmus.edu.com] (email)
-    - Vâng. Tôi là [Hoàng] (name). Email của tôi là  [20127168@student.hcmus.edu.com](email)
-    - [Thái] (name), [20127623@student.hcmus.edu.com] (email)
+# - intent: supply_contact_info 
+#   examples: |
+#     - Tôi tên là [Thanh] (name). email's [20127072@student.hcmus.edu.com] (email)
+#     - Tôi tên: [Đạt] (name) email: [20127134@student.hcmus.edu.com] (email)
+#     - Vâng. Tôi là [Hoàng] (name). Email của tôi là  [20127168@student.hcmus.edu.com](email)
+#     - [Thái] (name), [20127623@student.hcmus.edu.com] (email)
 
     
