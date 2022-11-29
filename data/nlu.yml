@@ -151,16 +151,32 @@ nlu:
 
 - intent: duck_price
   examples: |
-    - giá thịt vịt bao nhiêu
-    - bao nhiêu 1 con vịt
-    - giá thịt vịt dao động bao nhiêu
-    - nửa con vịt bao nhiêu
-    - 1 con vịt bao nhiêu
+    - giá thịt vịt [bao nhiêu](how_much)
+    - [bao nhiêu](how_much) 1 con vịt
+    - giá thịt vịt dao động [bao nhiêu](how_much)
+    - nửa con vịt [bao nhiêu](how_much)
+    - 1 con vịt [bao nhiêu](how_much)
 
-- intent: Inflation
+# - intent: Inflation
+#   examples: |
+#     - lạm phát là gì
+#     - như thế nào là lạm phát
+#     - lạm phát
+
+
+- intent: supply_contact_Inflation
   examples: |
-    - lạm phát là gì
-    - như thế nào là lạm phát
-    - lạm phát
+    - [lạm phát](what) là gì
+    - như thế nào là [lạm phát](what)
+    - [lạm phát](what)
 
 
+
+- intent: supply_contact_info 
+  examples: |
+    - Tôi tên là [Thanh] (name). email's [20127072@student.hcmus.edu.com] (email)
+    - Tôi tên: [Đạt] (name) email: [20127134@student.hcmus.edu.com] (email)
+    - Vâng. Tôi là [Hoàng] (name). Email của tôi là  [20127168@student.hcmus.edu.com](email)
+    - [Thái] (name), [20127623@student.hcmus.edu.com] (email)
+
+    
