@@ -1,0 +1,213 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - chào bạn
+    - hello bạn
+    - hi bạn
+    - bot ơi
+    - hannah ơi
+    - cho mình hỏi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - xin chào
+    - bạn cảm thấy thế nào
+    - có ai ở đây không
+    - hola
+
+    
+
+- intent: goodbye
+  examples: |
+    - good bye
+    - bye
+    - goodbye
+    - bye bye
+    - tạm biệt
+    - tạm biệt bạn
+    - tạm biệt bot nhá
+    - tạm biệt hannah
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - hẹn gặp lại
+    - tạm biệt
+    - thật vui khi nói chuyện với bạn
+    - chào nhé
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - ok
+    - đúng
+    - đúng rồi
+    - được
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - không
+    - không đúng
+    - không phải vậy
+    - không chắc
+    - chưa phải
+    - sai rồi
+    - sai
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - xin lỗi, mình không hiểu
+    - hãy đưa ra thêm thông tin
+    - không chắc là mình hiểu lắm
+
+- intent: ask_ability
+  examples: |
+    - bạn có thể làm gì
+    - bạn có chức năng gì
+    - bạn giúp được gì
+    - bạn biết làm gì
+    - cho mình các xem chức năng của bạn
+    - bạn có thể giúp gì cho mình
+    - bạn có thể làm gì
+    - mình cần cung cấp những gì
+    - bạn có thể giúp ích được gì
+    - bạn có thể đưa ra những hỗ trợ được không
+
+- intent: thankyou
+  examples: |
+    - cảm ơn
+    - cảm ơn bạn
+    - thank you
+    - thanks
+    - thanks bạn nha
+    - thanks bạn
+    - cảm ơn
+    - thật tốt
+    - tuyệt vời
+    - cảm ơn vì đã giúp
+    - hay
+
+- regex: name_fuel
+  examples: |
+    - \s{0,10}
+
+- regex: name_jenewry
+  examples: |
+    - \s{0,10}
+
+- regex: name_money
+  examples: |
+    - \s{0,10}
+
+- regex: name_food
+  examples: |
+    - \s{0,10}
+
+- regex: name_Inflation
+  examples: |
+    - \s{0,10}
+
+- regex: name
+  examples: |
+    - \s{0,10}
+
+- regex: day
+  examples: |
+    - \s{0,10}
+
+- regex: how_much
+  examples: |
+    - \s{0,10}
+
+- intent: fuel_price
+  examples: |
+    - giá [xăng](name_fuel) [hôm nay](day)
+    - [xăng](name_fuel) bao nhiêu 1 lít
+    - [xăng](name_fuel)tăng hay giảm
+    - giá [xăng](name_fuel)?
+    - Giá [dầu](name_fuel) [hôm nay](how_much)
+    - [dầu](name_fuel) [bao nhiêu](how_much) 1 lit
+    - [dầu](name_fuel) tăng hay giảm[?](how_much)
+    - Giá [than](name_fuel) [hôm nay](how_much)
+    - [than](name_fuel) [bao nhiêu](how_much)
+    - [than](name_fuel) tăng hay giảm[?](how_much)
+
+- intent: jenewry_price
+  examples: |
+    - giá [vàng](name_jenewry) [hôm nay](day)
+    - [vàng](name_jenewry) [hôm nay](day) bao nhiêu
+    - [vàng](name_jenewry) thu lại bao nhiêu
+    - giá [kim cương](name_jenewry) [hôm nay](day)
+    - [kim cương](name_jenewry) [hôm nay](day) bao nhiêu
+    - [kim cương](name_jenewry) thu lại bao nhiêu
+    - giá [bạc](name_jenewry) [hôm nay](day)
+    - [bạc](name_jenewry) [hôm nay](day) bao nhiêu
+    - [hột xoàn](name_jenewry) thu lại bao nhiêu
+
+- intent: money_price
+  examples: |
+    - [đô mỹ](name_money) [hôm nay](day) bao nhiêu
+    - giá [đô mỹ](name_money) [hôm nay](day)
+    - [đô mỹ](name_money) mua vào bao nhiêu
+    - [đô úc](name_money) [hôm nay](day) bao nhiêu
+    - giá [đô úc](name_money) [hôm nay](day)
+    - [đô úc](name_money) mua vào bao nhiêu
+
+- intent: food_price
+  examples: |
+    - giá [thịt heo](name_food) [hôm nay](day)
+    - bao nhiêu 1 kg [thịt heo](name_food)
+    - giá [thịt heo](name_food)
+    - giá [thịt heo](name_food) dao động [hôm nay](day)
+    - [thịt heo](name_food)?
+    - giá [thịt bò](name_food) [bao nhiêu](how_much)
+    - [bao nhiêu](how_much) 1 kg [thịt bò](name_food)
+    - giá [thịt bò](name_food) dao động [bao nhiêu](how_much)
+    - giá [thịt vịt](name_food) [bao nhiêu](how_much)
+    - [bao nhiêu](how_much) 1 [con vịt](name_food)
+    - giá [thịt vịt](name_food) dao động [bao nhiêu](how_much)
+    - 1 [con vịt](name_food) [bao nhiêu](how_much)
+    - 1 [con vịt](name_food) [bao nhiêu](how_much)
+
+- intent: Inflation
+  examples: |
+    - [lạm phát](name_Inflation) là gì
+    - như thế nào là [lạm phát](Inflation)
+    - [lạm phát](Inflation)?
+    - [call margin](Inflation) là gì
+    - [Appreciation](Inflation) là gì
+    - [Barter](Inflation) là gì
+    - [Bond](Inflation) là gì
+    - [Equity](Inflation) là gì
+    - [Market share](Inflation) là gì
+    
+- intent: supply_contact_info 
+  examples: |
+    - Tôi tên là [Thanh] (name). 
+    - Tôi tên: [Đạt] (name) email: 
+    - Vâng. Tôi là [Hoàng] (name). 
+    - [Thái] (name),
+    - Mình tên là [Thanh](name)
+
+    

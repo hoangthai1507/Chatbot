@@ -1,0 +1,14 @@
+[
+  {
+    "name": "day",
+    "pattern": "\\d{0,10}"
+  },
+  {
+    "name": "how_much",
+    "pattern": "\\d{0,10}"
+  },
+  {
+    "name": "name_fuel",
+    "pattern": "\\d{0,10}"
+  }
+]
