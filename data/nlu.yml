@@ -141,6 +141,7 @@ nlu:
 - intent: fuel_price
   examples: |
     - giá [xăng](name_fuel) [hôm nay](day)
+    - giá [xăng Ron92](name_fuel) [hôm nay](day)
     - [xăng](name_fuel) bao nhiêu 1 lít
     - [xăng](name_fuel)[tăng hay giảm](compare)
     - giá [xăng](name_fuel)?
