@@ -23,6 +23,7 @@ entities:
  - name_food
  - name_Inflation
  - name
+ - compare
 
 responses:
   utter_greet:
