@@ -15,12 +15,9 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - moin
     - hey there
     - let's go
     - hey dude
-    - goodmorning
-    - goodevening
     - good afternoon
     - xin chào
     - bạn cảm thấy thế nào
@@ -33,7 +30,6 @@ nlu:
   examples: |
     - good bye
     - bye
-    - goodbye
     - bye bye
     - tạm biệt
     - tạm biệt bạn
@@ -41,12 +37,10 @@ nlu:
     - tạm biệt hannah
     - see you later
     - good night
-    - bye
     - goodbye
     - have a nice day
-    - see you around
+    - see you again
     - hẹn gặp lại
-    - tạm biệt
     - thật vui khi nói chuyện với bạn
     - chào nhé
 
@@ -140,18 +134,22 @@ nlu:
   examples: |
     - \s{0,10}
 
+- regex: compare
+  examples: |
+    - \s{0,10}
+
 - intent: fuel_price
   examples: |
     - giá [xăng](name_fuel) [hôm nay](day)
     - [xăng](name_fuel) bao nhiêu 1 lít
-    - [xăng](name_fuel)tăng hay giảm
+    - [xăng](name_fuel)[tăng hay giảm](compare)
     - giá [xăng](name_fuel)?
-    - Giá [dầu](name_fuel) [hôm nay](how_much)
-    - [dầu](name_fuel) [bao nhiêu](how_much) 1 lit
-    - [dầu](name_fuel) tăng hay giảm[?](how_much)
-    - Giá [than](name_fuel) [hôm nay](how_much)
-    - [than](name_fuel) [bao nhiêu](how_much)
-    - [than](name_fuel) tăng hay giảm[?](how_much)
+    - Giá [dầu](name_fuel) [hôm nay](day)
+    - [dầu](name_fuel) bao nhiêu 1 lit
+    - [dầu](name_fuel) [tăng hay giảm](compare)
+    - Giá [than](name_fuel) [hôm nay](day)
+    - [than](name_fuel) bao nhiêu
+    - [than](name_fuel) [tăng hay giảm](compare)
 
 - intent: jenewry_price
   examples: |
@@ -181,14 +179,13 @@ nlu:
     - giá [thịt heo](name_food)
     - giá [thịt heo](name_food) dao động [hôm nay](day)
     - [thịt heo](name_food)?
-    - giá [thịt bò](name_food) [bao nhiêu](how_much)
-    - [bao nhiêu](how_much) 1 kg [thịt bò](name_food)
-    - giá [thịt bò](name_food) dao động [bao nhiêu](how_much)
-    - giá [thịt vịt](name_food) [bao nhiêu](how_much)
-    - [bao nhiêu](how_much) 1 [con vịt](name_food)
-    - giá [thịt vịt](name_food) dao động [bao nhiêu](how_much)
-    - 1 [con vịt](name_food) [bao nhiêu](how_much)
-    - 1 [con vịt](name_food) [bao nhiêu](how_much)
+    - giá [thịt bò](name_food) bao nhiêu
+    - bao nhiêu 1 kg [thịt bò](name_food)
+    - giá [thịt bò](name_food) dao động bao nhiêu
+    - giá [thịt vịt](name_food) bao nhiêu
+    - bao nhiêu 1 [con vịt](name_food)
+    - giá [thịt vịt](name_food) dao động bao nhiêu
+    - 1 [con vịt](name_food) bao nhiêu
 
 - intent: Inflation
   examples: |
