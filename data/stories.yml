@@ -40,12 +40,6 @@ stories:
       - intent: ask_ability
       - action: utter_menu
 
-      - intent: fuel_price
-      - action: utter_fuel_price
-
-      - intent: jenewry_price
-      - action: utter_jenewry_price   
-
       - intent: food_price
       - action: utter_food_price
 

@@ -45,14 +45,8 @@ responses:
   utter_iamabot:
   - text: "Em là bot, tên em là hannah"
 
-  utter_fuel_price:
-  - text: "Giá hiện tại là 23.000/l"
-
   utter_food_price:
   - text: "Giá thịt hiện tại là 140.000/kg"
-
-  utter_jenewry_price:
-    - text: "Giá hiện tại là 6.000.000 vnd"
 
   utter_money_price:
     - text: "Giá đô hiện tại là 25.000 vnd"
@@ -77,6 +71,7 @@ actions:
 - utter_fuel_price
 - utter_food_price
 - utter_money_price
-- utter_jenewry_price
+- action_jenewry_price
 - utter_menu
 - utter_Inflation
+- action_fuel_price

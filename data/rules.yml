@@ -11,3 +11,13 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: tra loi gia xang
+  steps:
+  - intent: fuel_price
+  - action: action_fuel_price
+
+- rule: tra loi gia vang
+  steps:
+  - intent: jenewry_price
+  - action: action_jenewry_price

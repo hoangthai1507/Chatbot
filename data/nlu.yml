@@ -102,9 +102,9 @@ nlu:
     - cảm ơn vì đã giúp
     - hay
 
-- regex: name_fuel
-  examples: |
-    - \s{0,10}
+#- regex: name_fuel
+#  examples: |
+#    - \s{0,10}
 
 - regex: name_jenewry
   examples: |
@@ -138,22 +138,23 @@ nlu:
   examples: |
     - \s{0,10}
 
+
+
 - intent: fuel_price
   examples: |
     - giá [xăng](name_fuel) [hôm nay](day)
-    - [xăng](name_fuel) bao nhiêu 1 lít
-    - [xăng](name_fuel)[tăng hay giảm](compare)
-    - giá [xăng](name_fuel)?
+    - [Xăng e5 ron 92-ii](name_fuel) bao nhiêu 1 lít
+    - [xăng](name_fuel) [tăng hay giảm](compare)
+    - giá [Xăng ron 95-iii](name_fuel)?
     - Giá [dầu](name_fuel) [hôm nay](day)
-    - [dầu](name_fuel) bao nhiêu 1 lit
-    - [dầu](name_fuel) [tăng hay giảm](compare)
-    - Giá [than](name_fuel) [hôm nay](day)
-    - [than](name_fuel) bao nhiêu
-    - [than](name_fuel) [tăng hay giảm](compare)
+    - [Dầu diesel](name_fuel) bao nhiêu 1 lit
+    - [Dầu hỏa](name_fuel) [tăng hay giảm](compare)
+
 
 - intent: jenewry_price
   examples: |
     - giá [vàng](name_jenewry) [hôm nay](day)
+    - giá [vàng sjc](name_jenewry) [hôm nay](day)
     - [vàng](name_jenewry) [hôm nay](day) bao nhiêu
     - [vàng](name_jenewry) thu lại bao nhiêu
     - giá [kim cương](name_jenewry) [hôm nay](day)
@@ -187,24 +188,13 @@ nlu:
     - giá [thịt vịt](name_food) dao động bao nhiêu
     - 1 [con vịt](name_food) bao nhiêu
 
-- intent: Inflation
-  examples: |
-    - [lạm phát](name_Inflation) là gì
-    - như thế nào là [lạm phát](Inflation)
-    - [lạm phát](Inflation)?
-    - [call margin](Inflation) là gì
-    - [Appreciation](Inflation) là gì
-    - [Barter](Inflation) là gì
-    - [Bond](Inflation) là gì
-    - [Equity](Inflation) là gì
-    - [Market share](Inflation) là gì
+
     
 - intent: supply_contact_info 
   examples: |
-    - Tôi tên là [Thanh] (name). 
-    - Tôi tên: [Đạt] (name) email: 
-    - Vâng. Tôi là [Hoàng] (name). 
-    - [Thái] (name),
+    - Tôi tên là [Thanh](name). 
+    - Tôi tên: [Đạt](name)
+    - Vâng. Tôi là [Hoàng](name). 
+    - [Thái](name),
     - Mình tên là [Thanh](name)
 
-    
