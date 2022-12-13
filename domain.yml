@@ -68,7 +68,6 @@ actions:
 - utter_sorry
 - utter_affirm
 - utter_iamabot
-- utter_fuel_price
 - utter_food_price
 - utter_money_price
 - action_jenewry_price

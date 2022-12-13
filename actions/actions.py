@@ -24,12 +24,23 @@ class ActionFuelPrice(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-
+        entity = next(tracker.get_latest_entity_values("name_fuel"), None)
+        entity_list = ["Xăng RON 95-III", "Xăng E5 RON 92-II", "Dầu diesel", "Dầu hỏa"]
         price = getdata.getdata(0, "gas")
-        dispatcher.utter_message(text=f"{price}")
-   
-        
+        t = "price"
+        if entity in entity_list:
+            msg = f"giá {entity} hôm nay là {price[entity].get(t)} vnd"
+            dispatcher.utter_message(text=msg)
+        elif "xăng" in entity:
+            msg = f"giá {entity_list[0]} hôm nay là {price[entity_list[0]].get(t)} vnd còn {entity_list[1]} hôm nay là {price[entity_list[1]].get(t)} vnd"
+            dispatcher.utter_message(text=msg)
+        elif "dầu" in entity:
+            msg = f"giá {entity_list[2]} hôm nay là {price[entity_list[2]].get(t)} vnd còn {entity_list[3]} hôm nay là {price[entity_list[3]].get(t)} vnd"
+            dispatcher.utter_message(text=msg)
+        else:
+            dispatcher.utter_message(text=f"{price}")
+
+
 class ActionGold(Action):
 
     def name(self) -> Text:

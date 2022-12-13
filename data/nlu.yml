@@ -102,9 +102,7 @@ nlu:
     - cảm ơn vì đã giúp
     - hay
 
-- regex: name_fuel
-  examples: |
-    - \s{0,10}
+
 
 - regex: name_jenewry
   examples: |
@@ -140,16 +138,19 @@ nlu:
 
 - intent: fuel_price
   examples: |
-    - giá [xăng](name_fuel) [hôm nay](day)
-    - [xăng](name_fuel) bao nhiêu 1 lít
-    - [xăng](name_fuel)[tăng hay giảm](compare)
-    - giá [xăng](name_fuel)?
-    - Giá [dầu](name_fuel) [hôm nay](day)
-    - [dầu](name_fuel) bao nhiêu 1 lit
-    - [dầu](name_fuel) [tăng hay giảm](compare)
-    - Giá [than](name_fuel) [hôm nay](day)
-    - [than](name_fuel) bao nhiêu
-    - [than](name_fuel) [tăng hay giảm](compare)
+    - giá [xăng e5]{"entity": "name_fuel", "value": "Xăng E5 RON 92-II"} [hôm nay](day)
+    - [xăng e5]{"entity": "name_fuel", "value": "Xăng E5 RON 92-II"} [hôm nay](day) bao nhiêu
+    - giá [xăng e5]{"entity": "name_fuel", "value": "Xăng E5 RON 92-II"} [tăng hay giảm](compare)
+    - [xăng ron 95]{"entity": "name_fuel", "value": "Xăng RON 95-III"} bao nhiêu 1 lít
+    - [xăng ron 95]{"entity": "name_fuel", "value": "Xăng RON 95-III"} [hôm nay](day)
+    - [ron 95]{"entity": "name_fuel", "value": "Xăng RON 95-III"} [tăng hay giảm](compare)
+    - [dầu hoả](name_fuel) bao nhiêu 1 lit
+    - [dầu hoả](name_fuel) [hôm nay](day)
+    - [dầu hoả](name_fuel) bao nhiêu
+    - giá [dầu điezen]{"entity": "name_fuel", "value": "dầu diesel"}?
+    - giá [dầu diesel](name_fuel) [hôm nay](day)
+    - [dầu diesel](name_fuel) [tăng hay giảm](compare)
+
 
 - intent: jenewry_price
   examples: |
