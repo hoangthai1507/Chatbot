@@ -173,6 +173,145 @@ nlu:
     - giá [đô úc](name_money) [hôm nay](day)
     - [đô úc](name_money) mua vào bao nhiêu
 
+nlu:
+- lookup: name_money
+  examples: |
+    - AUD
+    - CAD
+    - CHF
+    - DKK
+    - EUR
+    - GBP
+    - HKD
+    - INR
+    - JPY
+    - KRW
+    - KWD
+    - MYR
+    - NOK
+    - RUB
+    - SEK
+    - SGD
+    - THB
+    - USD
+
+nlu:
+- synonym: AUD
+  examples: |
+    - aud
+    - đô úc
+    - đô aud
+    - tiền úc
+    - tiền aud
+    - úc
+
+nlu:
+- synonym: CAD
+  examples: |
+    - cad
+    - đô canada
+    - tiền canada
+    - canada đô
+    - dollar canada
+    - canada dollar
+    - C$
+    - $C
+
+nlu:
+- synonym: CHF
+  examples: |
+    - chf
+    - đô thụy sĩ
+    - tiền thụy sĩ
+    - thụy sĩ đô
+    - dollar thụy sĩ
+    - thụy sĩ dollar
+
+nlu:
+- synonym: CHF
+  examples: |
+    - đô thụy sĩ
+    - tiền thụy sĩ
+    - thụy sĩ đô
+    - dollar thụy sĩ
+    - thụy sĩ dollar
+
+nlu:
+- synonym: DKK
+  examples: |
+    - dkk
+    - đô đan mạch
+    - tiền đan mạch
+    - đan mạch đô
+    - dollar đan mạch
+    - đan mạch dollar
+
+nlu:
+- synonym: EUR
+  examples: |
+    - eur
+    - đô châu âu
+    - tiền euro
+    - tiền châu âu đô
+    - euro đô
+    - dollar euro 
+    - euro dollar
+    - âu kim
+
+nlu:
+- synonym: GBP
+  examples: |
+    - gbp
+    - bảng anh
+    - tiền nước anh
+    - tiền đô bảng anh
+    - tiền đô nước anh
+    - bảng anh đô
+    - dollar nước anh 
+    - euro dollar
+    - pound
+    - pence
+    - penny
+
+nlu:
+- synonym: HKD
+  examples: |
+    - đô la hồng kông
+    - hkd
+    - tiền hồng kông
+    - tiền đô hong kong 
+    - hồng kông đô
+    - dollar hong kong 
+    - hong kong dollar
+    - hong kong đô la  
+
+nlu:
+- synonym: JPY
+  examples: |
+    - jpy
+    - tiền nhật
+    - yên
+    - yên nhật                                   v
+
+nlu:
+- synonym: KRW
+  examples: |
+    - krw
+    - won
+    - won hàn
+    - tiền hàn quốc
+
+nlu:
+- synonym: USD
+  examples: |
+    - usd
+    - tiền đô
+    - đô mỹ
+    - đô la
+    - dollar
+    - dollar mỹ 
+    - usd dollar
+
 - intent: food_price
   examples: |
     - giá [thịt heo](name_food) [hôm nay](day)
