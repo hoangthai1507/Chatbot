@@ -150,7 +150,67 @@ nlu:
     - giá [dầu điezen]{"entity": "name_fuel", "value": "dầu diesel"}?
     - giá [dầu diesel](name_fuel) [hôm nay](day)
     - [dầu diesel](name_fuel) [tăng hay giảm](compare)
+    - giá [xăng e5] [hôm qua](day)
+    - [Xăng sinh học] [hôm qua](day) bao nhiêu
+    - giá [RON92 E5] [tăng hay giảm](compare)
+    - [A95] bao nhiêu 1 lít
+    - [Xăng RON 95-III] [hôm qua](day)
+    - [Mogas 95 ] [tăng hay giảm](compare)
+    - [dầu hôi](name_fuel) bao nhiêu 1 lit
+    - [dầu lửa ](name_fuel) [hôm qua](day)
+    - [paraffin](name_fuel) bao nhiêu
+    - giá [dầu gazole]?
+    - giá [dầu diesel](name_fuel) [hôm qua](day)
+    - [dầu DO](name_fuel) [tăng hay giảm](compare)    
 
+- lookup: name_fuel
+  examples: |
+    - Dầu diesel
+    - Dầu hỏa
+    - Xăng E5 RON 92-II
+    - Xăng RON 95-III
+
+- synonym: Dầu diesel
+  examples: |
+    - Dầu diesel
+    - dầu gazole 
+    - DO
+    - dầu DO
+    - DO 0,25%S
+    - DO 0,005%S
+
+- synonym: Dầu hỏa
+  examples: |
+    - dầu lửa 
+    - KO 
+    - dầu kêrôsin
+    - dầu KO 
+    - coal oil
+    - kerosene 
+    - paraffin 
+    - paraffin oil 
+    - dầu hôi
+    - Dầu hỏa
+
+- synonym: Xăng E5 RON 92-II
+  examples: |
+    - Xăng sinh học
+    - Ex
+    - E5 RON 92
+    - RON92 E5
+    - RON92 
+    - Xăng sinh học E5
+
+- synonym: Xăng RON 95-III
+  examples: |
+    - Xăng RON 95-II
+    - Xăng RON 95-III
+    - Xăng Ron 95
+    - Xăng RON 95-V
+    - Xăng RON 95-IV
+    - A95 
+    - Mogas 95 
+    - Xăng sinh học E5
 
 - intent: jenewry_price
   examples: |
@@ -164,6 +224,11 @@ nlu:
     - [bạc](name_jenewry) [hôm nay](day) bao nhiêu
     - [hột xoàn](name_jenewry) thu lại bao nhiêu
 
+# - lookup: name_jenewry
+#   examples: |
+#     - 
+
+
 - intent: money_price
   examples: |
     - [đô mỹ](name_money) [hôm nay](day) bao nhiêu
@@ -172,6 +237,27 @@ nlu:
     - [đô úc](name_money) [hôm nay](day) bao nhiêu
     - giá [đô úc](name_money) [hôm nay](day)
     - [đô úc](name_money) mua vào bao nhiêu
+    - [đô mỹ](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô mỹ](name_money) [hôm qua](day)
+    - [đô la mỹ](name_money) mua vào bao nhiêu
+    - [đô úc](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô úc](name_money) [hôm qua](day)
+    - [đô la mỹ](name_money) mua vào bao nhiêu
+    - [aud](name_money) [hôm nay](day) bao nhiêu
+    - giá [CAD](name_money) [hôm nay](day)
+    - [đô thụy sĩ](name_money) [hôm nay](day) bao nhiêu
+    - giá [chf](name_money) [hôm nay](day)
+    - [đô đan mạch](name_money) [hôm nay](day) bao nhiêu
+    - giá [dkk](name_money) [hôm nay](day)
+    - [bảng anh](name_money) [hôm nay](day) bao nhiêu
+    - giá [penny](name_money) [hôm nay](day)
+    - [đô la hong kong](name_money) [hôm nay](day) bao nhiêu
+    - giá [hong kong dollar](name_money) [hôm nay](day)
+    - [jpy](name_money) [hôm nay](day) bao nhiêu
+    - giá [yên](name_money) [hôm nay](day)
+    - [krw](name_money) [hôm nay](day) bao nhiêu
+    - giá [won](name_money) [hôm nay](day)
+
 
 - lookup: name_money
   examples: |
@@ -225,14 +311,6 @@ nlu:
     - dollar thụy sĩ
     - thụy sĩ dollar
 
-- synonym: CHF
-  examples: |
-    - đô thụy sĩ
-    - tiền thụy sĩ
-    - thụy sĩ đô
-    - dollar thụy sĩ
-    - thụy sĩ dollar
-
 - synonym: DKK
   examples: |
     - dkk
@@ -262,7 +340,6 @@ nlu:
     - tiền đô nước anh
     - bảng anh đô
     - dollar nước anh 
-    - euro dollar
     - pound
     - pence
     - penny
@@ -283,7 +360,7 @@ nlu:
     - jpy
     - tiền nhật
     - yên
-    - yên nhật                                   v
+    - yên nhật                                 
 
 - synonym: KRW
   examples: |
@@ -316,6 +393,7 @@ nlu:
     - bao nhiêu 1 [con vịt](name_food)
     - giá [thịt vịt](name_food) dao động bao nhiêu
     - 1 [con vịt](name_food) bao nhiêu
+
 
 - intent: Inflation
   examples: |
