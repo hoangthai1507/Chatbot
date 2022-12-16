@@ -173,7 +173,6 @@ nlu:
     - giá [đô úc](name_money) [hôm nay](day)
     - [đô úc](name_money) mua vào bao nhiêu
 
-nlu:
 - lookup: name_money
   examples: |
     - AUD
@@ -195,7 +194,7 @@ nlu:
     - THB
     - USD
 
-nlu:
+
 - synonym: AUD
   examples: |
     - aud
@@ -205,7 +204,7 @@ nlu:
     - tiền aud
     - úc
 
-nlu:
+
 - synonym: CAD
   examples: |
     - cad
@@ -217,7 +216,6 @@ nlu:
     - C$
     - $C
 
-nlu:
 - synonym: CHF
   examples: |
     - chf
@@ -227,7 +225,6 @@ nlu:
     - dollar thụy sĩ
     - thụy sĩ dollar
 
-nlu:
 - synonym: CHF
   examples: |
     - đô thụy sĩ
@@ -236,7 +233,6 @@ nlu:
     - dollar thụy sĩ
     - thụy sĩ dollar
 
-nlu:
 - synonym: DKK
   examples: |
     - dkk
@@ -246,7 +242,6 @@ nlu:
     - dollar đan mạch
     - đan mạch dollar
 
-nlu:
 - synonym: EUR
   examples: |
     - eur
@@ -258,7 +253,6 @@ nlu:
     - euro dollar
     - âu kim
 
-nlu:
 - synonym: GBP
   examples: |
     - gbp
@@ -273,7 +267,6 @@ nlu:
     - pence
     - penny
 
-nlu:
 - synonym: HKD
   examples: |
     - đô la hồng kông
@@ -285,7 +278,6 @@ nlu:
     - hong kong dollar
     - hong kong đô la  
 
-nlu:
 - synonym: JPY
   examples: |
     - jpy
@@ -293,7 +285,6 @@ nlu:
     - yên
     - yên nhật                                   v
 
-nlu:
 - synonym: KRW
   examples: |
     - krw
@@ -301,7 +292,6 @@ nlu:
     - won hàn
     - tiền hàn quốc
 
-nlu:
 - synonym: USD
   examples: |
     - usd
