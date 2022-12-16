@@ -103,38 +103,38 @@ nlu:
     - hay
 
 
-
-- regex: name_jenewry
-  examples: |
-    - \s{0,10}
-
-- regex: name_money
-  examples: |
-    - \s{0,10}
-
-- regex: name_food
-  examples: |
-    - \s{0,10}
-
-- regex: name_Inflation
-  examples: |
-    - \s{0,10}
-
-- regex: name
-  examples: |
-    - \s{0,10}
-
-- regex: day
-  examples: |
-    - \s{0,10}
-
-- regex: how_much
-  examples: |
-    - \s{0,10}
-
-- regex: compare
-  examples: |
-    - \s{0,10}
+#
+#- regex: name_jenewry
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: name_money
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: name_food
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: name_Inflation
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: name
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: day
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: how_much
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: compare
+#  examples: |
+#    - \s{0,10}
 
 - intent: fuel_price
   examples: |
