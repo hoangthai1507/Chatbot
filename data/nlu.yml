@@ -225,19 +225,154 @@ nlu:
 
 - intent: jenewry_price
   examples: |
-    - giá [vàng](name_jenewry) [hôm nay](day)
-    - [vàng](name_jenewry) [hôm nay](day) bao nhiêu
-    - [vàng](name_jenewry) thu lại bao nhiêu
-    - giá [kim cương](name_jenewry) [hôm nay](day)
-    - [kim cương](name_jenewry) [hôm nay](day) bao nhiêu
-    - [kim cương](name_jenewry) thu lại bao nhiêu
-    - giá [bạc](name_jenewry) [hôm nay](day)
-    - [bạc](name_jenewry) [hôm nay](day) bao nhiêu
-    - [hột xoàn](name_jenewry) thu lại bao nhiêu
-
-# - lookup: name_jenewry
-#   examples: |
-#     - 
+    - giá [mua](status) [DOJI HN](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [DOJI SG](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [Phú Quý SJC](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [SJC Hà Nội](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [SJC TP HCM](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [DOJI HN](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [DOJI SG](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [Phú Quý SJC](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [SJC Hà Nội](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [SJC TP HCM](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [DOJI HN](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [DOJI SG](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [Phú Quý SJC](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [SJC Hà Nội](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [SJC TP HCM](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [DOJI HN](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [DOJI SG](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [Phú Quý SJC](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [SJC Hà Nội](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [SJC TP HCM](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day)
+    - [mua](status) [DOJI HN](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [DOJI SG](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [Phú Quý SJC](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [SJC Hà Nội](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [SJC TP HCM](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [DOJI HN](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [DOJI SG](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [Phú Quý SJC](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [SJC Hà Nội](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [SJC TP HCM](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [DOJI HN](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [DOJI SG](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [Phú Quý SJC](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [SJC Hà Nội](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [SJC TP HCM](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [DOJI HN](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [DOJI SG](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [Phú Quý SJC](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [SJC Hà Nội](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [SJC TP HCM](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day) bao nhiêu
+    - [DOJI HN](name_jenewry) [thu lại](status) bao nhiêu
+    - [DOJI SG](name_jenewry) [thu lại](status) bao nhiêu
+    - [Phú Quý SJC](name_jenewry) [thu lại](status) bao nhiêu
+    - [SJC Hà Nội](name_jenewry) [thu lại](status) bao nhiêu
+    - [SJC TP HCM](name_jenewry) [thu lại](status) bao nhiêu
+    - [SJC Đà Nẵng](name_jenewry) [thu lại](status) bao nhiêu
+    - [VIETINBANK GOLD](name_jenewry) [thu lại](status) bao nhiêu
+    - [DOJI HN](name_jenewry) [mua lại](status) bao nhiêu
+    - [DOJI SG](name_jenewry) [mua lại](status) bao nhiêu
+    - [Phú Quý SJC](name_jenewry) [mua lại](status) bao nhiêu
+    - [SJC Hà Nội](name_jenewry) [mua lại](status) bao nhiêu
+    - [SJC TP HCM](name_jenewry) [mua lại](status) bao nhiêu
+    - [SJC Đà Nẵng](name_jenewry) [mua lại](status) bao nhiêu
+    - [VIETINBANK GOLD](name_jenewry) [mua lại](status) bao nhiêu
+- lookup: name_jenewry
+  examples: |
+    - DOJI HN
+    - DOJI SG
+    - Phú Quý SJC
+    - SJC Hà Nội
+    - SJC TP HCM
+    - SJC Đà Nẵng
+    - VIETINBANK GOLD
+- synonym: DOJI HN
+  examples: |
+    - DOJI Hà Nội
+    - DOJI TP Hà Nội
+    - DOJI Thành Phố Hà Nội
+    - DOJI Thành Phố HN
+    - DOJI TP HN
+    - DOJI Thủ Đô Hà nội
+    - DOJI TĐ HN
+    - DOJI TD HN
+    - DOJI Thủ Đô HN
+    - DOJI TĐ Hà Nội
+    - DOJI TD Hà Nội
+    - DOJI_HN
+    - Vàng DOJI HN
+    - Vàng DOJI_HN
+    - Vàng DOJI Hà Nội
+- synonym: DOJI SG
+  examples: |
+    - DOJI Sài Gòn
+    - Vàng DOJI SG
+    - Vàng DOJI_SG
+    - Vàng DOJI Sài Gòn
+- synonym: Phú Quý SJC
+  examples: |
+    - Vàng Miếng SJC
+    - Vàng SJC
+    - SJC
+- synonym: SJC Hà Nội
+  examples: |
+    - Vàng SJC Hà Nội
+    - Vàng SJC HN
+    - SJC HN
+- synonym: SJC TP HCM
+  examples: |
+    - Vàng SJC TP Hồ Chí Minh
+    - Vàng SJC HCM
+    - Vàng SJC Thành Phố Hồ Chí Minh
+    - Vàng SJC Thành Phố HCM
+    - SJC HCM
+    - SJC Thành Phố Hồ Chí Minh
+    - SJC Thành Phố HCM
+- synonym: SJC Đà Nẵng
+  examples: |
+    - Vàng SJC TP Đà Nẵng
+    - Vàng SJC ĐN
+    - Vàng SJC DN
+    - Vàng SJC Thành Phố Đà Nẵng
+    - Vàng SJC Thành Phố ĐN
+    - Vàng SJC Thành Phố DN
+    - SJC ĐN
+    - SJC DN
+    - SJC Thành Phố Đà Nẵng
+    - SJC Thành Phố ĐN
+    - SJC Thành Phố DN
+- synonym: VIETINBANK GOLD
+  examples: |
+    - Vàng Miếng SJC 999.9
+    - Vàng Miếng SJC VIETINBANK GOLD
+    - Vàng Miếng VIETINBANK GOLD
+    - Vàng SJC VIETINBANK GOLD
+    - Vàng VIETINBANK GOLD
+    - Vàng 999.9
+    - SJC VIETINBANK GOLD
+    - SJC 999.9
+- lookup: status
+  examples: |
+    - mua
+    - bán
 
 
 - intent: money_price
@@ -396,20 +531,61 @@ nlu:
     - dollar mỹ 
     - usd dollar
 
-- intent: food_price
+- intent: Coffee_price
   examples: |
-    - giá [thịt heo](name_food) [hôm nay](day)
-    - bao nhiêu 1 kg [thịt heo](name_food)
-    - giá [thịt heo](name_food)
-    - giá [thịt heo](name_food) dao động [hôm nay](day)
-    - [thịt heo](name_food)?
-    - giá [thịt bò](name_food) bao nhiêu
-    - bao nhiêu 1 kg [thịt bò](name_food)
-    - giá [thịt bò](name_food) dao động bao nhiêu
-    - giá [thịt vịt](name_food) bao nhiêu
-    - bao nhiêu 1 [con vịt](name_food)
-    - giá [thịt vịt](name_food) dao động bao nhiêu
-    - 1 [con vịt](name_food) bao nhiêu
+    - giá coffee [FOB (HCM)](name_coffee)
+    - giá coffee [Gia Lai](name_coffee)
+    - giá coffee [Hồ Tiêu](name_coffee)
+    - giá coffee [Lâm Đòng](name_coffee)
+    - giá coffee [Đắk Lăk](name_coffee)
+    - giá coffee [Đắk Nông](name_coffee)
+    - giá cà phê [FOB (HCM)](name_coffee)
+    - giá cà phê [Gia Lai](name_coffee)
+    - giá cà phê [Hồ Tiêu](name_coffee)
+    - giá cà phê [Lâm Đòng](name_coffee)
+    - giá cà phê [Đắk Lăk](name_coffee)
+    - giá cà phê [Đắk Nông](name_coffee)
+    - giá cà phê [FOB (HCM)](name_coffee) bao nhiêu
+    - giá cà phê [Gia Lai](name_coffee) bao nhiêu
+    - giá cà phê [Hồ Tiêu](name_coffee) bao nhiêu
+    - giá cà phê [Lâm Đòng](name_coffee) bao nhiêu
+    - giá cà phê [Đắk Lăk](name_coffee) bao nhiêu
+    - giá cà phê [Đắk Nông](name_coffee) bao nhiêu
+    - giá coffee [FOB (HCM)](name_coffee) bao nhiêu
+    - giá coffee [Gia Lai](name_coffee) bao nhiêu
+    - giá coffee [Hồ Tiêu](name_coffee) bao nhiêu
+    - giá coffee [Lâm Đòng](name_coffee) bao nhiêu
+    - giá coffee [Đắk Lăk](name_coffee) bao nhiêu
+    - giá coffee [Đắk Nông](name_coffee) bao nhiêu
+    - giá cà phê [FOB (HCM)](name_coffee) dao động bao nhiêu
+    - giá cà phê [Gia Lai](name_coffee) dao động bao nhiêu
+    - giá cà phê [Hồ Tiêu](name_coffee) dao động bao nhiêu
+    - giá cà phê [Lâm Đòng](name_coffee) dao động bao nhiêu
+    - giá cà phê [Đắk Lăk](name_coffee) dao động bao nhiêu
+    - giá cà phê [Đắk Nông](name_coffee) dao động bao nhiêu
+    - giá coffee [FOB (HCM)](name_coffee) dao động bao nhiêu
+    - giá coffee [Gia Lai](name_coffee) dao động bao nhiêu
+    - giá coffee [Hồ Tiêu](name_coffee) dao động bao nhiêu
+    - giá coffee [Lâm Đòng](name_coffee) dao động bao nhiêu
+    - giá coffee [Đắk Lăk](name_coffee) dao động bao nhiêu
+    - giá coffee [Đắk Nông](name_coffee) dao động bao nhiêu
+
+- lookup: name_coffee
+  examples: |
+    - FOB (HCM)
+    - Gia Lai
+    - Hồ Tiêu
+    - Lâm Đồng
+    - Đắk Lăk
+    - Đắk Nông
+
+- synonym: Đắk Lăk
+  examples: |
+    - Dak Lak
+
+- synonym: Đắk Nông
+  examples: |
+    - Dak Nông
 
 
 - intent: Terms
