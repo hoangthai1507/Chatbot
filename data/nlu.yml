@@ -414,7 +414,7 @@ nlu:
 
 - intent: Inflation
   examples: |
-    - [lạm phát](name_Inflation) là gì
+    - [lạm phát](Inflation) là gì
     - như thế nào là [lạm phát](Inflation)
     - [lạm phát](Inflation)?
     - [call margin](Inflation) là gì
@@ -423,7 +423,38 @@ nlu:
     - [Bond](Inflation) là gì
     - [Equity](Inflation) là gì
     - [Market share](Inflation) là gì
-    
+
+    - [lạm phát](Inflation) xảy ra khi nào
+    - như thế nào mới được gọi là [lạm phát](Inflation)
+    - [lạm phát](Inflation) xảy ra như thế nào?
+    - [call margin](Inflation) là thuật ngữ nói về gì
+    - [Appreciation](Inflation) nói cái gì
+    - [Barter](Inflation) được hiểu như thế nào
+    - như thế nào là [Bond](Inflation) 
+    - [Equity](Inflation) xảy ra khi nào
+    - [Market share](Inflation) diễn ra như thế nào
+
+- lookup: Inflation
+  examples: |
+    - lạm phát
+    - call margin
+    - appreciation
+    - barter
+    - bond
+    - equity
+    - market share
+
+- synonym: lạm phát
+  examples: |
+    - sự mất giá tiền tệ
+    - tiền mất giá
+    - gia tăng giá trị hoàng hóa
+
+- synonym: call margin
+  examples: |
+    - lệnh tăng kí quỹ
+    - call margin
+
 - intent: supply_contact_info 
   examples: |
     - Tôi tên là [Thanh] (name). 
