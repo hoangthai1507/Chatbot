@@ -147,7 +147,7 @@ nlu:
     - [dầu hoả](name_fuel) bao nhiêu 1 lit
     - [dầu hoả](name_fuel) [hôm nay](day)
     - [dầu hoả](name_fuel) bao nhiêu
-    - giá [dầu điezen]{"entity": "name_fuel", "value": "dầu diesel"}?
+    - giá [dầu diezen]{"entity": "name_fuel", "value": "dầu diesel"}?
     - giá [dầu diesel](name_fuel) [hôm nay](day)
     - [dầu diesel](name_fuel) [tăng hay giảm](compare)
     - giá [xăng e5] [hôm qua](day)
@@ -161,7 +161,19 @@ nlu:
     - [paraffin](name_fuel) bao nhiêu
     - giá [dầu gazole]?
     - giá [dầu diesel](name_fuel) [hôm qua](day)
-    - [dầu DO](name_fuel) [tăng hay giảm](compare)    
+    - [dầu DO](name_fuel) [tăng hay giảm](compare)
+    - giá [RON92 E5] [hôm qua](day)
+    - [RON92] [hôm qua](day) bao nhiêu
+    - giá [Ex] [tăng hay giảm](compare)
+    - [A95] bao nhiêu 1 lít
+    - [Xăng RON 95-II] [hôm qua](day)
+    - [Xăng RON 95-IV ] [tăng hay giảm](compare)
+    - [Dầu hỏa](name_fuel) bao nhiêu 1 lit
+    - [dầu kêrôsin ](name_fuel) [hôm qua](day)
+    - [dầu KO](name_fuel) bao nhiêu
+    - giá [DO]?
+    - giá [DO 0,25%S](name_fuel) [hôm qua](day)
+    - [DO 0,005%S](name_fuel) [tăng hay giảm](compare)
 
 - lookup: name_fuel
   examples: |
@@ -210,7 +222,6 @@ nlu:
     - Xăng RON 95-IV
     - A95 
     - Mogas 95 
-    - Xăng sinh học E5
 
 - intent: jenewry_price
   examples: |
@@ -257,7 +268,13 @@ nlu:
     - giá [yên](name_money) [hôm nay](day)
     - [krw](name_money) [hôm nay](day) bao nhiêu
     - giá [won](name_money) [hôm nay](day)
-
+    - [KWD](name_money) [hôm nay](day) bao nhiêu
+    - giá [MYR](name_money) [hôm nay](day)
+    - [NOK](name_money) [hôm nay](day) bao nhiêu
+    - giá [RUB](name_money) [hôm nay](day)
+    - [SEK](name_money) [hôm qua](day) bao nhiêu
+    - giá [SGD](name_money) [hôm qua](day)
+    - [THB](name_money) [hôm qua](day) bao nhiêu
 
 - lookup: name_money
   examples: |
