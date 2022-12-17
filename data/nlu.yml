@@ -116,7 +116,7 @@ nlu:
 #  examples: |
 #    - \s{0,10}
 #
-#- regex: name_Inflation
+#- regex: name_Terms
 #  examples: |
 #    - \s{0,10}
 #
@@ -412,48 +412,141 @@ nlu:
     - 1 [con vịt](name_food) bao nhiêu
 
 
-- intent: Inflation
+- intent: Terms
   examples: |
-    - [lạm phát](Inflation) là gì
-    - như thế nào là [lạm phát](Inflation)
-    - [lạm phát](Inflation)?
-    - [call margin](Inflation) là gì
-    - [Appreciation](Inflation) là gì
-    - [Barter](Inflation) là gì
-    - [Bond](Inflation) là gì
-    - [Equity](Inflation) là gì
-    - [Market share](Inflation) là gì
+    - [Bear trap (bẫy giá giảm)](Terms) là gì
+    - như thế nào là [Biên độ giao động giá](Terms)
+    - [Bull trap (bẫy tăng giá)](Terms)?
+    - [Công ty niêm yết](Terms) là gì
+    - [Cổ Phiếu](Terms) là gì
+    - [Cổ phiếu Blue Chip](Terms) là gì
+    - [Cổ phiếu phổ thông](Terms) là gì
+    - [Cổ phiếu Blue Chip ( tiềm năng )](Terms) là gì
+    - [Cổ phiếu phổ thông ( cổ phiếu thường )](Terms) là gì
+    - [Cổ phiếu ưu đãi](Terms) là gì
+    - [Cổ phần](Terms) là gì
+    - [Cổ tức](Terms) xảy ra khi nào
+    - như thế nào mới được gọi là [Cổ tức cố định](Terms)
+    - [Cổ đông](Terms) xảy ra như thế nào?
+    - [Dead cat bounce](Terms) là thuật ngữ nói về gì
+    - [Giao dịch trong ngày](Terms) nói cái gì
+    - [Giá Cao nhất](Terms) được hiểu như thế nào
+    - như thế nào là [Giá khớp lệnh](Terms) 
+    - [Giá mở cửa](Terms) xảy ra khi nào
+    - [Giá niêm yết](Terms) diễn ra như thế nào
+    - [Giá sàn](Terms) là gì
+    - như thế nào là [Sàn giao dịch](Terms)
+    - [Mệnh giá](Terms)?
+    - [Môi giới](Terms) là gì
+    - [Mô hình CAPM](Terms) là gì
+    - [Lệnh điều kiện](Terms) là gì
+    - [Lệnh giới hạn LO](Terms) là gì
+    - [Lệnh ATC](Terms) là gì
+    - [Kỹ thuật Hedging](Terms) là gì
+    - [Khối lượng giao dịch](Terms) là gì
+    - [Giá trị vốn hóa](Terms) là gì
+    - [Thanh khoản](Terms) xảy ra khi nào
+    - như thế nào mới được gọi là [Giá tham chiếu](Terms)
+    - [Giá thấp nhất](Terms) xảy ra như thế nào?
+    - [IPO](Terms) là thuật ngữ nói về gì
+    - [Hệ số giá thị trường trên giá ghi sổ](Terms) nói cái gì
+    - [Hệ số Beta](Terms) được hiểu như thế nào
+    - như thế nào là [HNX-Index](Terms) 
+    - [HNX-Index](Terms) xảy ra khi nào
+    - [Giá đóng cửa](Terms) diễn ra như thế nào
+    - [Thị giá](Terms) là gì
+    - như thế nào là [Thị trường bò](Terms)
+    - [Thị trường gấu](Terms)?
+    - [Tài khoản chứng khoán](Terms) là gì
+    - [VN-Index](Terms) là gì
 
-    - [lạm phát](Inflation) xảy ra khi nào
-    - như thế nào mới được gọi là [lạm phát](Inflation)
-    - [lạm phát](Inflation) xảy ra như thế nào?
-    - [call margin](Inflation) là thuật ngữ nói về gì
-    - [Appreciation](Inflation) nói cái gì
-    - [Barter](Inflation) được hiểu như thế nào
-    - như thế nào là [Bond](Inflation) 
-    - [Equity](Inflation) xảy ra khi nào
-    - [Market share](Inflation) diễn ra như thế nào
-
-- lookup: Inflation
+- lookup: Terms
   examples: |
-    - lạm phát
-    - call margin
-    - appreciation
-    - barter
-    - bond
-    - equity
-    - market share
+    - Bear trap (bẫy giá giảm)
+    - Biên độ giao động giá
+    - Bull trap (bẫy tăng giá)
+    - Công ty niêm yết
+    - Cổ Phiếu
+    - Cổ phiếu Blue Chip ( tiềm năng )
+    - Cổ phiếu phổ thông ( cổ phiếu thường )
+    - Cổ phiếu ưu đãi
+    - Cổ phần
+    - Cổ tức
+    - Cổ tức cố định
+    - Cổ tức thưởng
+    - Cổ đông
+    - Dead cat bounce
+    - Giao dịch trong ngày ( day trading )
+    - Giá Cao nhất - High Price
+    - Giá khớp lệnh
+    - Giá mở cửa - Open Price
+    - Giá niêm yết
+    - Giá sàn
+    - Giá tham chiếu
+    - Giá thấp nhất - Low Price
+    - Giá trần
+    - Giá trị vốn hóa
+    - Giá đóng cửa
+    - HNX-Index
+    - Hệ số Beta
+    - Hệ số giá thị trường trên giá ghi sổ
+    - IPO
+    - Index
+    - Khối lượng giao dịch
+    - Kỹ thuật Hedging
+    - Lệnh ATC
+    - Lệnh giới hạn LO
+    - Lệnh điều kiện
+    - Mô hình CAPM
+    - Môi giới
+    - Mệnh giá
+    - Sàn giao dịch
+    - Sở giao dịch chứng khoán      
+    - Thanh khoản
+    - Thị giá
+    - Thị trường bò
+    - Thị trường gấu
+    - Tài khoản chứng khoán
+    - VN-Index
 
-- synonym: lạm phát
+- synonym: Bear trap
   examples: |
-    - sự mất giá tiền tệ
-    - tiền mất giá
-    - gia tăng giá trị hoàng hóa
+    - Bear trap
+    - bẫy giảm giá
 
-- synonym: call margin
+- synonym: Bull trap
   examples: |
-    - lệnh tăng kí quỹ
-    - call margin
+    - bẫy tăng giá
+
+- synonym: Cổ phiếu Blue Chip ( tiềm năng )
+  examples: |
+    - cổ phiếu tiềm năng
+    - tiềm năng
+
+- synonym: Cổ phiếu phổ thông ( cổ phiếu thường )
+  examples: |
+    - cổ phiếu phổ thông
+    - cổ phiếu thường
+
+- synonym: Giá thấp nhất - Low Price
+  examples: |
+    - Giá thấp nhất
+    - Low Price
+
+- synonym: Giá Cao nhất - High Price
+  examples: |
+    - Giá Cao nhất
+    - High Price
+
+- synonym: Giá mở cửa - Open Price
+  examples: |
+    - Giá mở cửa
+    - Open Price   
+
+- synonym: Giao dịch trong ngày ( day trading )
+  examples: |
+    - day trading
+    - Giao dịch trong ngày
 
 - intent: supply_contact_info 
   examples: |
