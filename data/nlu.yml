@@ -157,7 +157,7 @@ nlu:
     - [Xăng RON 95-III] [hôm qua](day)
     - [Mogas 95 ] [tăng hay giảm](compare)
     - [dầu hôi](name_fuel) bao nhiêu 1 lit
-    - [dầu lửa ](name_fuel) [hôm qua](day)
+    - [dầu lửa](name_fuel) [hôm qua](day)
     - [paraffin](name_fuel) bao nhiêu
     - giá [dầu gazole]?
     - giá [dầu diesel](name_fuel) [hôm qua](day)
@@ -551,13 +551,13 @@ nlu:
     - giá cà phê [Lâm Đòng](name_coffee) bao nhiêu
     - giá cà phê [Đắk Lăk](name_coffee) bao nhiêu
     - giá cà phê [Đắk Nông](name_coffee) bao nhiêu
-    - giá coffee [FOB (HCM)](name_coffee) bao nhiêu
+    - giá coffee [FOB](name_coffee) bao nhiêu
     - giá coffee [Gia Lai](name_coffee) bao nhiêu
     - giá coffee [Hồ Tiêu](name_coffee) bao nhiêu
     - giá coffee [Lâm Đòng](name_coffee) bao nhiêu
     - giá coffee [Đắk Lăk](name_coffee) bao nhiêu
     - giá coffee [Đắk Nông](name_coffee) bao nhiêu
-    - giá cà phê [FOB (HCM)](name_coffee) dao động bao nhiêu
+    - giá cà phê [FOB](name_coffee) dao động bao nhiêu
     - giá cà phê [Gia Lai](name_coffee) dao động bao nhiêu
     - giá cà phê [Hồ Tiêu](name_coffee) dao động bao nhiêu
     - giá cà phê [Lâm Đòng](name_coffee) dao động bao nhiêu
@@ -643,13 +643,13 @@ nlu:
 
 - lookup: Terms
   examples: |
-    - Bear trap (bẫy giá giảm)
+    - Bear trap
     - Biên độ giao động giá
-    - Bull trap (bẫy tăng giá)
+    - Bull trap
     - Công ty niêm yết
     - Cổ Phiếu
-    - Cổ phiếu Blue Chip ( tiềm năng )
-    - Cổ phiếu phổ thông ( cổ phiếu thường )
+    - Cổ phiếu Blue Chip
+    - Cổ phiếu phổ thông
     - Cổ phiếu ưu đãi
     - Cổ phần
     - Cổ tức
@@ -657,14 +657,14 @@ nlu:
     - Cổ tức thưởng
     - Cổ đông
     - Dead cat bounce
-    - Giao dịch trong ngày ( day trading )
-    - Giá Cao nhất - High Price
+    - Giao dịch trong ngày
+    - Giá Cao nhất
     - Giá khớp lệnh
-    - Giá mở cửa - Open Price
+    - Giá mở cửa
     - Giá niêm yết
     - Giá sàn
     - Giá tham chiếu
-    - Giá thấp nhất - Low Price
+    - Giá thấp nhất
     - Giá trần
     - Giá trị vốn hóa
     - Giá đóng cửa
@@ -699,32 +699,32 @@ nlu:
   examples: |
     - bẫy tăng giá
 
-- synonym: Cổ phiếu Blue Chip ( tiềm năng )
+- synonym: Cổ phiếu Blue Chip
   examples: |
     - cổ phiếu tiềm năng
     - tiềm năng
 
-- synonym: Cổ phiếu phổ thông ( cổ phiếu thường )
+- synonym: Cổ phiếu phổ thông
   examples: |
     - cổ phiếu phổ thông
     - cổ phiếu thường
 
-- synonym: Giá thấp nhất - Low Price
+- synonym: Giá thấp nhất
   examples: |
     - Giá thấp nhất
     - Low Price
 
-- synonym: Giá Cao nhất - High Price
+- synonym: Giá Cao nhất
   examples: |
     - Giá Cao nhất
     - High Price
 
-- synonym: Giá mở cửa - Open Price
+- synonym: Giá mở cửa
   examples: |
     - Giá mở cửa
     - Open Price   
 
-- synonym: Giao dịch trong ngày ( day trading )
+- synonym: Giao dịch trong ngày
   examples: |
     - day trading
     - Giao dịch trong ngày
