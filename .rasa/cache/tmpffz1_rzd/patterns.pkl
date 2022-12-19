@@ -1,0 +1,38 @@
+[
+  {
+    "name": "compare",
+    "pattern": "\\s{0,10}"
+  },
+  {
+    "name": "day",
+    "pattern": "\\s{0,10}"
+  },
+  {
+    "name": "how_much",
+    "pattern": "\\s{0,10}"
+  },
+  {
+    "name": "name",
+    "pattern": "\\s{0,10}"
+  },
+  {
+    "name": "name_Inflation",
+    "pattern": "\\s{0,10}"
+  },
+  {
+    "name": "name_food",
+    "pattern": "\\s{0,10}"
+  },
+  {
+    "name": "name_jenewry",
+    "pattern": "\\s{0,10}"
+  },
+  {
+    "name": "name_money",
+    "pattern": "\\s{0,10}"
+  },
+  {
+    "name": "name_money",
+    "pattern": "(\\bAUD\\b|\\bCAD\\b|\\bCHF\\b|\\bDKK\\b|\\bEUR\\b|\\bGBP\\b|\\bHKD\\b|\\bINR\\b|\\bJPY\\b|\\bKRW\\b|\\bKWD\\b|\\bMYR\\b|\\bNOK\\b|\\bRUB\\b|\\bSEK\\b|\\bSGD\\b|\\bTHB\\b|\\bUSD\\b)"
+  }
+]
