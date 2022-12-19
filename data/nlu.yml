@@ -539,13 +539,13 @@ nlu:
     - giá coffee [Lâm Đòng](name_coffee)
     - giá coffee [Đắk Lăk](name_coffee)
     - giá coffee [Đắk Nông](name_coffee)
-    - giá cà phê [FOB (HCM)](name_coffee)
+    - giá cà phê [FOB](name_coffee)
     - giá cà phê [Gia Lai](name_coffee)
     - giá cà phê [Hồ Tiêu](name_coffee)
     - giá cà phê [Lâm Đòng](name_coffee)
     - giá cà phê [Đắk Lăk](name_coffee)
     - giá cà phê [Đắk Nông](name_coffee)
-    - giá cà phê [FOB (HCM)](name_coffee) bao nhiêu
+    - giá cà phê [FOB](name_coffee) bao nhiêu
     - giá cà phê [Gia Lai](name_coffee) bao nhiêu
     - giá cà phê [Hồ Tiêu](name_coffee) bao nhiêu
     - giá cà phê [Lâm Đòng](name_coffee) bao nhiêu
@@ -563,7 +563,7 @@ nlu:
     - giá cà phê [Lâm Đòng](name_coffee) dao động bao nhiêu
     - giá cà phê [Đắk Lăk](name_coffee) dao động bao nhiêu
     - giá cà phê [Đắk Nông](name_coffee) dao động bao nhiêu
-    - giá coffee [FOB (HCM)](name_coffee) dao động bao nhiêu
+    - giá coffee [FOB](name_coffee) dao động bao nhiêu
     - giá coffee [Gia Lai](name_coffee) dao động bao nhiêu
     - giá coffee [Hồ Tiêu](name_coffee) dao động bao nhiêu
     - giá coffee [Lâm Đòng](name_coffee) dao động bao nhiêu
