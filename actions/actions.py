@@ -11,7 +11,11 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+<<<<<<< HEAD
 from database import getdata
+=======
+
+>>>>>>> fd6c0e700ac322bf9468b37102a426b9c89db34c
 
 
 class ActionFuelPrice(Action):
