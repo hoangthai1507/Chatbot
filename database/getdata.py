@@ -1,7 +1,8 @@
 from firebase import firebase
+import datetime
 from datetime import date
 
-
+yesterday = datetime.date.fromordinal(datetime.date.today().toordinal() - 1)
 today = date.today()
 Firebase = firebase.FirebaseApplication(
     "https://chatbot-b8f03-default-rtdb.firebaseio.com/", None
@@ -52,10 +53,13 @@ def get_terms(name):  # truyen vao ten cua thuat ngu can phan tich
 
 
 def get_list_term(name):
+    terms_list = []
     terms = Firebase.get("TERMS", None)
     for i in terms:
         if terms.get(f"{i}").get("type") == name:
-            print(terms.get(f"{i}").get("terms"))
+            terms_list.append(terms.get(f"{i}").get("terms"))
+
+    return terms_list
 
 
-print(get_list_term(input("name: ")))
+# print(get_list_term(input("name: ")))

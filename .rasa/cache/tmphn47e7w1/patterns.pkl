@@ -1,0 +1,26 @@
+[
+  {
+    "name": "name_fuel",
+    "pattern": "(\\bDầu\\ diesel\\b|\\bDầu\\ hỏa\\b|\\bXăng\\ E5\\ RON\\ 92\\-II\\b|\\bXăng\\ RON\\ 95\\-III\\b)"
+  },
+  {
+    "name": "name_jenewry",
+    "pattern": "(\\bDOJI\\ HN\\b|\\bDOJI\\ SG\\b|\\bPhú\\ Quý\\ SJC\\b|\\bSJC\\ Hà\\ Nội\\b|\\bSJC\\ TP\\ HCM\\b|\\bSJC\\ Đà\\ Nẵng\\b|\\bVIETINBANK\\ GOLD\\b)"
+  },
+  {
+    "name": "status",
+    "pattern": "(\\bmua\\b|\\bbán\\b)"
+  },
+  {
+    "name": "name_money",
+    "pattern": "(\\bAUD\\b|\\bCAD\\b|\\bCHF\\b|\\bDKK\\b|\\bEUR\\b|\\bGBP\\b|\\bHKD\\b|\\bINR\\b|\\bJPY\\b|\\bKRW\\b|\\bKWD\\b|\\bMYR\\b|\\bNOK\\b|\\bRUB\\b|\\bSEK\\b|\\bSGD\\b|\\bTHB\\b|\\bUSD\\b)"
+  },
+  {
+    "name": "name_coffee",
+    "pattern": "(\\bFOB\\b|\\bGia\\ Lai\\b|\\bHồ\\ Tiêu\\b|\\bLâm\\ Đồng\\b|\\bĐắk\\ Lăk\\b|\\bĐắk\\ Nông\\b)"
+  },
+  {
+    "name": "Terms",
+    "pattern": "(\\bBear\\ trap\\b|\\bBiên\\ độ\\ giao\\ động\\ giá\\b|\\bBull\\ trap\\b|\\bCông\\ ty\\ niêm\\ yết\\b|\\bCổ\\ Phiếu\\b|\\bCổ\\ phiếu\\ Blue\\ Chip\\b|\\bCổ\\ phiếu\\ phổ\\ thông\\b|\\bCổ\\ phiếu\\ ưu\\ đãi\\b|\\bCổ\\ phần\\b|\\bCổ\\ tức\\b|\\bCổ\\ tức\\ cố\\ định\\b|\\bCổ\\ tức\\ thưởng\\b|\\bCổ\\ đông\\b|\\bDead\\ cat\\ bounce\\b|\\bGiao\\ dịch\\ trong\\ ngày\\b|\\bGiá\\ Cao\\ nhất\\b|\\bGiá\\ khớp\\ lệnh\\b|\\bGiá\\ mở\\ cửa\\b|\\bGiá\\ niêm\\ yết\\b|\\bGiá\\ sàn\\b|\\bGiá\\ tham\\ chiếu\\b|\\bGiá\\ thấp\\ nhất\\b|\\bGiá\\ trần\\b|\\bGiá\\ trị\\ vốn\\ hóa\\b|\\bGiá\\ đóng\\ cửa\\b|\\bHNX\\-Index\\b|\\bHệ\\ số\\ Beta\\b|\\bHệ\\ số\\ giá\\ thị\\ trường\\ trên\\ giá\\ ghi\\ sổ\\b|\\bIPO\\b|\\bIndex\\b|\\bKhối\\ lượng\\ giao\\ dịch\\b|\\bKỹ\\ thuật\\ Hedging\\b|\\bLệnh\\ ATC\\b|\\bLệnh\\ giới\\ hạn\\ LO\\b|\\bLệnh\\ điều\\ kiện\\b|\\bMô\\ hình\\ CAPM\\b|\\bMôi\\ giới\\b|\\bMệnh\\ giá\\b|\\bSàn\\ giao\\ dịch\\b|\\bSở\\ giao\\ dịch\\ chứng\\ khoán\\b|\\bThanh\\ khoản\\b|\\bThị\\ giá\\b|\\bThị\\ trường\\ bò\\b|\\bThị\\ trường\\ gấu\\b|\\bTài\\ khoản\\ chứng\\ khoán\\b|\\bVN\\-Index\\b)"
+  }
+]

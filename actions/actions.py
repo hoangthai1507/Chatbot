@@ -11,17 +11,19 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-
+from database import getdata
 
 
 class ActionFuelPrice(Action):
-
     def name(self) -> Text:
         return "action_fuel_price"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
         entity = next(tracker.get_latest_entity_values("name_fuel"), None)
         entity_list = ["Xăng RON 95-III", "Xăng E5 RON 92-II", "Dầu diesel", "Dầu hỏa"]
         # price = getdata.getdata(0, "gas")
@@ -41,14 +43,14 @@ class ActionFuelPrice(Action):
 
 
 class ActionGold(Action):
-
     def name(self) -> Text:
         return "action_jenewry_price"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
 
-
-        
         dispatcher.utter_message(text=f"vang 5 trieu")
