@@ -590,7 +590,7 @@ nlu:
 - synonym: FOB
   examples: |
     - FOB
-    - FOB (HCM)
+    - FOB HCM
 
 
 - intent: Terms
