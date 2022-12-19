@@ -11,5 +11,8 @@ def get_today():
 
 def get_yesterday():
     today = date.today()
-    yesterday = today - timedelta(days = 1)
-    return yesterday
+    yesterday = today - timedelta(days=1)
+    return yesterday.strftime("%Y-%m-%d")
+
+
+
