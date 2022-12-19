@@ -169,7 +169,7 @@ nlu:
     - [Xăng RON 95-II] [hôm qua](day)
     - [Xăng RON 95-IV ] [tăng hay giảm](compare)
     - [Dầu hỏa](name_fuel) bao nhiêu 1 lit
-    - [dầu kêrôsin ](name_fuel) [hôm qua](day)
+    - [dầu kêrôsin](name_fuel) [hôm qua](day)
     - [dầu KO](name_fuel) bao nhiêu
     - giá [DO]?
     - giá [DO 0,25%S](name_fuel) [hôm qua](day)
@@ -533,7 +533,7 @@ nlu:
 
 - intent: Coffee_price
   examples: |
-    - giá coffee [FOB (HCM)](name_coffee)
+    - giá coffee [FOB](name_coffee)
     - giá coffee [Gia Lai](name_coffee)
     - giá coffee [Hồ Tiêu](name_coffee)
     - giá coffee [Lâm Đòng](name_coffee)
@@ -572,7 +572,7 @@ nlu:
 
 - lookup: name_coffee
   examples: |
-    - FOB (HCM)
+    - FOB
     - Gia Lai
     - Hồ Tiêu
     - Lâm Đồng
@@ -587,18 +587,23 @@ nlu:
   examples: |
     - Dak Nông
 
+- synonym: FOB
+  examples: |
+    - FOB
+    - FOB (HCM)
+
 
 - intent: Terms
   examples: |
-    - [Bear trap (bẫy giá giảm)](Terms) là gì
+    - [Bear trap](Terms) là gì
     - như thế nào là [Biên độ giao động giá](Terms)
-    - [Bull trap (bẫy tăng giá)](Terms)?
+    - [Bull trap](Terms)?
     - [Công ty niêm yết](Terms) là gì
     - [Cổ Phiếu](Terms) là gì
     - [Cổ phiếu Blue Chip](Terms) là gì
     - [Cổ phiếu phổ thông](Terms) là gì
-    - [Cổ phiếu Blue Chip ( tiềm năng )](Terms) là gì
-    - [Cổ phiếu phổ thông ( cổ phiếu thường )](Terms) là gì
+    - [Cổ phiếu Blue Chip](Terms) là gì
+    - [Cổ phiếu phổ thông](Terms) là gì
     - [Cổ phiếu ưu đãi](Terms) là gì
     - [Cổ phần](Terms) là gì
     - [Cổ tức](Terms) xảy ra khi nào
