@@ -11,11 +11,9 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-<<<<<<< HEAD
-from database import getdata
-=======
 
->>>>>>> fd6c0e700ac322bf9468b37102a426b9c89db34c
+from database import getdata
+from database import getdate
 
 
 class ActionFuelPrice(Action):
@@ -23,27 +21,44 @@ class ActionFuelPrice(Action):
         return "action_fuel_price"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        entity = next(tracker.get_latest_entity_values("name_fuel"), None)
-        entity_list = ["Xăng RON 95-III", "Xăng E5 RON 92-II", "Dầu diesel", "Dầu hỏa"]
-        # price = getdata.getdata(0, "gas")
-        # t = "price"
-        # if entity in entity_list:
-        #     msg = f"giá {entity} hôm nay là {price[entity].get(t)} vnd"
-        #     dispatcher.utter_message(text=msg)
-        # elif "xăng" in entity:
-        #     msg = f"giá {entity_list[0]} hôm nay là {price[entity_list[0]].get(t)} vnd còn {entity_list[1]} hôm nay là {price[entity_list[1]].get(t)} vnd"
-        #     dispatcher.utter_message(text=msg)
-        # elif "dầu" in entity:
-        #     msg = f"giá {entity_list[2]} hôm nay là {price[entity_list[2]].get(t)} vnd còn {entity_list[3]} hôm nay là {price[entity_list[3]].get(t)} vnd"
-        #     dispatcher.utter_message(text=msg)
-        # else:
-        #     dispatcher.utter_message(text=f"{price}")
-        dispatcher.utter_message(text=f"xang 5 trieu")
+        name_fuel = next(tracker.get_latest_entity_values("name_fuel"), None)
+        day = next(tracker.get_latest_entity_values("day"), None)
+        price = ""
+        if day == "hôm qua":
+            date = getdate.get_yesterday()
+        else:
+            date = getdate.get_today()
+            day = "hôm nay"
+
+        try:
+            price = getdata.get_price("gas", name_fuel, date, "price")
+        except:
+            print("name fuel :" + name_fuel)
+
+        if price:
+            msg = f"giá {name_fuel} {day} là {price} vnd"
+            dispatcher.utter_message(text=msg)
+
+        elif "xăng" in tracker.latest_message['text']:
+            price = getdata.get_price("gas", "Xăng RON 95-III", date, "price")
+            msg = f"giá Xăng RON 95-III {day} là {price} vnd còn "
+            price = getdata.get_price("gas", "Xăng E5 RON 92-II", date, "price")
+            msg += f"giá Xăng E5 RON 92-II {day} là {price} vnd"
+            dispatcher.utter_message(text=f"{msg}")
+
+        elif "dầu" in tracker.latest_message['text']:
+            price = getdata.get_price("gas", "Dầu hỏa", date, "price")
+            msg = f"giá Dầu hỏa {day} là {price} vnd còn "
+            price = getdata.get_price("gas", "Dầu diesel", date, "price")
+            msg += f"giá Dầu diesel {day} là {price} vnd "
+            dispatcher.utter_message(text=f"{msg}")
+        else:
+            dispatcher.utter_message(text=f"{tracker.latest_message['text']}")
 
 
 class ActionGold(Action):
@@ -51,10 +66,9 @@ class ActionGold(Action):
         return "action_jenewry_price"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-
         dispatcher.utter_message(text=f"vang 5 trieu")

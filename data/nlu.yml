@@ -175,16 +175,16 @@ nlu:
     - giá [DO 0,25%S](name_fuel) [hôm qua](day)
     - [DO 0,005%S](name_fuel) [tăng hay giảm](compare)
 
-- lookup: name_fuel
-  examples: |
-    - Dầu diesel
-    - Dầu hỏa
-    - Xăng E5 RON 92-II
-    - Xăng RON 95-III
+#- lookup: name_fuel
+#  examples: |
+#    - Dầu diesel
+#    - Dầu hỏa
+#    - Xăng E5 RON 92-II
+#    - Xăng RON 95-III
 
 - synonym: Dầu diesel
   examples: |
-    - Dầu diesel
+    - dầu diesel
     - dầu gazole 
     - DO
     - dầu DO
@@ -202,7 +202,7 @@ nlu:
     - paraffin 
     - paraffin oil 
     - dầu hôi
-    - Dầu hỏa
+    - dầu hỏa
 
 - synonym: Xăng E5 RON 92-II
   examples: |
@@ -222,6 +222,8 @@ nlu:
     - Xăng RON 95-IV
     - A95 
     - Mogas 95 
+    - xăng
+    - xăng ron
 
 - intent: jenewry_price
   examples: |
