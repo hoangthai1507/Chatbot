@@ -66,10 +66,15 @@ def get_list_term(name):
 
 
 # print(get_list_term(input("name: ")))
+def get_list_term(name):
+    terms_list = []
     terms = Firebase.get("TERMS", None)
     for i in terms:
         if terms.get(f"{i}").get("type") == name:
-            print(terms.get(f"{i}").get("terms"))
+            terms_list.append(terms.get(f"{i}").get("terms"))
+
+    return terms_list
+
 
 
 print(get_list_term(input("name: ")))
