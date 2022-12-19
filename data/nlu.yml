@@ -103,38 +103,38 @@ nlu:
     - hay
 
 
-
-- regex: name_jenewry
-  examples: |
-    - \s{0,10}
-
-- regex: name_money
-  examples: |
-    - \s{0,10}
-
-- regex: name_food
-  examples: |
-    - \s{0,10}
-
-- regex: name_Inflation
-  examples: |
-    - \s{0,10}
-
-- regex: name
-  examples: |
-    - \s{0,10}
-
-- regex: day
-  examples: |
-    - \s{0,10}
-
-- regex: how_much
-  examples: |
-    - \s{0,10}
-
-- regex: compare
-  examples: |
-    - \s{0,10}
+#
+#- regex: name_jenewry
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: name_money
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: name_food
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: name_Terms
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: name
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: day
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: how_much
+#  examples: |
+#    - \s{0,10}
+#
+#- regex: compare
+#  examples: |
+#    - \s{0,10}
 
 - intent: fuel_price
   examples: |
@@ -147,22 +147,233 @@ nlu:
     - [dầu hoả](name_fuel) bao nhiêu 1 lit
     - [dầu hoả](name_fuel) [hôm nay](day)
     - [dầu hoả](name_fuel) bao nhiêu
-    - giá [dầu điezen]{"entity": "name_fuel", "value": "dầu diesel"}?
+    - giá [dầu diezen]{"entity": "name_fuel", "value": "dầu diesel"}?
     - giá [dầu diesel](name_fuel) [hôm nay](day)
     - [dầu diesel](name_fuel) [tăng hay giảm](compare)
+    - giá [xăng e5] [hôm qua](day)
+    - [Xăng sinh học] [hôm qua](day) bao nhiêu
+    - giá [RON92 E5] [tăng hay giảm](compare)
+    - [A95] bao nhiêu 1 lít
+    - [Xăng RON 95-III] [hôm qua](day)
+    - [Mogas 95 ] [tăng hay giảm](compare)
+    - [dầu hôi](name_fuel) bao nhiêu 1 lit
+    - [dầu lửa](name_fuel) [hôm qua](day)
+    - [paraffin](name_fuel) bao nhiêu
+    - giá [dầu gazole]?
+    - giá [dầu diesel](name_fuel) [hôm qua](day)
+    - [dầu DO](name_fuel) [tăng hay giảm](compare)
+    - giá [RON92 E5] [hôm qua](day)
+    - [RON92] [hôm qua](day) bao nhiêu
+    - giá [Ex] [tăng hay giảm](compare)
+    - [A95] bao nhiêu 1 lít
+    - [Xăng RON 95-II] [hôm qua](day)
+    - [Xăng RON 95-IV ] [tăng hay giảm](compare)
+    - [Dầu hỏa](name_fuel) bao nhiêu 1 lit
+    - [dầu kêrôsin](name_fuel) [hôm qua](day)
+    - [dầu KO](name_fuel) bao nhiêu
+    - giá [DO]?
+    - giá [DO 0,25%S](name_fuel) [hôm qua](day)
+    - [DO 0,005%S](name_fuel) [tăng hay giảm](compare)
 
+- lookup: name_fuel
+  examples: |
+    - Dầu diesel
+    - Dầu hỏa
+    - Xăng E5 RON 92-II
+    - Xăng RON 95-III
+
+- synonym: Dầu diesel
+  examples: |
+    - Dầu diesel
+    - dầu gazole 
+    - DO
+    - dầu DO
+    - DO 0,25%S
+    - DO 0,005%S
+
+- synonym: Dầu hỏa
+  examples: |
+    - dầu lửa 
+    - KO 
+    - dầu kêrôsin
+    - dầu KO 
+    - coal oil
+    - kerosene 
+    - paraffin 
+    - paraffin oil 
+    - dầu hôi
+    - Dầu hỏa
+
+- synonym: Xăng E5 RON 92-II
+  examples: |
+    - Xăng sinh học
+    - Ex
+    - E5 RON 92
+    - RON92 E5
+    - RON92 
+    - Xăng sinh học E5
+
+- synonym: Xăng RON 95-III
+  examples: |
+    - Xăng RON 95-II
+    - Xăng RON 95-III
+    - Xăng Ron 95
+    - Xăng RON 95-V
+    - Xăng RON 95-IV
+    - A95 
+    - Mogas 95 
 
 - intent: jenewry_price
   examples: |
-    - giá [vàng](name_jenewry) [hôm nay](day)
-    - [vàng](name_jenewry) [hôm nay](day) bao nhiêu
-    - [vàng](name_jenewry) thu lại bao nhiêu
-    - giá [kim cương](name_jenewry) [hôm nay](day)
-    - [kim cương](name_jenewry) [hôm nay](day) bao nhiêu
-    - [kim cương](name_jenewry) thu lại bao nhiêu
-    - giá [bạc](name_jenewry) [hôm nay](day)
-    - [bạc](name_jenewry) [hôm nay](day) bao nhiêu
-    - [hột xoàn](name_jenewry) thu lại bao nhiêu
+    - giá [mua](status) [DOJI HN](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [DOJI SG](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [Phú Quý SJC](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [SJC Hà Nội](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [SJC TP HCM](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [DOJI HN](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [DOJI SG](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [Phú Quý SJC](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [SJC Hà Nội](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [SJC TP HCM](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [DOJI HN](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [DOJI SG](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [Phú Quý SJC](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [SJC Hà Nội](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [SJC TP HCM](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [DOJI HN](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [DOJI SG](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [Phú Quý SJC](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [SJC Hà Nội](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [SJC TP HCM](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day)
+    - [mua](status) [DOJI HN](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [DOJI SG](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [Phú Quý SJC](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [SJC Hà Nội](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [SJC TP HCM](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [DOJI HN](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [DOJI SG](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [Phú Quý SJC](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [SJC Hà Nội](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [SJC TP HCM](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [DOJI HN](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [DOJI SG](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [Phú Quý SJC](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [SJC Hà Nội](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [SJC TP HCM](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [DOJI HN](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [DOJI SG](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [Phú Quý SJC](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [SJC Hà Nội](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [SJC TP HCM](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day) bao nhiêu
+    - [DOJI HN](name_jenewry) [thu lại](status) bao nhiêu
+    - [DOJI SG](name_jenewry) [thu lại](status) bao nhiêu
+    - [Phú Quý SJC](name_jenewry) [thu lại](status) bao nhiêu
+    - [SJC Hà Nội](name_jenewry) [thu lại](status) bao nhiêu
+    - [SJC TP HCM](name_jenewry) [thu lại](status) bao nhiêu
+    - [SJC Đà Nẵng](name_jenewry) [thu lại](status) bao nhiêu
+    - [VIETINBANK GOLD](name_jenewry) [thu lại](status) bao nhiêu
+    - [DOJI HN](name_jenewry) [mua lại](status) bao nhiêu
+    - [DOJI SG](name_jenewry) [mua lại](status) bao nhiêu
+    - [Phú Quý SJC](name_jenewry) [mua lại](status) bao nhiêu
+    - [SJC Hà Nội](name_jenewry) [mua lại](status) bao nhiêu
+    - [SJC TP HCM](name_jenewry) [mua lại](status) bao nhiêu
+    - [SJC Đà Nẵng](name_jenewry) [mua lại](status) bao nhiêu
+    - [VIETINBANK GOLD](name_jenewry) [mua lại](status) bao nhiêu
+- lookup: name_jenewry
+  examples: |
+    - DOJI HN
+    - DOJI SG
+    - Phú Quý SJC
+    - SJC Hà Nội
+    - SJC TP HCM
+    - SJC Đà Nẵng
+    - VIETINBANK GOLD
+- synonym: DOJI HN
+  examples: |
+    - DOJI Hà Nội
+    - DOJI TP Hà Nội
+    - DOJI Thành Phố Hà Nội
+    - DOJI Thành Phố HN
+    - DOJI TP HN
+    - DOJI Thủ Đô Hà nội
+    - DOJI TĐ HN
+    - DOJI TD HN
+    - DOJI Thủ Đô HN
+    - DOJI TĐ Hà Nội
+    - DOJI TD Hà Nội
+    - DOJI_HN
+    - Vàng DOJI HN
+    - Vàng DOJI_HN
+    - Vàng DOJI Hà Nội
+- synonym: DOJI SG
+  examples: |
+    - DOJI Sài Gòn
+    - Vàng DOJI SG
+    - Vàng DOJI_SG
+    - Vàng DOJI Sài Gòn
+- synonym: Phú Quý SJC
+  examples: |
+    - Vàng Miếng SJC
+    - Vàng SJC
+    - SJC
+- synonym: SJC Hà Nội
+  examples: |
+    - Vàng SJC Hà Nội
+    - Vàng SJC HN
+    - SJC HN
+- synonym: SJC TP HCM
+  examples: |
+    - Vàng SJC TP Hồ Chí Minh
+    - Vàng SJC HCM
+    - Vàng SJC Thành Phố Hồ Chí Minh
+    - Vàng SJC Thành Phố HCM
+    - SJC HCM
+    - SJC Thành Phố Hồ Chí Minh
+    - SJC Thành Phố HCM
+- synonym: SJC Đà Nẵng
+  examples: |
+    - Vàng SJC TP Đà Nẵng
+    - Vàng SJC ĐN
+    - Vàng SJC DN
+    - Vàng SJC Thành Phố Đà Nẵng
+    - Vàng SJC Thành Phố ĐN
+    - Vàng SJC Thành Phố DN
+    - SJC ĐN
+    - SJC DN
+    - SJC Thành Phố Đà Nẵng
+    - SJC Thành Phố ĐN
+    - SJC Thành Phố DN
+- synonym: VIETINBANK GOLD
+  examples: |
+    - Vàng Miếng SJC 999.9
+    - Vàng Miếng SJC VIETINBANK GOLD
+    - Vàng Miếng VIETINBANK GOLD
+    - Vàng SJC VIETINBANK GOLD
+    - Vàng VIETINBANK GOLD
+    - Vàng 999.9
+    - SJC VIETINBANK GOLD
+    - SJC 999.9
+- lookup: status
+  examples: |
+    - mua
+    - bán
+
 
 - intent: money_price
   examples: |
@@ -172,7 +383,33 @@ nlu:
     - [đô úc](name_money) [hôm nay](day) bao nhiêu
     - giá [đô úc](name_money) [hôm nay](day)
     - [đô úc](name_money) mua vào bao nhiêu
-
+    - [đô mỹ](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô mỹ](name_money) [hôm qua](day)
+    - [đô la mỹ](name_money) mua vào bao nhiêu
+    - [đô úc](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô úc](name_money) [hôm qua](day)
+    - [đô la mỹ](name_money) mua vào bao nhiêu
+    - [aud](name_money) [hôm nay](day) bao nhiêu
+    - giá [CAD](name_money) [hôm nay](day)
+    - [đô thụy sĩ](name_money) [hôm nay](day) bao nhiêu
+    - giá [chf](name_money) [hôm nay](day)
+    - [đô đan mạch](name_money) [hôm nay](day) bao nhiêu
+    - giá [dkk](name_money) [hôm nay](day)
+    - [bảng anh](name_money) [hôm nay](day) bao nhiêu
+    - giá [penny](name_money) [hôm nay](day)
+    - [đô la hong kong](name_money) [hôm nay](day) bao nhiêu
+    - giá [hong kong dollar](name_money) [hôm nay](day)
+    - [jpy](name_money) [hôm nay](day) bao nhiêu
+    - giá [yên](name_money) [hôm nay](day)
+    - [krw](name_money) [hôm nay](day) bao nhiêu
+    - giá [won](name_money) [hôm nay](day)
+    - [KWD](name_money) [hôm nay](day) bao nhiêu
+    - giá [MYR](name_money) [hôm nay](day)
+    - [NOK](name_money) [hôm nay](day) bao nhiêu
+    - giá [RUB](name_money) [hôm nay](day)
+    - [SEK](name_money) [hôm qua](day) bao nhiêu
+    - giá [SGD](name_money) [hôm qua](day)
+    - [THB](name_money) [hôm qua](day) bao nhiêu
 
 - lookup: name_money
   examples: |
@@ -217,7 +454,6 @@ nlu:
     - C$
     - $C
 
-
 - synonym: CHF
   examples: |
     - chf
@@ -227,16 +463,6 @@ nlu:
     - dollar thụy sĩ
     - thụy sĩ dollar
 
-
-- synonym: CHF
-  examples: |
-    - đô thụy sĩ
-    - tiền thụy sĩ
-    - thụy sĩ đô
-    - dollar thụy sĩ
-    - thụy sĩ dollar
-
-
 - synonym: DKK
   examples: |
     - dkk
@@ -245,7 +471,6 @@ nlu:
     - đan mạch đô
     - dollar đan mạch
     - đan mạch dollar
-
 
 - synonym: EUR
   examples: |
@@ -258,7 +483,6 @@ nlu:
     - euro dollar
     - âu kim
 
-
 - synonym: GBP
   examples: |
     - gbp
@@ -268,7 +492,6 @@ nlu:
     - tiền đô nước anh
     - bảng anh đô
     - dollar nước anh 
-    - euro dollar
     - pound
     - pence
     - penny
@@ -289,7 +512,7 @@ nlu:
     - jpy
     - tiền nhật
     - yên
-    - yên nhật                                   v
+    - yên nhật                                 
 
 - synonym: KRW
   examples: |
@@ -308,33 +531,204 @@ nlu:
     - dollar mỹ 
     - usd dollar
 
-- intent: food_price
+- intent: Coffee_price
   examples: |
-    - giá [thịt heo](name_food) [hôm nay](day)
-    - bao nhiêu 1 kg [thịt heo](name_food)
-    - giá [thịt heo](name_food)
-    - giá [thịt heo](name_food) dao động [hôm nay](day)
-    - [thịt heo](name_food)?
-    - giá [thịt bò](name_food) bao nhiêu
-    - bao nhiêu 1 kg [thịt bò](name_food)
-    - giá [thịt bò](name_food) dao động bao nhiêu
-    - giá [thịt vịt](name_food) bao nhiêu
-    - bao nhiêu 1 [con vịt](name_food)
-    - giá [thịt vịt](name_food) dao động bao nhiêu
-    - 1 [con vịt](name_food) bao nhiêu
+    - giá coffee [FOB](name_coffee)
+    - giá coffee [Gia Lai](name_coffee)
+    - giá coffee [Hồ Tiêu](name_coffee)
+    - giá coffee [Lâm Đòng](name_coffee)
+    - giá coffee [Đắk Lăk](name_coffee)
+    - giá coffee [Đắk Nông](name_coffee)
+    - giá cà phê [FOB](name_coffee)
+    - giá cà phê [Gia Lai](name_coffee)
+    - giá cà phê [Hồ Tiêu](name_coffee)
+    - giá cà phê [Lâm Đòng](name_coffee)
+    - giá cà phê [Đắk Lăk](name_coffee)
+    - giá cà phê [Đắk Nông](name_coffee)
+    - giá cà phê [FOB](name_coffee) bao nhiêu
+    - giá cà phê [Gia Lai](name_coffee) bao nhiêu
+    - giá cà phê [Hồ Tiêu](name_coffee) bao nhiêu
+    - giá cà phê [Lâm Đòng](name_coffee) bao nhiêu
+    - giá cà phê [Đắk Lăk](name_coffee) bao nhiêu
+    - giá cà phê [Đắk Nông](name_coffee) bao nhiêu
+    - giá coffee [FOB](name_coffee) bao nhiêu
+    - giá coffee [Gia Lai](name_coffee) bao nhiêu
+    - giá coffee [Hồ Tiêu](name_coffee) bao nhiêu
+    - giá coffee [Lâm Đòng](name_coffee) bao nhiêu
+    - giá coffee [Đắk Lăk](name_coffee) bao nhiêu
+    - giá coffee [Đắk Nông](name_coffee) bao nhiêu
+    - giá cà phê [FOB](name_coffee) dao động bao nhiêu
+    - giá cà phê [Gia Lai](name_coffee) dao động bao nhiêu
+    - giá cà phê [Hồ Tiêu](name_coffee) dao động bao nhiêu
+    - giá cà phê [Lâm Đòng](name_coffee) dao động bao nhiêu
+    - giá cà phê [Đắk Lăk](name_coffee) dao động bao nhiêu
+    - giá cà phê [Đắk Nông](name_coffee) dao động bao nhiêu
+    - giá coffee [FOB](name_coffee) dao động bao nhiêu
+    - giá coffee [Gia Lai](name_coffee) dao động bao nhiêu
+    - giá coffee [Hồ Tiêu](name_coffee) dao động bao nhiêu
+    - giá coffee [Lâm Đòng](name_coffee) dao động bao nhiêu
+    - giá coffee [Đắk Lăk](name_coffee) dao động bao nhiêu
+    - giá coffee [Đắk Nông](name_coffee) dao động bao nhiêu
 
-- intent: Inflation
+- lookup: name_coffee
   examples: |
-    - [lạm phát](name_Inflation) là gì
-    - như thế nào là [lạm phát](Inflation)
-    - [lạm phát](Inflation)?
-    - [call margin](Inflation) là gì
-    - [Appreciation](Inflation) là gì
-    - [Barter](Inflation) là gì
-    - [Bond](Inflation) là gì
-    - [Equity](Inflation) là gì
-    - [Market share](Inflation) là gì
-    
+    - FOB
+    - Gia Lai
+    - Hồ Tiêu
+    - Lâm Đồng
+    - Đắk Lăk
+    - Đắk Nông
+
+- synonym: Đắk Lăk
+  examples: |
+    - Dak Lak
+
+- synonym: Đắk Nông
+  examples: |
+    - Dak Nông
+
+- synonym: FOB
+  examples: |
+    - FOB
+    - FOB HCM
+
+
+- intent: Terms
+  examples: |
+    - [Bear trap](Terms) là gì
+    - như thế nào là [Biên độ giao động giá](Terms)
+    - [Bull trap](Terms)?
+    - [Công ty niêm yết](Terms) là gì
+    - [Cổ Phiếu](Terms) là gì
+    - [Cổ phiếu Blue Chip](Terms) là gì
+    - [Cổ phiếu phổ thông](Terms) là gì
+    - [Cổ phiếu Blue Chip](Terms) là gì
+    - [Cổ phiếu phổ thông](Terms) là gì
+    - [Cổ phiếu ưu đãi](Terms) là gì
+    - [Cổ phần](Terms) là gì
+    - [Cổ tức](Terms) xảy ra khi nào
+    - như thế nào mới được gọi là [Cổ tức cố định](Terms)
+    - [Cổ đông](Terms) xảy ra như thế nào?
+    - [Dead cat bounce](Terms) là thuật ngữ nói về gì
+    - [Giao dịch trong ngày](Terms) nói cái gì
+    - [Giá Cao nhất](Terms) được hiểu như thế nào
+    - như thế nào là [Giá khớp lệnh](Terms) 
+    - [Giá mở cửa](Terms) xảy ra khi nào
+    - [Giá niêm yết](Terms) diễn ra như thế nào
+    - [Giá sàn](Terms) là gì
+    - như thế nào là [Sàn giao dịch](Terms)
+    - [Mệnh giá](Terms)?
+    - [Môi giới](Terms) là gì
+    - [Mô hình CAPM](Terms) là gì
+    - [Lệnh điều kiện](Terms) là gì
+    - [Lệnh giới hạn LO](Terms) là gì
+    - [Lệnh ATC](Terms) là gì
+    - [Kỹ thuật Hedging](Terms) là gì
+    - [Khối lượng giao dịch](Terms) là gì
+    - [Giá trị vốn hóa](Terms) là gì
+    - [Thanh khoản](Terms) xảy ra khi nào
+    - như thế nào mới được gọi là [Giá tham chiếu](Terms)
+    - [Giá thấp nhất](Terms) xảy ra như thế nào?
+    - [IPO](Terms) là thuật ngữ nói về gì
+    - [Hệ số giá thị trường trên giá ghi sổ](Terms) nói cái gì
+    - [Hệ số Beta](Terms) được hiểu như thế nào
+    - như thế nào là [HNX-Index](Terms) 
+    - [HNX-Index](Terms) xảy ra khi nào
+    - [Giá đóng cửa](Terms) diễn ra như thế nào
+    - [Thị giá](Terms) là gì
+    - như thế nào là [Thị trường bò](Terms)
+    - [Thị trường gấu](Terms)?
+    - [Tài khoản chứng khoán](Terms) là gì
+    - [VN-Index](Terms) là gì
+
+- lookup: Terms
+  examples: |
+    - Bear trap
+    - Biên độ giao động giá
+    - Bull trap
+    - Công ty niêm yết
+    - Cổ Phiếu
+    - Cổ phiếu Blue Chip
+    - Cổ phiếu phổ thông
+    - Cổ phiếu ưu đãi
+    - Cổ phần
+    - Cổ tức
+    - Cổ tức cố định
+    - Cổ tức thưởng
+    - Cổ đông
+    - Dead cat bounce
+    - Giao dịch trong ngày
+    - Giá Cao nhất
+    - Giá khớp lệnh
+    - Giá mở cửa
+    - Giá niêm yết
+    - Giá sàn
+    - Giá tham chiếu
+    - Giá thấp nhất
+    - Giá trần
+    - Giá trị vốn hóa
+    - Giá đóng cửa
+    - HNX-Index
+    - Hệ số Beta
+    - Hệ số giá thị trường trên giá ghi sổ
+    - IPO
+    - Index
+    - Khối lượng giao dịch
+    - Kỹ thuật Hedging
+    - Lệnh ATC
+    - Lệnh giới hạn LO
+    - Lệnh điều kiện
+    - Mô hình CAPM
+    - Môi giới
+    - Mệnh giá
+    - Sàn giao dịch
+    - Sở giao dịch chứng khoán      
+    - Thanh khoản
+    - Thị giá
+    - Thị trường bò
+    - Thị trường gấu
+    - Tài khoản chứng khoán
+    - VN-Index
+
+- synonym: Bear trap
+  examples: |
+    - Bear trap
+    - bẫy giảm giá
+
+- synonym: Bull trap
+  examples: |
+    - bẫy tăng giá
+
+- synonym: Cổ phiếu Blue Chip
+  examples: |
+    - cổ phiếu tiềm năng
+    - tiềm năng
+
+- synonym: Cổ phiếu phổ thông
+  examples: |
+    - cổ phiếu phổ thông
+    - cổ phiếu thường
+
+- synonym: Giá thấp nhất
+  examples: |
+    - Giá thấp nhất
+    - Low Price
+
+- synonym: Giá Cao nhất
+  examples: |
+    - Giá Cao nhất
+    - High Price
+
+- synonym: Giá mở cửa
+  examples: |
+    - Giá mở cửa
+    - Open Price   
+
+- synonym: Giao dịch trong ngày
+  examples: |
+    - day trading
+    - Giao dịch trong ngày
+
 - intent: supply_contact_info 
   examples: |
     - Tôi tên là [Thanh] (name). 
