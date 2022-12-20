@@ -372,10 +372,10 @@ nlu:
     - Vàng 999.9
     - SJC VIETINBANK GOLD
     - SJC 999.9
-- lookup: status
-  examples: |
-    - mua
-    - bán
+#- lookup: status
+#  examples: |
+#    - mua
+#    - bán
 
 
 - intent: money_price
@@ -624,136 +624,147 @@ nlu:
 
 - intent: Terms
   examples: |
-    - [Bear trap](Terms) là gì
-    - như thế nào là [Biên độ giao động giá](Terms)
-    - [Bull trap](Terms)?
-    - [Công ty niêm yết](Terms) là gì
-    - [Cổ Phiếu](Terms) là gì
-    - [Cổ phiếu Blue Chip](Terms) là gì
-    - [Cổ phiếu phổ thông](Terms) là gì
-    - [Cổ phiếu Blue Chip](Terms) là gì
-    - [Cổ phiếu phổ thông](Terms) là gì
-    - [Cổ phiếu ưu đãi](Terms) là gì
-    - [Cổ phần](Terms) là gì
-    - [Cổ tức](Terms) xảy ra khi nào
-    - như thế nào mới được gọi là [Cổ tức cố định](Terms)
-    - [Cổ đông](Terms) xảy ra như thế nào?
-    - [Dead cat bounce](Terms) là thuật ngữ nói về gì
-    - [Giao dịch trong ngày](Terms) nói cái gì
-    - [Giá Cao nhất](Terms) được hiểu như thế nào
-    - như thế nào là [Giá khớp lệnh](Terms) 
-    - [Giá mở cửa](Terms) xảy ra khi nào
-    - [Giá niêm yết](Terms) diễn ra như thế nào
-    - [Giá sàn](Terms) là gì
-    - như thế nào là [Sàn giao dịch](Terms)
-    - [Mệnh giá](Terms)?
-    - [Môi giới](Terms) là gì
-    - [Mô hình CAPM](Terms) là gì
-    - [Lệnh điều kiện](Terms) là gì
-    - [Lệnh giới hạn LO](Terms) là gì
-    - [Lệnh ATC](Terms) là gì
-    - [Kỹ thuật Hedging](Terms) là gì
-    - [Khối lượng giao dịch](Terms) là gì
-    - [Giá trị vốn hóa](Terms) là gì
-    - [Thanh khoản](Terms) xảy ra khi nào
-    - như thế nào mới được gọi là [Giá tham chiếu](Terms)
-    - [Giá thấp nhất](Terms) xảy ra như thế nào?
-    - [IPO](Terms) là thuật ngữ nói về gì
-    - [Hệ số giá thị trường trên giá ghi sổ](Terms) nói cái gì
-    - [Hệ số Beta](Terms) được hiểu như thế nào
-    - như thế nào là [HNX-Index](Terms) 
-    - [HNX-Index](Terms) xảy ra khi nào
-    - [Giá đóng cửa](Terms) diễn ra như thế nào
-    - [Thị giá](Terms) là gì
-    - như thế nào là [Thị trường bò](Terms)
-    - [Thị trường gấu](Terms)?
-    - [Tài khoản chứng khoán](Terms) là gì
-    - [VN-Index](Terms) là gì
+    - [bear trap](terms) là gì
+    - [bẫy giảm giá](terms) là gì
+    - như thế nào là [biên độ giao động giá](terms)
+    - [bull trap](terms)?
+    - [bẫy tăng giá](terms)?
+    - [công ty niêm yết](terms) là gì
+    - [cổ phiếu](terms) là gì
+    - [cổ phiếu blue chip](terms) là gì
+    - [cổ phiếu phổ thông](terms) là gì
+    - [cổ phiếu blue chip](terms) là gì
+    - [cổ phiếu tiềm năng](terms) là gì
+    - [cổ phiếu thường](terms) là gì
+    - [low price](terms) là gì
+    - [high price](terms) là gì
+    - [open price](terms) là gì
+    - [close price](terms) là gì
+    - [cổ phiếu phổ thông](terms) là gì
+    - [cổ phiếu ưu đãi](terms) là gì
+    - [cổ phần](terms) là gì
+    - [cổ tức](terms) xảy ra khi nào
+    - như thế nào mới được gọi là [cổ tức cố định](terms)
+    - [cổ đông](terms) xảy ra như thế nào?
+    - [dead cat bounce](terms) là thuật ngữ nói về gì
+    - [giao dịch trong ngày](terms) nói cái gì
+    - [giá cao nhất](terms) được hiểu như thế nào
+    - như thế nào là [giá khớp lệnh](terms)
+    - [giá mở cửa](terms) xảy ra khi nào
+    - [giá niêm yết](terms) diễn ra như thế nào
+    - [giá sàn](terms) là gì
+    - như thế nào là [sàn giao dịch](terms)
+    - [mệnh giá](terms)?
+    - [môi giới](terms) là gì
+    - [mô hình capm](terms) là gì
+    - [lệnh điều kiện](terms) là gì
+    - [lệnh giới hạn lo](terms) là gì
+    - [lệnh atc](terms) là gì
+    - [kỹ thuật hedging](terms) là gì
+    - [khối lượng giao dịch](terms) là gì
+    - [giá trị vốn hóa](terms) là gì
+    - [thanh khoản](terms) xảy ra khi nào
+    - như thế nào mới được gọi là [giá tham chiếu](terms)
+    - [giá thấp nhất](terms) xảy ra như thế nào?
+    - [ipo](terms) là thuật ngữ nói về gì
+    - [hệ số giá thị trường trên giá ghi sổ](terms) nói cái gì
+    - [hệ số beta](terms) được hiểu như thế nào
+    - như thế nào là [hnx-index](terms)
+    - [hnx-index](terms) xảy ra khi nào
+    - [giá đóng cửa](terms) diễn ra như thế nào
+    - [thị giá](terms) là gì
+    - như thế nào là [thị trường bò](terms)
+    - [thị trường gấu](terms)?
+    - [tài khoản chứng khoán](terms) là gì
+    - [vn-index](terms) là gì
 
 - lookup: Terms
   examples: |
-    - Bear trap
-    - Biên độ giao động giá
-    - Bull trap
-    - Công ty niêm yết
-    - Cổ Phiếu
-    - Cổ phiếu Blue Chip
-    - Cổ phiếu phổ thông
-    - Cổ phiếu ưu đãi
-    - Cổ phần
-    - Cổ tức
-    - Cổ tức cố định
-    - Cổ tức thưởng
-    - Cổ đông
-    - Dead cat bounce
-    - Giao dịch trong ngày
-    - Giá Cao nhất
-    - Giá khớp lệnh
-    - Giá mở cửa
-    - Giá niêm yết
-    - Giá sàn
-    - Giá tham chiếu
-    - Giá thấp nhất
-    - Giá trần
-    - Giá trị vốn hóa
-    - Giá đóng cửa
-    - HNX-Index
-    - Hệ số Beta
-    - Hệ số giá thị trường trên giá ghi sổ
-    - IPO
-    - Index
-    - Khối lượng giao dịch
-    - Kỹ thuật Hedging
-    - Lệnh ATC
-    - Lệnh giới hạn LO
-    - Lệnh điều kiện
-    - Mô hình CAPM
-    - Môi giới
-    - Mệnh giá
-    - Sàn giao dịch
-    - Sở giao dịch chứng khoán      
-    - Thanh khoản
-    - Thị giá
-    - Thị trường bò
-    - Thị trường gấu
-    - Tài khoản chứng khoán
-    - VN-Index
+    - bear trap
+    - biên độ giao động giá
+    - bull trap
+    - công ty niêm yết
+    - cổ phiếu
+    - cổ phiếu blue chip
+    - cổ phiếu phổ thông
+    - cổ phiếu ưu đãi
+    - cổ phần
+    - cổ tức
+    - cổ tức cố định
+    - cổ tức thưởng
+    - cổ đông
+    - dead cat bounce
+    - giao dịch trong ngày
+    - giá cao nhất
+    - giá khớp lệnh
+    - giá mở cửa
+    - giá niêm yết
+    - giá sàn
+    - giá tham chiếu
+    - giá thấp nhất
+    - giá trần
+    - giá trị vốn hóa
+    - giá đóng cửa
+    - hnx-index
+    - hệ số beta
+    - hệ số giá thị trường trên giá ghi sổ
+    - ipo
+    - index
+    - khối lượng giao dịch
+    - kỹ thuật hedging
+    - lệnh atc
+    - lệnh giới hạn lo
+    - lệnh điều kiện
+    - mô hình capm
+    - môi giới
+    - mệnh giá
+    - sàn giao dịch
+    - sở giao dịch chứng khoán      
+    - thanh khoản
+    - thị giá
+    - thị trường bò
+    - thị trường gấu
+    - tài khoản chứng khoán
+    - vn-index
 
-- synonym: Bear trap
+- synonym: bear trap
   examples: |
-    - Bear trap
+    - bear trap
     - bẫy giảm giá
 
-- synonym: Bull trap
+- synonym: bull trap
   examples: |
     - bẫy tăng giá
 
-- synonym: Cổ phiếu Blue Chip
+- synonym: cổ phiếu blue chip
   examples: |
     - cổ phiếu tiềm năng
-    - tiềm năng
 
-- synonym: Cổ phiếu phổ thông
+- synonym: cổ phiếu phổ thông
   examples: |
-    - cổ phiếu phổ thông
     - cổ phiếu thường
 
-- synonym: Giá thấp nhất
+- synonym: giá thấp nhất
   examples: |
     - Giá thấp nhất
-    - Low Price
+    - low price
 
-- synonym: Giá Cao nhất
+- synonym: giá cao nhất
   examples: |
-    - Giá Cao nhất
-    - High Price
+    - giá cao nhất
+    - high price
 
-- synonym: Giá mở cửa
+- synonym: giá mở cửa
   examples: |
     - Giá mở cửa
-    - Open Price   
+    - open price   
 
-- synonym: Giao dịch trong ngày
+- synonym: giá đóng cửa
+  examples: |
+    - Giá đóng cửa
+    - close price 
+
+- synonym: giao dịch trong ngày
   examples: |
     - day trading
     - Giao dịch trong ngày

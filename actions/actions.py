@@ -92,6 +92,32 @@ class ActionCoffeePrice(Action):
         else:
             dispatcher.utter_message(text=f"có vẻ bạn đang hỏi về cà phê, bạn hãy thử đặt lại câu hỏi ngắn gọn hơn ạ !")
 
+class ActionTerm(Action):
+    def name(self) -> Text:
+        return "action_term_explain"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        term = next(tracker.get_latest_entity_values("terms"), None)
+        explain = ""
+
+        try:
+            explain = getdata.get_terms(term)
+        except:
+            print(term)
+
+        if explain:
+            msg = f"{explain}"
+            dispatcher.utter_message(text=msg)
+
+        else:
+            dispatcher.utter_message(text=f"có vẻ bạn đang hỏi về thuật ngữ đầu tư chứng khoán, bạn hãy thử đặt lại câu hỏi ngắn gọn hơn ạ!")
+
+
 
 class ActionGold(Action):
     def name(self) -> Text:

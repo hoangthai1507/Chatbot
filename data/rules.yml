@@ -26,3 +26,8 @@ rules:
   steps:
   - intent: Coffee_price
   - action: action_coffee_price
+
+- rule: tra loi cau hoi dinh nghia tai chinh
+  steps:
+  - intent: Terms
+  - action: action_term_explain
