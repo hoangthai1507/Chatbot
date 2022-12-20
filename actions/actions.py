@@ -38,27 +38,27 @@ class ActionFuelPrice(Action):
         try:
             price = getdata.get_price("gas", name_fuel, date, "price")
         except:
-            print("name fuel :" + name_fuel)
+            print(name_fuel)
 
         if price:
-            msg = f"giá {name_fuel} {day} là {price} vnd"
+            msg = f"giá {name_fuel} {day} ({date}) là {price} vnd"
             dispatcher.utter_message(text=msg)
 
         elif "xăng" in tracker.latest_message['text']:
             price = getdata.get_price("gas", "Xăng RON 95-III", date, "price")
-            msg = f"giá Xăng RON 95-III {day} là {price} vnd còn "
+            msg = f"giá Xăng RON 95-III {day} ({date}) là {price} vnd còn "
             price = getdata.get_price("gas", "Xăng E5 RON 92-II", date, "price")
-            msg += f"giá Xăng E5 RON 92-II {day} là {price} vnd"
+            msg += f"giá Xăng E5 RON 92-II {day} ({date}) là {price} vnd"
             dispatcher.utter_message(text=f"{msg}")
 
         elif "dầu" in tracker.latest_message['text']:
             price = getdata.get_price("gas", "Dầu hỏa", date, "price")
-            msg = f"giá Dầu hỏa {day} là {price} vnd còn "
+            msg = f"giá Dầu hỏa {day} ({date}) là {price} vnd còn "
             price = getdata.get_price("gas", "Dầu diesel", date, "price")
-            msg += f"giá Dầu diesel {day} là {price} vnd "
+            msg += f"giá Dầu diesel {day} ({date}) là {price} vnd "
             dispatcher.utter_message(text=f"{msg}")
         else:
-            dispatcher.utter_message(text=f"{tracker.latest_message['text']}")
+            dispatcher.utter_message(text=f"có vẻ bạn đang hỏi về xăng, bạn hãy thử đặt lại câu hỏi ngắn gọn hơn ạ !")
 
 
 class ActionGold(Action):

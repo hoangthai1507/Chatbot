@@ -150,30 +150,30 @@ nlu:
     - giá [dầu diezen]{"entity": "name_fuel", "value": "dầu diesel"}?
     - giá [dầu diesel](name_fuel) [hôm nay](day)
     - [dầu diesel](name_fuel) [tăng hay giảm](compare)
-    - giá [xăng e5] [hôm qua](day)
-    - [Xăng sinh học] [hôm qua](day) bao nhiêu
-    - giá [RON92 E5] [tăng hay giảm](compare)
-    - [A95] bao nhiêu 1 lít
-    - [Xăng RON 95-III] [hôm qua](day)
-    - [Mogas 95 ] [tăng hay giảm](compare)
+    - giá [xăng e5](name_fuel) [hôm qua](day)
+    - [xăng sinh học](name_fuel) [hôm qua](day) bao nhiêu
+    - giá [ron92 e5](name_fuel) [tăng hay giảm](compare)
+    - [a95](name_fuel) bao nhiêu 1 lít
+    - [xăng ron 95-iii](name_fuel) [hôm qua](day)
+    - [mogas 95](name_fuel) [tăng hay giảm](compare)
     - [dầu hôi](name_fuel) bao nhiêu 1 lit
     - [dầu lửa](name_fuel) [hôm qua](day)
     - [paraffin](name_fuel) bao nhiêu
-    - giá [dầu gazole]?
+    - giá [dầu gazole](name_fuel)?
     - giá [dầu diesel](name_fuel) [hôm qua](day)
-    - [dầu DO](name_fuel) [tăng hay giảm](compare)
-    - giá [RON92 E5] [hôm qua](day)
-    - [RON92] [hôm qua](day) bao nhiêu
-    - giá [Ex] [tăng hay giảm](compare)
-    - [A95] bao nhiêu 1 lít
-    - [Xăng RON 95-II] [hôm qua](day)
-    - [Xăng RON 95-IV ] [tăng hay giảm](compare)
-    - [Dầu hỏa](name_fuel) bao nhiêu 1 lit
+    - [dầu do](name_fuel) [tăng hay giảm](compare)
+    - giá [ron92 e5](name_fuel) [hôm qua](day)
+    - [ron92](name_fuel) [hôm qua](day) bao nhiêu
+    - giá [ex](name_fuel) [tăng hay giảm](compare)
+    - [a95](name_fuel) bao nhiêu 1 lít
+    - [xăng ron 95-ii](name_fuel) [hôm qua](day)
+    - [xăng ron 95-iv](name_fuel) [tăng hay giảm](compare)
+    - [dầu hỏa](name_fuel) bao nhiêu 1 lit
     - [dầu kêrôsin](name_fuel) [hôm qua](day)
-    - [dầu KO](name_fuel) bao nhiêu
-    - giá [DO]?
-    - giá [DO 0,25%S](name_fuel) [hôm qua](day)
-    - [DO 0,005%S](name_fuel) [tăng hay giảm](compare)
+    - [dầu ko](name_fuel) bao nhiêu
+    - giá [do](name_fuel)?
+    - giá [do 0,25%s](name_fuel) [hôm qua](day)
+    - [do 0,005%s](name_fuel) [tăng hay giảm](compare)
 
 #- lookup: name_fuel
 #  examples: |
@@ -186,8 +186,8 @@ nlu:
   examples: |
     - dầu diesel
     - dầu gazole 
-    - DO
-    - dầu DO
+    - do
+    - dầu do
     - DO 0,25%S
     - DO 0,005%S
 
@@ -203,25 +203,26 @@ nlu:
     - paraffin oil 
     - dầu hôi
     - dầu hỏa
+    - dầu
 
 - synonym: Xăng E5 RON 92-II
   examples: |
-    - Xăng sinh học
+    - xăng sinh học
     - Ex
-    - E5 RON 92
-    - RON92 E5
-    - RON92 
-    - Xăng sinh học E5
+    - e5 ron 92
+    - ron92 e5
+    - ron92 
+    - xăng sinh học e5
 
 - synonym: Xăng RON 95-III
   examples: |
-    - Xăng RON 95-II
-    - Xăng RON 95-III
-    - Xăng Ron 95
-    - Xăng RON 95-V
-    - Xăng RON 95-IV
-    - A95 
-    - Mogas 95 
+    - xăng ron 95-ii
+    - xăng ron95
+    - xăng ron 95
+    - xăng ron 95-v
+    - xăng ron 95-iv
+    - a95 
+    - mogas 95 
     - xăng
     - xăng ron
 
