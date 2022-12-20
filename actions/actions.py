@@ -61,6 +61,38 @@ class ActionFuelPrice(Action):
             dispatcher.utter_message(text=f"có vẻ bạn đang hỏi về xăng, bạn hãy thử đặt lại câu hỏi ngắn gọn hơn ạ !")
 
 
+class ActionCoffeePrice(Action):
+    def name(self) -> Text:
+        return "action_coffee_price"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        name_coffee = next(tracker.get_latest_entity_values("name_coffee"), None)
+        day = next(tracker.get_latest_entity_values("day"), None)
+        price = ""
+        if day == "hôm qua":
+            date = getdate.get_yesterday()
+        else:
+            date = getdate.get_today()
+            day = "hôm nay"
+
+        try:
+            price = getdata.get_price("coffee", name_coffee, date, "average price")
+        except:
+            print(name_coffee)
+
+        if price:
+            msg = f"giá cà phê {name_coffee} {day} ({date}) là {price} vnd 1kg"
+            dispatcher.utter_message(text=msg)
+
+        else:
+            dispatcher.utter_message(text=f"có vẻ bạn đang hỏi về cà phê, bạn hãy thử đặt lại câu hỏi ngắn gọn hơn ạ !")
+
+
 class ActionGold(Action):
     def name(self) -> Text:
         return "action_jenewry_price"

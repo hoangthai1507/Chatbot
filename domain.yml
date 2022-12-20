@@ -13,6 +13,7 @@ intents:
   - fuel_price
   - money_price
   - supply_contact_info
+  - Coffee_price
 
 entities:
  - name_fuel
@@ -24,6 +25,7 @@ entities:
  - name_Inflation
  - name
  - compare
+ - name_coffee
 
 responses:
   utter_greet:
@@ -74,3 +76,4 @@ actions:
 - utter_menu
 - utter_Inflation
 - action_fuel_price
+- action_coffee_price

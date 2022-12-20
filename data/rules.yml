@@ -21,3 +21,8 @@ rules:
   steps:
   - intent: jenewry_price
   - action: action_jenewry_price
+
+- rule: tra loi gia ca phe
+  steps:
+  - intent: Coffee_price
+  - action: action_coffee_price
