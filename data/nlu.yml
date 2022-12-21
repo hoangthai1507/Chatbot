@@ -102,8 +102,6 @@ nlu:
     - cảm ơn vì đã giúp
     - hay
 
-
-#
 #- regex: name_jenewry
 #  examples: |
 #    - \s{0,10}
