@@ -775,7 +775,7 @@ nlu:
     - Mình tên là [Thanh](name)
 
 - intent: Summarize
-  examples:
+  examples: |
     - sơ lược giá [vàng](name_jenewry) [hôm nay](day)
     - sơ lược giá [vàng](name_jenewry) [hôm qua](day)
     - sơ lược giá [trang sức vàng](name_jenewry) [hôm qua](day)
@@ -818,7 +818,7 @@ nlu:
     - phân tích giá [thịt heo](name_analyse) [hôm nay](day)
     - cụ thể giá [thịt](name_analyse) [hôm nay](day)
     - cụ thể cho tôi giá [thịt heo](name_analyse) [hôm qua](day)
-    - sơ lược [thị trường chứng khoán](name_stock) [hôm nay](day)
+    - sơ lược [thị trường chứng khoán](name_analyse) [hôm nay](day)
     - sơ lược giá [thị trường](name_analyse) [hôm qua](day)
     - sơ lược [thị trường](name_analyse) [hôm qua](day)
     - giá [thị trường chứng khoán](name_analyse) [hôm nay](day)
