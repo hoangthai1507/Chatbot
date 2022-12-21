@@ -829,4 +829,7 @@ nlu:
     - phân tích giá [thị trường](name_analyse) [hôm qua](day)
     - phân tích giá [thị trường](name_analyse) [hôm nay](day)
     - cụ thể giá [thị trường chứng khoán](name_analyse) [hôm nay](day)
-    - cụ thể cho tôi giá [thị trường](name_analyse) [hôm qua](day)
+    # - cụ thể cho tôi giá [thị trường](name_analyse) [hôm qua](day)
+
+
+
