@@ -806,7 +806,7 @@ nlu:
     - \b[0-9]{1,4}[k||m]{1}
     - \b[0-9]{1,4} [triệu||nghìn||ngàn]{4,5}\b
 
-- intent: money_input
+- intent: Subsistence
   examples: |
     - tôi sử dụng [20k](k_m_money) mua [bún](food_section) bò
     - [50k](k_m_money)
@@ -826,6 +826,11 @@ nlu:
     - tôi sử dụng [5440 triệu](k_m_money)
     - tôi sử dụng [23 ngàn](k_m_money)
 
+
+
+
+# ăn uống, food_section 
+# phân loại theo cơm, gạo bún cháo phở
 - lookup: food_section
   examples: |
     - bún
@@ -884,18 +889,131 @@ nlu:
     - cá
     - trứng
 
-# ăn uống, food_section 
-# phân loại theo cơm, gạo bún cháo phở
-
-
 # chi trả sinh hoạt, housing_section
 # tiền mạng wifi, xăng xe, điện thoại, tiền nhà, tiền nước, tiền điện
+
+- lookup: housing_section
+  examples: |
+    - tiền mạng
+    - wifi
+    - xăng
+    - xe
+    - bảo hiểm
+    - điện
+    - điện thoại
+    - di động
+    - nước
+    - thuế
+    - tiền nhà
+    - tiền chung cư
+    - tiền thuê trọ
+    - tiền học
+    - tiết kiệm ngắn hạn
+    - tiết kiệm dài hạn
+    - tiết kiệm
+    - thuê văn phòng
+    - 
+
 
 
 # vui chơi-giải trí, recreation_section
 # xem phim, karaoke, nhảy, du lịch, gym, vé tour, vé máy bay/tàu/xe
 
+- lookup: recreation_section
+  examples: |
+    - xem phim
+    - karaoke
+    - nhảy
+    - du lịch
+    - gym
+    - yoga
+    - aerobic
+    - vé tour
+    - vé máy bay
+    - vé tàu hỏa
+    - vé tàu
+    - vé xe
+    - khách sạn
+    - nhà hàng
+    - quầy bar
+    - rượu
+    - bar
+    - club
+    - phượt
+    - bơi
+    - cầu lông
+    - bóng chuyền
+    - bóng ném
+    - bóng bàn
+    - bóng rổ
+    - đá cầu
+    - nhảy dây
+    - đạp xe
+    - khiêu vũ
+    - tennis
+    - võ
+    - game
+    - game trên điện thoại
+    
+
+
+     
+
+
 
 # mua sắm cần thiết personal_section
 # quần áo, cắt tóc, làm nail, decor nhà, giày dép, balo, dây nịch, 
 
+- lookup: personal_section
+  examples: |
+    - quần áo
+    - cắt tóc
+    - làm nail
+    - decor nhà
+    - giày
+    - dép
+    - balo
+    - dây nịch
+    - túi xách
+    - khuyên tai
+    - nhẫn
+    - nhẫn vàng
+    - vòng bạc
+    - dây chuyền
+    - dây cổ
+    - lắc tay
+    - lắc chân
+    - nước hoa
+    - kính
+    - lens
+    - áo khoác
+    - áo 
+    - quần
+    - laptop
+    - máy tính
+    - pc
+    - tay nghe
+    - chuột máy tính
+    - bàn phím
+    - đèn
+    - máy 
+    - tivi
+    - tủ lạnh
+    - đồng hồ
+    - xe
+    - xe hơi
+    - mỹ phẩm
+    - tập
+    - sách
+    - bút
+    - thước
+    - bàn
+    - bàn là
+    - chăn
+    - nệm
+    - gối
+    - vớ
+    - thức ăn
+    - giấy
+    - tủ
+    - kệ tủ
