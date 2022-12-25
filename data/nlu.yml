@@ -102,38 +102,6 @@ nlu:
     - cảm ơn vì đã giúp
     - hay
 
-#- regex: name_jenewry
-#  examples: |
-#    - \s{0,10}
-#
-#- regex: name_money
-#  examples: |
-#    - \s{0,10}
-#
-#- regex: name_food
-#  examples: |
-#    - \s{0,10}
-#
-#- regex: name_Terms
-#  examples: |
-#    - \s{0,10}
-#
-#- regex: name
-#  examples: |
-#    - \s{0,10}
-#
-#- regex: day
-#  examples: |
-#    - \s{0,10}
-#
-#- regex: how_much
-#  examples: |
-#    - \s{0,10}
-#
-#- regex: compare
-#  examples: |
-#    - \s{0,10}
-
 - intent: fuel_price
   examples: |
     - giá [xăng e5]{"entity": "name_fuel", "value": "Xăng E5 RON 92-II"} [hôm nay](day)
@@ -610,6 +578,7 @@ nlu:
     - dac nong
     - đắc nông
     - dac nông
+    - đắc nong
 
 - synonym: FOB
   examples: |
@@ -832,4 +801,101 @@ nlu:
     - cụ thể cho tôi giá [thị trường](name_analyse) [hôm qua](day)
 
 
+- regex: k_m_money
+  examples: |
+    - \b[0-9]{1,4}[k||m]{1}
+    - \b[0-9]{1,4} [triệu||nghìn||ngàn]{4,5}\b
+
+- intent: money_input
+  examples: |
+    - tôi sử dụng [20k](k_m_money) mua [bún](food_section) bò
+    - [50k](k_m_money)
+    - có [40k](k_m_money)
+    - tôi xài [70k](k_m_money)
+    - xài [50k](k_m_money)
+    - tôi sử dụng [20m](k_m_money)
+    - [50m](k_m_money)
+    - có [40m](k_m_money)
+    - tôi xài [70m](k_m_money)
+    - xài [50m](k_m_money)
+    - tôi xài [5440 nghìn](k_m_money)
+    - tôi xài [5440 ngàn](k_m_money)
+    - tôi xài [5440 triệu](k_m_money)
+    - tôi xài [23 ngàn](k_m_money)
+    - tôi sử dụng [5440 ngàn](k_m_money)
+    - tôi sử dụng [5440 triệu](k_m_money)
+    - tôi sử dụng [23 ngàn](k_m_money)
+
+- lookup: food_section
+  examples: |
+    - bún
+    - phở
+    - hủ tiếu
+    - cơm
+    - mì
+    - nem 
+    - chả
+    - bánh 
+    - bột
+    - canh
+    - súp
+    - thịt
+    - heo
+    - lợn
+    - bò 
+    - nước
+    - đường
+    - sinh tố
+    - lúa mạch
+    - lúa
+    - gạo
+    - cám
+    - ức
+    - đùi
+    - trà sữa
+    - cà phê
+    - trà
+    - sữa
+    - milo
+    - ovatin
+    - cacao
+    - sủi cảo
+    - hẹ 
+    - gỏi
+    - cao lầu
+    - ốc
+    - sushi 
+    - đồ nướng
+    - nướng 
+    - lẩu
+    - đá
+    - sầu 
+    - thanh long
+    - mận
+    - dâu
+    - ổi 
+    - nhãn
+    - roi
+    - xoài
+    - dưa
+    - bơ
+    - chôm chôm
+    - bưởi
+    - cá
+    - trứng
+
+# ăn uống, food_section 
+# phân loại theo cơm, gạo bún cháo phở
+
+
+# chi trả sinh hoạt, housing_section
+# tiền mạng wifi, xăng xe, điện thoại, tiền nhà, tiền nước, tiền điện
+
+
+# vui chơi-giải trí, recreation_section
+# xem phim, karaoke, nhảy, du lịch, gym, vé tour, vé máy bay/tàu/xe
+
+
+# mua sắm cần thiết personal_section
+# quần áo, cắt tóc, làm nail, decor nhà, giày dép, balo, dây nịch, 
 
