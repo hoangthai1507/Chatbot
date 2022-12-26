@@ -19,22 +19,23 @@ intents:
   - Subsistence
 
 entities:
- - name_fuel
- - day
- - how_much
- - name_jenewry
- - name_money
- - name_food
- - name_Inflation
- - name
- - compare
- - name_coffee
- - terms
- - name_analyse
- - food_section
- - housing_section
- - recreation_section
- - personal_section
+  - name_fuel
+  - day
+  - how_much
+  - name_jenewry
+  - name_money
+  - name_food
+  - name_Inflation
+  - name
+  - compare
+  - name_coffee
+  - terms
+  - name_analyse
+  - food_section
+  - housing_section
+  - recreation_section
+  - personal_section
+  - k_m_money
 
  
 
