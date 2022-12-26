@@ -809,25 +809,95 @@ nlu:
 - intent: Subsistence
   examples: |
     - tôi sử dụng [20k](k_m_money) mua [bún](food_section) bò
-    - [50k](k_m_money)
-    - có [40k](k_m_money)
-    - tôi xài [70k](k_m_money)
-    - xài [50k](k_m_money)
-    - tôi sử dụng [20m](k_m_money)
-    - [50m](k_m_money)
-    - có [40m](k_m_money)
-    - tôi xài [70m](k_m_money)
-    - xài [50m](k_m_money)
-    - tôi xài [5440 nghìn](k_m_money)
-    - tôi xài [5440 ngàn](k_m_money)
-    - tôi xài [5440 triệu](k_m_money)
-    - tôi xài [23 ngàn](k_m_money)
-    - tôi sử dụng [5440 ngàn](k_m_money)
-    - tôi sử dụng [5440 triệu](k_m_money)
-    - tôi sử dụng [23 ngàn](k_m_money)
+    - [phở](food_section) [50k](k_m_money)
+    - có [40k](k_m_money) tiền [cơm](food_section) tấm
+    - tôi xài [70k](k_m_money) [bánh](food_section) canh cua
+    - xài [50k](k_m_money) [hủ tiếu](food_section) nam vang
+    - tôi sử dụng [20m](k_m_money) tiền ăn [buffet](food_section)
+    - [5m](k_m_money) [hải sản](food_section)
+    - có [40m](k_m_money) tiền [bò](food_section)
+    - tôi xài [70m](k_m_money) cho tiền [ăn](food_section) tháng này
+    - xài [500k](k_m_money) tiền [bánh](food_section) mì
+    
+    - tôi sử dụng [20k](k_m_money) mua [nem](food_section) bò
+    - [chả](food_section) [150k](k_m_money)
+    - có [40k](k_m_money) tiền [bột](food_section) chiên
+    - tôi xài [70k](k_m_money) [canh](food_section) chua
+    - xài [50k](k_m_money) [súp](food_section) cua
+    - tôi sử dụng [2m](k_m_money) mua [thịt](food_section)
+    - [5m](k_m_money) [heo](food_section) sữa quay
+    - có [400k](k_m_money) tiền [lợn](food_section) quay
+    - tôi xài [70k](k_m_money) cho tiền [sinh tố](food_section) 
+    - xài [500k](k_m_money) tiền [bia](food_section)
 
+    - tháng này xài hết [5440 nghìn](k_m_money) tiền [ăn](food_section) 
+    - tôi xài [5440 ngàn](k_m_money) tiền [ăn](food_section) tháng này
+    - tôi xài [5440 triệu](k_m_money) để đãi công ty [hải sản](food_section) 
+    - tôi xài [23 ngàn](k_m_money) mua [bánh bao](food_section) 
+    - tôi sử dụng [2307 ngàn](k_m_money) để [ăn](food_section) cho tháng này
+    - tôi sử dụng [2002 triệu](k_m_money) để cho tiền [ăn](food_section) tết
+    - tôi sử dụng [070 ngàn](k_m_money) tiền [sinh tố](food_section) 
 
-
+    - [bún](food_section) [40k](k_m_money)
+    - [phở](food_section) [50 nggàn](k_m_money)
+    - [hủ tiếu](food_section) [30 nghìn](k_m_money)
+    - [cơm](food_section) [45k](k_m_money)
+    - [mì](food_section) xào [30k](k_m_money)
+    - [nem](food_section) rán [50k](k_m_money)
+    - [chả](food_section) [50k](k_m_money)
+    - [bánh](food_section) [50k](k_m_money)
+    - [bột](food_section) chiên [50k](k_m_money)
+    - [canh](food_section) [60k](k_m_money)
+    - [súp](food_section) [50k](k_m_money)
+    - [thịt](food_section) [70k](k_m_money)
+    - [heo](food_section) [90k](k_m_money)
+    - [lợn](food_section) [40k](k_m_money)
+    - [bò](food_section) [100k](k_m_money)
+    - [nước](food_section) [30k](k_m_money)
+    - [đường](food_section) [14k](k_m_money)
+    - [sinh tố](food_section) [45k](k_m_money)
+    - [lúa mạch](food_section) [5m](k_m_money)
+    - [lúa](food_section) [1m](k_m_money)
+    - [gạo](food_section) [500k](k_m_money)
+    - [cám](food_section) [5000k](k_m_money)
+    - [ức](food_section) gà [76k](k_m_money)
+    - [đùi](food_section) gà [80k](k_m_money)
+    - [trà sữa](food_section) [40k](k_m_money)
+    - [cà phê](food_section) [20k](k_m_money)
+    - [trà](food_section) [20k](k_m_money)
+    - [sữa](food_section) [30k](k_m_money)
+    - [milo](food_section) [8k](k_m_money)
+    - [ovatin](food_section) [9k](k_m_money)
+    - [cacao](food_section) [17k](k_m_money)
+    - [sủi cảo](food_section) [85k](k_m_money)
+    - [hẹ](food_section) [3k](k_m_money)
+    - [gỏi](food_section) [27k](k_m_money)
+    - [cao lầu](food_section) [38k](k_m_money)
+    - [ốc](food_section) [40k](k_m_money)
+    - [sushi](food_section) [50k](k_m_money)
+    - [đồ nướng](food_section) [5 triệu](k_m_money)
+    - [nướng](food_section)  [5000 ngàn](k_m_money)
+    - [lẩu](food_section) [2000 nghìn](k_m_money)
+    - [đá](food_section) [5k](k_m_money)
+    - [sầu](food_section) [150k](k_m_money)
+    - [thanh long](food_section) [15k](k_m_money)
+    - [mận](food_section) [40k](k_m_money)
+    - [dâu](food_section) [70k](k_m_money)
+    - [ổi](food_section) [20k](k_m_money)
+    - [nhãn](food_section) [30k](k_m_money)
+    - [roi](food_section) [20k](k_m_money)
+    - [xoài](food_section) [30k](k_m_money)
+    - [dưa](food_section) [60k](k_m_money)
+    - [bơ](food_section) [70k](k_m_money)
+    - [chôm chôm](food_section) [50k](k_m_money)
+    - [bưởi](food_section) [95k](k_m_money)
+    - [cá](food_section) [75k](k_m_money)
+    - [trứng](food_section) [3.5k](k_m_money)
+    - [hải sản](food_section) [8m](k_m_money)
+    - [buffet](food_section) [375 nghìn](k_m_money)
+    - [ăn](food_section) [50 ngàn](k_m_money)
+    - [bia](food_section) [5 triệu](k_m_money)
+    - [uống](food_section) [70k](k_m_money)
 
 # ăn uống, food_section 
 # phân loại theo cơm, gạo bún cháo phở
@@ -888,6 +958,10 @@ nlu:
     - bưởi
     - cá
     - trứng
+    - hải sản
+    - buffet
+    - ăn
+    - bia
 
 # chi trả sinh hoạt, housing_section
 # tiền mạng wifi, xăng xe, điện thoại, tiền nhà, tiền nước, tiền điện
