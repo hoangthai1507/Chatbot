@@ -1,0 +1,10 @@
+[
+  {
+    "name": "name_jenewry",
+    "pattern": "(\\bDOJI\\ HN\\b|\\bDOJI\\ SG\\b|\\bPhú\\ Quý\\ SJC\\b|\\bSJC\\ Hà\\ Nội\\b|\\bSJC\\ TP\\ HCM\\b|\\bSJC\\ Đà\\ Nẵng\\b|\\bVIETINBANK\\ GOLD\\b)"
+  },
+  {
+    "name": "name_money",
+    "pattern": "(\\bAUD\\b|\\bCAD\\b|\\bCHF\\b|\\bDKK\\b|\\bEUR\\b|\\bGBP\\b|\\bHKD\\b|\\bINR\\b|\\bJPY\\b|\\bKRW\\b|\\bKWD\\b|\\bMYR\\b|\\bNOK\\b|\\bRUB\\b|\\bSEK\\b|\\bSGD\\b|\\bTHB\\b|\\bUSD\\b)"
+  }
+]

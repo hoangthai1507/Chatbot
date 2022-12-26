@@ -15,6 +15,8 @@ intents:
   - supply_contact_info
   - Coffee_price
   - Terms
+  - Summarize
+  - Subsistence
 
 entities:
  - name_fuel
@@ -28,6 +30,13 @@ entities:
  - compare
  - name_coffee
  - terms
+ - name_analyse
+ - food_section
+ - housing_section
+ - recreation_section
+ - personal_section
+
+ 
 
 responses:
   utter_greet:
@@ -66,17 +75,18 @@ session_config:
   carry_over_slots_to_new_session: true
 
 actions:
-- utter_greet
-- utter_deny
-- utter_goodbye
-- utter_sorry
-- utter_affirm
-- utter_iamabot
-- utter_food_price
-- utter_money_price
-- action_jenewry_price
-- utter_menu
-- utter_Inflation
-- action_fuel_price
-- action_coffee_price
-- action_term_explain
+  - utter_greet
+  - utter_deny
+  - utter_goodbye
+  - utter_sorry
+  - utter_affirm
+  - utter_iamabot
+  - utter_food_price
+  - utter_money_price
+  - action_jenewry_price
+  - utter_menu
+  - utter_Inflation
+  - action_fuel_price
+  - action_coffee_price
+  - action_term_explain
+  - action_summarize_explain

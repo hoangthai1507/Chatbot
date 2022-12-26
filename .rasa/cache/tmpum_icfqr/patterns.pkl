@@ -1,0 +1,14 @@
+[
+  {
+    "name": "name_jenewry",
+    "pattern": "(\\bDOJI\\ HN\\b|\\bDOJI\\ SG\\b|\\bPhú\\ Quý\\ SJC\\b|\\bSJC\\ Hà\\ Nội\\b|\\bSJC\\ TP\\ HCM\\b|\\bSJC\\ Đà\\ Nẵng\\b|\\bVIETINBANK\\ GOLD\\b)"
+  },
+  {
+    "name": "name_money",
+    "pattern": "(\\bAUD\\b|\\bCAD\\b|\\bCHF\\b|\\bDKK\\b|\\bEUR\\b|\\bGBP\\b|\\bHKD\\b|\\bINR\\b|\\bJPY\\b|\\bKRW\\b|\\bKWD\\b|\\bMYR\\b|\\bNOK\\b|\\bRUB\\b|\\bSEK\\b|\\bSGD\\b|\\bTHB\\b|\\bUSD\\b)"
+  },
+  {
+    "name": "Terms",
+    "pattern": "(\\bbear\\ trap\\b|\\bbiên\\ độ\\ giao\\ động\\ giá\\b|\\bbull\\ trap\\b|\\bcông\\ ty\\ niêm\\ yết\\b|\\bcổ\\ phiếu\\b|\\bcổ\\ phiếu\\ blue\\ chip\\b|\\bcổ\\ phiếu\\ phổ\\ thông\\b|\\bcổ\\ phiếu\\ ưu\\ đãi\\b|\\bcổ\\ phần\\b|\\bcổ\\ tức\\b|\\bcổ\\ tức\\ cố\\ định\\b|\\bcổ\\ tức\\ thưởng\\b|\\bcổ\\ đông\\b|\\bdead\\ cat\\ bounce\\b|\\bgiao\\ dịch\\ trong\\ ngày\\b|\\bgiá\\ cao\\ nhất\\b|\\bgiá\\ khớp\\ lệnh\\b|\\bgiá\\ mở\\ cửa\\b|\\bgiá\\ niêm\\ yết\\b|\\bgiá\\ sàn\\b|\\bgiá\\ tham\\ chiếu\\b|\\bgiá\\ thấp\\ nhất\\b|\\bgiá\\ trần\\b|\\bgiá\\ trị\\ vốn\\ hóa\\b|\\bgiá\\ đóng\\ cửa\\b|\\bhnx\\-index\\b|\\bhệ\\ số\\ beta\\b|\\bhệ\\ số\\ giá\\ thị\\ trường\\ trên\\ giá\\ ghi\\ sổ\\b|\\bipo\\b|\\bindex\\b|\\bkhối\\ lượng\\ giao\\ dịch\\b|\\bkỹ\\ thuật\\ hedging\\b|\\blệnh\\ atc\\b|\\blệnh\\ giới\\ hạn\\ lo\\b|\\blệnh\\ điều\\ kiện\\b|\\bmô\\ hình\\ capm\\b|\\bmôi\\ giới\\b|\\bmệnh\\ giá\\b|\\bsàn\\ giao\\ dịch\\b|\\bsở\\ giao\\ dịch\\ chứng\\ khoán\\b|\\bthanh\\ khoản\\b|\\bthị\\ giá\\b|\\bthị\\ trường\\ bò\\b|\\bthị\\ trường\\ gấu\\b|\\btài\\ khoản\\ chứng\\ khoán\\b|\\bvn\\-index\\b)"
+  }
+]
