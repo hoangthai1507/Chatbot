@@ -336,10 +336,14 @@ nlu:
     - Vàng 999.9
     - SJC VIETINBANK GOLD
     - SJC 999.9
-#- lookup: status
-#  examples: |
-#    - mua
-#    - bán
+    
+- lookup: status
+  examples: |
+    - mua
+    - bán
+    - giá mua
+    - giá bán
+    - giá chuyển nhượng
 
 - intent: money_price
   examples: |
