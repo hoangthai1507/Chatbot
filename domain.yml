@@ -17,6 +17,7 @@ intents:
   - Terms
   - Summarize
   - Subsistence
+  - Total_money
 
 entities:
   - name_fuel
@@ -36,7 +37,10 @@ entities:
   - recreation_section
   - personal_section
   - k_m_money
-
+  - food
+  - housing
+  - recreation
+  - personal
  
 
 responses:

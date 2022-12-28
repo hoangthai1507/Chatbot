@@ -24,8 +24,6 @@ nlu:
     - có ai ở đây không
     - hola
 
-    
-
 - intent: goodbye
   examples: |
     - good bye
@@ -800,11 +798,11 @@ nlu:
     - cụ thể giá [thị trường chứng khoán](name_analyse) [hôm nay](day)
     - cụ thể cho tôi giá [thị trường](name_analyse) [hôm qua](day)
 
-
 - regex: k_m_money
   examples: |
     - \b[0-9]{1,4}[k||m]{1}
     - \b[0-9]{1,4} [triệu||nghìn||ngàn]{4,5}\b
+    - \b[0-9]{1,9}\b
 
 - intent: Subsistence
   examples: |
@@ -1184,3 +1182,23 @@ nlu:
     - giấy
     - tủ
     - kệ tủ
+
+- intent: Total_money
+  examples: |
+    - [hôm nay](day) tôi đã [ăn](food) bao nhiêu tiền
+    - [hôm qua](day) tôi đã [mua sắm](personal) bao nhiêu tiền
+    - [hôm trước](day) tôi đã [vui chơi](recreation) bao nhiêu tiền
+    - [tuần trước](day) tôi đã [sinh hoạt](housing) bao nhiêu tiền
+    - [tuần này](day) tôi đã [sinh hoạt](housing) bao nhiêu tiền
+    - [hôm qua](day) tôi đã xài bao nhiêu tiền
+    - [tuần trước](day) tôi đã xài bao nhiêu tiền
+    - [hôm nay](day) tôi đã xài bao nhiêu tiền
+    - [hôm trước](day) tôi đã xài bao nhiêu tiền
+    - [tuần này](day) tôi đã xài bao nhiêu tiền
+    - [hôm qua](day) trả tiền [sinh hoạt](housing) bao nhiêu
+    - [hôm nay](day) trả tiền [vui chơi](recreation) bao nhiêu
+    - [hôm trước](day) trả tiền [mua sắm](personal) bao nhiêu
+    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [ăn](food)
+    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [mua sắm](personal)
+    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [vui chơi](recreation)
+    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [sinh hoạt](housing)
