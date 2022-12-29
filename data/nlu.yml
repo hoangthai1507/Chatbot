@@ -348,25 +348,25 @@ nlu:
 - intent: money_price
   examples: |
     - [đô mỹ](name_money) [hôm nay](day) bao nhiêu
-    - giá [đô mỹ](name_money) [hôm nay](day)
-    - [đô mỹ](name_money) mua vào bao nhiêu
+    - giá [mua](status) [đô mỹ](name_money) [hôm nay](day)
+    - [đô mỹ](name_money) [mua](status) vào bao nhiêu
     - [đô úc](name_money) [hôm nay](day) bao nhiêu
-    - giá [đô úc](name_money) [hôm nay](day)
-    - [đô úc](name_money) mua vào bao nhiêu
+    - giá [bán](status) [đô úc](name_money) [hôm nay](day)
+    - [đô úc](name_money) [bán](status) ra bao nhiêu
     - [đô mỹ](name_money) [hôm qua](day) bao nhiêu
     - giá [đô mỹ](name_money) [hôm qua](day)
-    - [đô la mỹ](name_money) mua vào bao nhiêu
+    - [đô la mỹ](name_money) [mua](status) vào bao nhiêu
     - [đô úc](name_money) [hôm qua](day) bao nhiêu
-    - giá [đô úc](name_money) [hôm qua](day)
-    - [đô la mỹ](name_money) mua vào bao nhiêu
+    - giá [bán](status) [đô úc](name_money) [hôm qua](day)
+    - [đô la mỹ](name_money) [mua](status) vào bao nhiêu
     - [aud](name_money) [hôm nay](day) bao nhiêu
-    - giá [CAD](name_money) [hôm nay](day)
+    - giá [bán](status) [CAD](name_money) [hôm nay](day)
     - [đô thụy sĩ](name_money) [hôm nay](day) bao nhiêu
     - giá [chf](name_money) [hôm nay](day)
     - [đô đan mạch](name_money) [hôm nay](day) bao nhiêu
     - giá [dkk](name_money) [hôm nay](day)
     - [bảng anh](name_money) [hôm nay](day) bao nhiêu
-    - giá [penny](name_money) [hôm nay](day)
+    - giá [bán](status) [penny](name_money) [hôm nay](day)
     - [đô la hong kong](name_money) [hôm nay](day) bao nhiêu
     - giá [hong kong dollar](name_money) [hôm nay](day)
     - [jpy](name_money) [hôm nay](day) bao nhiêu
