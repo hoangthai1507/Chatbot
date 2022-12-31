@@ -810,12 +810,12 @@ nlu:
 - regex: m_money
   examples: |
     - \b[0-9]{1,9}[m]{1}\b
-    - \b[0-9]{1,9} [triệu]{5}\b
+    - \b[0-9]{1,9} [triệu||củ]{5}\b
 
 - regex: money
   examples: |
     - \b[0-9]{1,9}\b
-    
+
 - intent: Subsistence
   examples: |
     - tôi sử dụng [20k](k_money) mua [bún](food_section) bò
@@ -899,7 +899,7 @@ nlu:
     - [chôm chôm](food_section) [50k](k_money)
     - [bưởi](food_section) [95k](k_money)
     - [cá](food_section) [75k](k_money)
-    - [trứng](food_section) [3.5k](k_money)
+    - [trứng](food_section) [3,5k](k_money)
     - [hải sản](food_section) [8m](m_money)
     - [buffet](food_section) [375 nghìn](k_money)
     - [ăn](food_section) [50 ngàn](k_money)
@@ -910,12 +910,12 @@ nlu:
     - [xăng](housing_section) [70 nghìn](k_money)
     - [xe](housing_section) [140 ngàn](k_money)
     - [bảo hiểm](housing_section) [180 ngàn](k_money)
-    - [điện](housing_section) [1.750 triệu](m_money)
+    - [điện](housing_section) [1,750 triệu](m_money)
     - [điện thoại](housing_section) [100k](k_money)
     - [di động](housing_section) [100k](k_money)
     - [nước](housing_section) [220k](k_money)
     - [thuế](housing_section) [800k](k_money)
-    - [tiền nhà](housing_section) [4.5 triệu](m_money)
+    - [tiền nhà](housing_section) [4,5 triệu](m_money)
     - [tiền chung cư](housing_section) [7000k](k_money)
     - [tiền thuê trọ](housing_section) [2 triệu](m_money)
     - [tiền học](housing_section) Toán [700k](k_money)
@@ -940,7 +940,7 @@ nlu:
     - [quầy bar](recreation_section) [70k](k_money)
     - [rượu](recreation_section) [65k](k_money)
     - [bar](recreation_section) [2 triệu](m_money)
-    - [club](recreation_section) [1.500 triệu](m_money)
+    - [club](recreation_section) [1,500 triệu](m_money)
     - [phượt](recreation_section) [3 triệu](m_money)
     - [bơi](recreation_section) [20k](k_money)
     - vợt [cầu lông](recreation_section) [529k](k_money)
@@ -956,7 +956,7 @@ nlu:
     - [tennis](recreation_section) [110k](k_money)
     - [võ](recreation_section) [250k](k_money)
     - [game](recreation_section) [170k](k_money)
-    - [game moblie](recreation_section)[255k](k_money)
+    - [game moblie](recreation_section) [255k](k_money)
     - [nạp thẻ](recreation_section) [870k](k_money)
     - [nạp](recreation_section) [900k](k_money)
     - [quần áo](personal_section) [315k](k_money)
