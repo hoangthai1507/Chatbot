@@ -804,13 +804,13 @@ nlu:
 
 - regex: k_money
   examples: |
-    - \b[0-9.]{1,9}[k]{1}\b
-    - \b[0-9.]{1,9} [nghìn||ngàn]{4,5}\b
+    - \b[0-9]{1,9}[k]{1}\b
+    - \b[0-9]{1,9} [nghìn||ngàn]{4,5}\b
 
 - regex: m_money
   examples: |
-    - \b[0-9.]{1,9}[m]{1}\b
-    - \b[0-9.]{1,9} [triệu||củ]{5}\b
+    - \b[0-9]{1,9}[m]{1}\b
+    - \b[0-9]{1,9} [triệu||củ]{5}\b
 
 - regex: money
   examples: |
