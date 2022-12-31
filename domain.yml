@@ -36,7 +36,9 @@ entities:
   - housing_section
   - recreation_section
   - personal_section
-  - k_m_money
+  - money
+  - m_money
+  - k_money
   - food
   - housing
   - recreation
