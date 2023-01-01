@@ -31,3 +31,19 @@ rules:
   steps:
   - intent: Terms
   - action: action_term_explain
+
+- rule: tra loi cau hoi phan tich gia
+  steps:
+  - intent: Summarize
+  - action: action_summarize_explain
+
+
+- rule: nhap thong tin su dung tien
+  steps:
+  - intent: Subsistence
+  - action: action_Subsistence
+
+- rule: hoi thong tin su dung tien
+  steps:
+  - intent: Total_money
+  - action: action_Total_money

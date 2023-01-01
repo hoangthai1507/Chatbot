@@ -4,9 +4,9 @@ from datetime import timedelta
 
 
 def get_today():
-    now = datetime.now()  # current date and time
-    d = now.strftime("%Y-%m-%d")
-    return d
+        now = datetime.now()  # current date and time
+        d = now.strftime("%Y-%m-%d")
+        return d
 
 
 def get_yesterday():
