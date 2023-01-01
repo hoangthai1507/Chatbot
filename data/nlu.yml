@@ -288,22 +288,47 @@ nlu:
     - Vàng DOJI HN
     - Vàng DOJI_HN
     - Vàng DOJI Hà Nội
+    - doji hà nội
+    - doji tp hà nội
+    - doji thành phố hà nội
+    - doji thành phố hn
+    - doji tp hn
+    - doji thủ đô hà nội
+    - doji tđ hn
+    - doji td hn
+    - doji thủ đô hn
+    - doji tđ hà nội
+    - doji td hà nội
+    - doji_hn
+    - vàng doji hn
+    - vàng doji_hn
+    - vàng doji hà nội
 - synonym: DOJI SG
   examples: |
     - DOJI Sài Gòn
     - Vàng DOJI SG
     - Vàng DOJI_SG
     - Vàng DOJI Sài Gòn
+    - doji sài gòn
+    - vàng doji sg
+    - vàng doji_sg
+    - vàng doji sài gòn
 - synonym: Phú Quý SJC
   examples: |
     - Vàng Miếng SJC
     - Vàng SJC
     - SJC
+    - vàng miếng sjc
+    - vàng sjc
+    - sjc
 - synonym: SJC Hà Nội
   examples: |
     - Vàng SJC Hà Nội
     - Vàng SJC HN
     - SJC HN
+    - vàng sjc hà nội
+    - vàng sjc hn
+    - sjc hn
 - synonym: SJC TP HCM
   examples: |
     - Vàng SJC TP Hồ Chí Minh
@@ -313,6 +338,13 @@ nlu:
     - SJC HCM
     - SJC Thành Phố Hồ Chí Minh
     - SJC Thành Phố HCM
+    - vàng sjc tp hồ chí minh
+    - vàng sjc hcm
+    - vàng sjc thành phố hồ chí minh
+    - vàng sjc thành phố hcm
+    - sjc hcm
+    - sjc thành phố hồ chí minh
+    - sjc thành phố hcm
 - synonym: SJC Đà Nẵng
   examples: |
     - Vàng SJC TP Đà Nẵng
@@ -326,6 +358,17 @@ nlu:
     - SJC Thành Phố Đà Nẵng
     - SJC Thành Phố ĐN
     - SJC Thành Phố DN
+    - vàng sjc tp đà nẵng
+    - vàng sjc đn
+    - vàng sjc dn
+    - vàng sjc thành phố đà nẵng
+    - vàng sjc thành phố đn
+    - vàng sjc thành phố dn
+    - sjc đn
+    - sjc dn
+    - sjc thành phố đà nẵng
+    - sjc thành phố đn
+    - sjc thành phố dn
 - synonym: VIETINBANK GOLD
   examples: |
     - Vàng Miếng SJC 999.9
@@ -336,6 +379,14 @@ nlu:
     - Vàng 999.9
     - SJC VIETINBANK GOLD
     - SJC 999.9
+    - vàng miếng sjc 999.9
+    - vàng miếng sjc vietinbank gold
+    - vàng miếng vietinbank gold
+    - vàng sjc vietinbank gold
+    - vàng vietinbank gold
+    - vàng 999.9
+    - sjc vietinbank gold
+    - sjc 999.9
     
 - lookup: status
   examples: |
