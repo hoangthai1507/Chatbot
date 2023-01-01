@@ -321,6 +321,8 @@ nlu:
     - vàng miếng sjc
     - vàng sjc
     - sjc
+    - Phú Qúy
+    - phú qúy
 - synonym: SJC Hà Nội
   examples: |
     - Vàng SJC Hà Nội
