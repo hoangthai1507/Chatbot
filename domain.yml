@@ -95,7 +95,7 @@ actions:
   - utter_goodbye
   - utter_sorry
   - utter_affirm
-  - utter_iamabot
+  # - utter_iamabot
   - utter_food_price
   - action_jenewry_price
   - utter_menu
@@ -103,7 +103,6 @@ actions:
   - action_fuel_price
   - action_coffee_price
   - action_term_explain
-  - action_summarize_explain
   - action_money_price
   - action_summarize_explain
   - action_Subsistence
