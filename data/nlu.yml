@@ -824,34 +824,39 @@ nlu:
     - phân tích giá [cafe](name_coffee) [hôm nay](day)
     - cụ thể giá [coffee](name_coffee) [hôm nay](day)
     - cụ thể cho tôi giá [cà phê](name_coffee) [hôm qua](day)
-    - sơ lược giá [thịt](name_analyse) [hôm nay](day)
-    - sơ lược giá [thịt lợn](name_analyse) [hôm qua](day)
-    - sơ lược giá [thịt heo](name_analyse) [hôm qua](day)
-    - giá [thịt](name_analyse) [hôm nay](day)
-    - giá [thịt lợn](name_analyse) [hôm qua](day)
-    - giá [thịt heo](name_analyse) [hôm qua](day)
-    - cho tôi biết thêm về giá [thịt](name_analyse) [hôm nay](day)
-    - cho tôi biết giá [thịt lợn](name_analyse) [hôm nay](day)
-    - cho tôi giá [thịt heo](name_analyse) [hôm nay](day)
-    - phân tích giá [thịt](name_analyse) [hôm nay](day)
-    - phân tích giá [thịt lợn](name_analyse) [hôm qua](day)
-    - phân tích giá [thịt heo](name_analyse) [hôm nay](day)
-    - cụ thể giá [thịt](name_analyse) [hôm nay](day)
-    - cụ thể cho tôi giá [thịt heo](name_analyse) [hôm qua](day)
-    - sơ lược [thị trường chứng khoán](name_analyse) [hôm nay](day)
-    - sơ lược giá [thị trường](name_analyse) [hôm qua](day)
-    - sơ lược [thị trường](name_analyse) [hôm qua](day)
-    - giá [thị trường chứng khoán](name_analyse) [hôm nay](day)
-    - giá [thị trường](name_analyse) [hôm qua](day)
-    - giá [thị trường](name_analyse) [hôm nay](day)
-    - cho tôi biết thêm về giá [thị trường chứng khoán](name_analyse) [hôm nay](day)
-    - cho tôi biết giá [thị trường](name_analyse) [hôm qua](day)
-    - cho tôi giá [thị trường](name_analyse) [hôm nay](day)
-    - phân tích giá [thị trường chứng khoán](name_analyse) [hôm nay](day)
-    - phân tích giá [thị trường](name_analyse) [hôm qua](day)
-    - phân tích giá [thị trường](name_analyse) [hôm nay](day)
-    - cụ thể giá [thị trường chứng khoán](name_analyse) [hôm nay](day)
-    - cụ thể cho tôi giá [thị trường](name_analyse) [hôm qua](day)
+    - sơ lược giá [thịt](name_meat) [hôm nay](day)
+    - sơ lược giá [thịt lợn](name_meat) [hôm qua](day)
+    - sơ lược giá [thịt heo](name_meat) [hôm qua](day)
+    - giá [thịt](name_meat) [hôm nay](day)
+    - giá [thịt lợn](name_meat) [hôm qua](day)
+    - giá [thịt heo](name_meat) [hôm qua](day)
+    - cho tôi biết thêm về giá [thịt](name_meat) [hôm nay](day)
+    - cho tôi biết giá [thịt lợn](name_meat) [hôm nay](day)
+    - cho tôi giá [thịt heo](name_meat) [hôm nay](day)
+    - phân tích giá [thịt](name_meat) [hôm nay](day)
+    - phân tích giá [thịt lợn](name_meat) [hôm qua](day)
+    - phân tích giá [thịt heo](name_meat) [hôm nay](day)
+    - cụ thể giá [thịt](name_meat) [hôm nay](day)
+    - cụ thể cho tôi giá [thịt heo](name_meat) [hôm qua](day)
+    - sơ lược [thị trường chứng khoán](name_stock) [hôm nay](day)
+    - sơ lược giá [thị trường](name_stock) [hôm qua](day)
+    - sơ lược [thị trường](name_stock) [hôm qua](day)
+    - giá [thị trường chứng name_stock](name_stock) [hôm nay](day)
+    - giá [thị trường](name_stock) [hôm qua](day)
+    - giá [thị trường](name_stock) [hôm nay](day)
+    - cho tôi biết thêm về giá [thị trường chứng khoán](name_stock) [hôm nay](day)
+    - cho tôi biết giá [thị trường](name_stock) [hôm qua](day)
+    - cho tôi giá [thị trường](name_stock) [hôm nay](day)
+    - phân tích giá [thị trường chứng khoán](name_stock) [hôm nay](day)
+    - phân tích giá [thị trường](name_stock) [hôm qua](day)
+    - phân tích giá [thị trường](name_stock) [hôm nay](day)
+    - cụ thể giá [thị trường chứng khoán](name_stock) [hôm nay](day)
+    - cụ thể cho tôi giá [thị trường](name_stock) [hôm qua](day)
+
+- regex: b_money
+  examples: |
+    - \b[0-9]{1,9}[k]{1}\b
+    - \b[0-9]{1,9} [tỷ||tỉ]{2}\b
 
 - regex: k_money
   examples: |
@@ -861,7 +866,7 @@ nlu:
 - regex: m_money
   examples: |
     - \b[0-9]{1,9}[m]{1}\b
-    - \b[0-9]{1,9} [triệu||củ]{5}\b
+    - \b[0-9]{1,9} [triệu]{5}\b
 
 - regex: money
   examples: |
@@ -874,10 +879,10 @@ nlu:
     - có [40k](k_money) tiền [cơm](food_section) tấm
     - tôi xài [70k](k_money) [bánh](food_section) canh cua
     - xài [50k](k_money) [hủ tiếu](food_section) nam vang
-    - tôi sử dụng [20m](m_money) tiền ăn [buffet](food_section)
+    - tôi sử dụng [20m](m_money) [210k](k_money) tiền ăn [buffet](food_section)
     - [5m](m_money) [hải sản](food_section)
-    - có [40m](m_money) tiền [bò](food_section)
-    - tôi xài [70m](m_money) cho tiền [ăn](food_section) tháng này
+    - có [40m](m_money) [900k](k_money) tiền [bò](food_section)
+    - tôi xài [70m](m_money) [500k](k_money) cho tiền [ăn](food_section) tháng này
     - xài [500k](k_money) tiền [bánh](food_section) mì
     - tôi sử dụng [20k](k_money) mua [nem](food_section) bò
     - [chả](food_section) [150k](k_money)
@@ -887,7 +892,7 @@ nlu:
     - tôi sử dụng [2m](m_money) mua [thịt](food_section)
     - tiêu [5m](m_money) [heo](food_section) sữa quay
     - có [400k](k_money) tiền [lợn](food_section) quay
-    - tôi xài [70k](k_money) cho tiền [sinh tố](food_section) 
+    - tôi xài [70k](k_money) [500](money) cho tiền [sinh tố](food_section) 
     - xài [500k](k_money) tiền [bia](food_section)
     - tháng này xài hết [5440 nghìn](k_money) tiền [ăn](food_section) 
     - tôi xài [5440 ngàn](k_money) tiền [ăn](food_section) tháng này
@@ -899,7 +904,7 @@ nlu:
     - [bún](food_section) [40k](k_money)
     - [phở](food_section) [50 nggàn](k_money)
     - [hủ tiếu](food_section) [30 nghìn](k_money)
-    - [cơm](food_section) [45k](k_money)
+    - [cơm](food_section) [45k](k_money) [500](money)
     - [mì](food_section) xào [30k](k_money)
     - [nem](food_section) rán [50k](k_money)
     - [chả](food_section) [50k](k_money)
@@ -908,30 +913,30 @@ nlu:
     - [canh](food_section) [60k](k_money)
     - [súp](food_section) [50k](k_money)
     - [thịt](food_section) [70k](k_money)
-    - [heo](food_section) [90k](k_money)
+    - [heo](food_section) [90k](k_money) [500](money)
     - [lợn](food_section) [40k](k_money)
     - [bò](food_section) [100k](k_money)
     - [nước](food_section) [30k](k_money)
     - [đường](food_section) [14k](k_money)
     - [sinh tố](food_section) [45k](k_money)
     - [lúa mạch](food_section) [5m](m_money)
-    - [lúa](food_section) [1m](m_money)
+    - [lúa](food_section) [1m](m_money) [500000](money)
     - [gạo](food_section) [500k](k_money)
     - [cám](food_section) [5000k](k_money)
     - [ức](food_section) gà [76k](k_money)
     - [đùi](food_section) gà [80k](k_money)
     - [trà sữa](food_section) [40k](k_money)
-    - [cà phê](food_section) [20k](k_money)
+    - [cà phê](food_section) [20k](k_money) [500](money)
     - [trà](food_section) [20k](k_money)
     - [sữa](food_section) [30k](k_money)
-    - [milo](food_section) [8k](k_money)
+    - [milo](food_section) [8k](k_money) [700](money)
     - [ovatin](food_section) [9k](k_money)
     - [cacao](food_section) [17k](k_money)
     - [sủi cảo](food_section) [85k](k_money)
-    - [hẹ](food_section) [3k](k_money)
+    - [hẹ](food_section) [3k](k_money) [500](money)
     - [gỏi](food_section) [27k](k_money)
-    - [cao lầu](food_section) [38k](k_money)
-    - [ốc](food_section) [40k](k_money)
+    - [cao lầu](food_section) [38k](k_money) [500](money)
+    - [ốc](food_section) [40k](k_money) 
     - [sushi](food_section) [50k](k_money)
     - [đồ nướng](food_section) [5 triệu](m_money)
     - [nướng](food_section)  [5000 ngàn](k_money)
@@ -950,7 +955,7 @@ nlu:
     - [chôm chôm](food_section) [50k](k_money)
     - [bưởi](food_section) [95k](k_money)
     - [cá](food_section) [75k](k_money)
-    - [trứng](food_section) [3,5k](k_money)
+    - [trứng](food_section) [35k](k_money)
     - [hải sản](food_section) [8m](m_money)
     - [buffet](food_section) [375 nghìn](k_money)
     - [ăn](food_section) [50 ngàn](k_money)
@@ -961,12 +966,12 @@ nlu:
     - [xăng](housing_section) [70 nghìn](k_money)
     - [xe](housing_section) [140 ngàn](k_money)
     - [bảo hiểm](housing_section) [180 ngàn](k_money)
-    - [điện](housing_section) [1,750 triệu](m_money)
+    - [điện](housing_section) [15 triệu](m_money)
     - [điện thoại](housing_section) [100k](k_money)
     - [di động](housing_section) [100k](k_money)
     - [nước](housing_section) [220k](k_money)
     - [thuế](housing_section) [800k](k_money)
-    - [tiền nhà](housing_section) [4,5 triệu](m_money)
+    - [tiền nhà](housing_section) [45 triệu](m_money)
     - [tiền chung cư](housing_section) [7000k](k_money)
     - [tiền thuê trọ](housing_section) [2 triệu](m_money)
     - [tiền học](housing_section) Toán [700k](k_money)
@@ -991,7 +996,7 @@ nlu:
     - [quầy bar](recreation_section) [70k](k_money)
     - [rượu](recreation_section) [65k](k_money)
     - [bar](recreation_section) [2 triệu](m_money)
-    - [club](recreation_section) [1,500 triệu](m_money)
+    - [club](recreation_section) [10 triệu](m_money)
     - [phượt](recreation_section) [3 triệu](m_money)
     - [bơi](recreation_section) [20k](k_money)
     - vợt [cầu lông](recreation_section) [529k](k_money)
@@ -1014,38 +1019,39 @@ nlu:
     - [cắt tóc](personal_section) [720k](k_money)
     - [làm nail](personal_section) [430k](k_money)
     - [decor nhà](personal_section) [2145000](money)
-    - [giày](personal_section) [9675000k](k_money)
+    - [giày](personal_section) [500 triệu](m_money) [799k](k_money)
     - [dép](personal_section) [180k](k_money)
     - [balo](personal_section) [4200k](k_money)
     - [dây nịch](personal_section) [310k](k_money)
     - [túi xách](personal_section) [7800k](k_money)
-    - [khuyên tai](personal_section) [1200k](k_money)
+    - [khuyên tai](personal_section) [1200000](money)
     - [nhẫn](personal_section) [5200k](k_money)
     - [nhẫn vàng](personal_section) [5400k](k_money)
     - [vòng bạc](personal_section) [380k](k_money)
     - [dây chuyền](personal_section) [21 triệu](m_money)
     - [dây cổ](personal_section) [15 triệu](m_money)
-    - [lắc tay](personal_section) [1900k](k_money)
+    - [lắc tay](personal_section) [1900000](money)
     - [lắc chân](personal_section) [660k](k_money)
     - [nước hoa](personal_section) [270k](k_money)
     - [kính](personal_section) [950 nghìn](k_money)
-    - [lens](personal_section) [1200k](k_money)
+    - [lens](personal_section) [1 triệu](k_money) [500k](k_money)
     - [áo khoác](personal_section) [765k](k_money)
     - [áo](personal_section) [210k](k_money)
     - [quần](personal_section) [550k](k_money)
     - [laptop](personal_section) [33000k](k_money)
     - [máy tính](personal_section) [620k](k_money)
-    - [pc](personal_section) [73000k](k_money)
+    - [pc](personal_section) [1 tỷ](b_money) [100 triệu](m_money)
     - [tay nghe](personal_section) [99k](k_money)
     - [chuột máy tính](personal_section) [396k](k_money)
     - [bàn phím](personal_section) [2700k](k_money)
     - [đèn](personal_section) [210k](k_money)
     - [máy](personal_section) [100k](k_money)
-    - [tivi](personal_section) [12785k](k_money)
+    - [tivi](personal_section) [12 triệu](m_money) [399k](k_money)
     - [tủ lạnh](personal_section) [14210k](k_money)
-    - [đồng hồ](personal_section) [3100k](k_money)
-    - [xe](personal_section) [120000 triệu](m_money)
-    - [xe hơi](personal_section) [2100000 triệu](m_money)
+    - [đồng hồ](personal_section) [31 triệu](k_money) [899k](k_money)
+    - [xe](personal_section) [12 tỷ](b_money) [500 triệu](m_money)
+    - [xe hơi](personal_section) [2 tỷ](b_money) [100 triệu](m_money)
+    - [nhà](housing_section) [12 tỷ](b_money) [700 triệu](m_money) [500k](k_money)
     - [mỹ phẩm](personal_section) [635k](k_money)
     - [tập](personal_section) [20k](k_money)
     - [sách](personal_section) [340k](k_money)
@@ -1054,12 +1060,12 @@ nlu:
     - [bàn](personal_section) [520k](k_money)
     - [bàn là](personal_section) [790k](k_money)
     - [chăn](personal_section) [2010k](k_money)
-    - [nệm](personal_section) [9710k](k_money)
-    - [gối](personal_section) [210k](k_money)
-    - [vớ](personal_section) [20k](k_money)
-    - [giấy](personal_section) [45k](k_money)
+    - [nệm](personal_section) [9 triệu](k_money) [750k](k_money)  
+    - [gối](personal_section) [210k](k_money) 
+    - [vớ](personal_section) [20k](k_money) 
+    - [giấy](personal_section) [45k](k_money) [500](money)  
     - [tủ](personal_section) [2310k](k_money)
-    - [kệ tủ](personal_section) [1570k](k_money)  
+    - [kệ tủ](personal_section) [1 triệu](m_money) [500k](k_money)  
 
 # ăn uống, food_section 
 # phân loại theo cơm, gạo bún cháo phở
@@ -1140,6 +1146,7 @@ nlu:
     - di động
     - nước
     - thuế
+    - nhà
     - tiền nhà
     - tiền chung cư
     - tiền thuê trọ
@@ -1265,3 +1272,48 @@ nlu:
     - [hôm qua](day) tôi xài hết bao nhiêu tiền để [mua sắm](personal)
     - [hôm qua](day) tôi xài hết bao nhiêu tiền để [vui chơi](recreation)
     - [hôm qua](day) tôi xài hết bao nhiêu tiền để [sinh hoạt](housing)
+    - tiền [sinh hoạt](housing) [hôm qua](day) hết bao nhiêu
+    - tiền [vui chơi](recreation) [hôm nay](day) xài hết bao nhiêu 
+    - tiền để [ăn](food) [hôm nay](day) tôi xài hết bao nhiêu
+    - tiền để [mua sắm](personal) [hôm qua](day) xài hết bao nhiêu
+    - hết bao nhiêu tiền cho [tuần trước](day)
+    - hết bao nhiêu tiền cho [tuần này](day)
+    - Xài hết bao nhiêu tiền cho [tuần trước](day)
+    - Xài hết bao nhiêu tiền cho [tháng trước](month)
+    - hết bao nhiêu tiền cho [ăn](food) [tháng này](month)
+    - hết bao nhiêu tiền cho [mua sắm](personal) [tháng trước](month)
+    - hết bao nhiêu tiền cho [vui chơi](recreation) [tháng này](month)
+    - hết bao nhiêu tiền cho [sinh hoạt](housing) [tháng trước](month)
+
+
+- intent: Salary
+  examples: |    
+    - Tiền [lương](salary_money) [tháng này](month) [5 triệu](m_money) [500k](k_money)
+    - Tiền [lương](salary_money) [tháng trước](month) [6 triệu](m_money) [30k](k_money)
+    - [Lương](salary_money) [tháng này](month) [15 triệu](m_money) [515k](k_money)
+    - [Lương](salary_money) [tháng trước](month) [25 triệu](m_money) [350k](k_money) 
+    - [Tháng này](month) nhận [8 triệu](m_money) tiền lương
+    - [Tháng trước](month) nhận [8 triệu](m_money) [700k](k_money) tiền lương
+    - Tiền [lương](salary_money) [hôm nay](day) [50k](k_money)
+    - Tiền [lương](salary_money) [hôm qua](day) [80](k_money)
+    - [Lương](salary_money) [hôm nay](day) [515k](k_money)
+    - [Lương](salary_money) [hôm qua](day) [350k](k_money) 
+    - [Hôm nay](day) nhận [80k](k_money) tiền lương
+    - [Hôm qua](day) nhận [700k](k_money) tiền lương    
+    - [Tuần này](day) nhận [180k](k_money) tiền lương
+    - [Tuần trước](day) nhận [170k](k_money) tiền lương 
+    - Tiền [lương](salary_money) [tháng này](month) [75 triệu](m_money) [500k](k_money)
+    - Tiền [lương](salary_money) [năm trước](year) [6 tỷ](b_money) [30 triệu](m_money)
+    - [Lương](salary_money) [năm nay](year) [1 tỷ](b_money) [515k](k_money)
+    - [Lương](salary_money) [năm trước](year) [2 tỉ](b_money) [350 triệu](m_money) 
+    - [Năm nay](year) nhận [8 tỷ](b_money) tiền lương
+    - [Năm trước](year) nhận [8 tỷ](b_money) [700k](k_money) tiền lương
+    - Tiền [lương](salary_money) [năm nay](day) [500 triệu](m_money)
+    - Tiền [lương](salary_money) [năm qua](day) [80 triệu](m_money)
+    - [Lương](salary_money) [hôm nay](day) [500](money) [15 ngàn](k_money) 
+    - [Lương](salary_money) [hôm qua](day) [700](money) [50k](k_money) 
+    - [Hôm nay](day) nhận [80k](k_money) [800](money) tiền lương
+    - [Hôm qua](day) nhận [700k](k_money) [500](money) tiền lương    
+    - [Tuần này](day) nhận [8 triệu](m_money) [500k](k_money) tiền lương
+    - [Tuần trước](day) nhận [2 triệu](m_money) [500k](k_money) [750](money) tiền lương     
+

@@ -18,6 +18,8 @@ intents:
   - Summarize
   - Subsistence
   - Total_money
+  - Salary
+
 
 entities:
   - name_fuel
@@ -39,11 +41,18 @@ entities:
   - money
   - m_money
   - k_money
+  - b_money
   - food
   - housing
   - recreation
   - personal
   - status
+  - month
+  - salary_money
+  - year
+  - name_product
+  - name_meat
+  - name_stock
  
 
 responses:
@@ -96,3 +105,6 @@ actions:
   - action_term_explain
   - action_summarize_explain
   - action_money_price
+  - action_summarize_explain
+  - action_Subsistence
+  - action_Total_money

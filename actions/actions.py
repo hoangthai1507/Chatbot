@@ -6,7 +6,7 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
-
+import re
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -14,6 +14,10 @@ from rasa_sdk.executor import CollectingDispatcher
 
 from database import getdata
 from database import getdate
+
+from database import data_user
+
+user_name = "thai4362"
 
 
 class ActionFuelPrice(Action):
@@ -306,3 +310,343 @@ class ActionGold(Action):
             )
 
         dispatcher.utter_message(text)
+
+
+class ActionAnaly(Action):
+    def name(self) -> Text:
+        return "action_summarize_explain"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        gold = None
+        coffee = None
+        meat = None
+        stock = None
+        date = next(tracker.get_latest_entity_values("day"), None)
+        try:
+            gold = next(tracker.get_latest_entity_values("name_jenewry"), None)
+        except:
+            print("Not gold!")
+        try:
+            coffee = next(tracker.get_latest_entity_values("name_coffee"), None)
+        except:
+            print("Not coffee!")
+        try:
+            meat = next(tracker.get_latest_entity_values("name_meat"), None)
+        except:
+            print("Not meat!")
+        try:
+            meat = next(tracker.get_latest_entity_values("food_section"), None)
+        except:
+            print("Not meat!")
+        try:
+            stock = next(tracker.get_latest_entity_values("name_stock"), None)
+        except:
+            print("Not stock!")
+
+        if date == "hôm nay" or date == None:
+            day = getdate.get_today()
+        elif date == "hôm qua":
+            day = getdate.get_yesterday()
+        else:
+            day = date
+        if gold != None:
+            try:
+                detail = getdata.get_analyse("gold", day, "price_gold_detail")
+            except:
+                print("can not find detail of gold!")
+                return
+            try:
+                summary = getdata.get_analyse("gold", day, "price_gold_summary")
+            except:
+                print("can not find summary of gold")
+                return
+            text = (
+                "phân tích vàng hôm " + f"{day}"
+                " là:\n"
+                + "chi tiết giá vàng: "
+                + f"{detail}"
+                + "\n"
+                + "tóm lược giá vàng: "
+                + f"{summary}"
+            )
+
+        elif coffee != None:
+            try:
+                detail = getdata.get_analyse("coffee", day, "price_coffee_detail")
+            except:
+                print("can not find detail of coffee!")
+                return
+            try:
+                summary = getdata.get_analyse("coffee", day, "price_coffee_summary")
+            except:
+                print("can not find summary of coffee")
+                return
+            text = (
+                "phân tích cà phê hôm " + f"{day}"
+                " là:\n"
+                + "chi tiết giá cà phê: "
+                + f"{detail}"
+                + "\n"
+                + "tóm lược giá cà phê: "
+                + f"{summary}"
+            )
+        elif meat != None:
+            try:
+                detail = getdata.get_analyse("meat", day, "price_meat_detail")
+            except:
+                print("can not find detail of meat!")
+                return
+            try:
+                summary = getdata.get_analyse("meat", day, "price_meat_summary")
+            except:
+                print("can not find summary of meat")
+                return
+            text = (
+                "phân tích giá thịt hôm " + f"{day}"
+                " là:\n"
+                + "chi tiết giá thịt: "
+                + f"{detail}"
+                + "\n"
+                + "tóm lược giá thịt: "
+                + f"{summary}"
+            )
+
+        elif stock != None:
+            daily = None
+            weekly = None
+            try:
+                daily = getdata.get_analyse("stock", day, "Stock_daily_analy")
+            except:
+                print("can not find daily analyse of stock!")
+                return
+            try:
+                weekly = getdata.get_analyse("stock", day, "stock_weekly_analy")
+            except:
+                print("can not find weekly analyse of stock!")
+
+            if weekly != None:
+                text = (
+                    "phân tích chứng khoán hôm " + f"{day}"
+                    " là:\n"
+                    + "phân tích chứng khoán theo ngày: "
+                    + f"{daily}"
+                    + "\n"
+                    + "phân tích chứng khoán theo tuần: "
+                    + f"{weekly}"
+                )
+            else:
+                text = (
+                    "phân tích chứng khoán hôm " + f"{day}"
+                    " là:\n" + "phân tích chứng khoán theo ngày: " + f"{daily}" + "\n"
+                )
+        else:
+            text = "có thể bạn đang muốn biết về phân tích một loại hàng hoá nào đó, vui lòng nhập cụ thể hơn!"
+
+        dispatcher.utter_message(text)
+        return
+
+
+class ActionSubsistence(Action):
+    def name(self) -> Text:
+        return "action_Subsistence"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        money = None
+        food = None
+        hous = None
+        recreation = None
+        personal = None
+        day_entity = next(tracker.get_latest_entity_values("day"), None)
+        if day_entity == "hôm nay" or day_entity == None:
+            date = getdate.get_today()
+        elif day_entity == "hôm qua":
+            date = getdate.get_yesterday()
+        else:
+            date = day_entity
+        try:
+            money = next(tracker.get_latest_entity_values("k_m_money"), None)
+            money_number = [float(x) for x in re.findall(r"-?\d+\.?\d*", money)][0]
+
+        except:
+            print("problem with money!")
+            dispatcher.utter_message(
+                "có vấn đề xẩy ra với việc nhập giá tiền, vui lòng nhập lại"
+            )
+            return
+        try:
+            food = next(tracker.get_latest_entity_values("food_section"), None)
+        except:
+            print("problem with food!")
+        try:
+            hous = next(tracker.get_latest_entity_values("housing_section"), None)
+        except:
+            print("problem with house!")
+        try:
+            recreation = next(
+                tracker.get_latest_entity_values("recreation_section"), None
+            )
+        except:
+            print("problem with recreation!")
+            return
+        try:
+            personal = next(tracker.get_latest_entity_values("personal_section"), None)
+        except:
+            print("problem with recreation!")
+            return
+
+        if food != None:
+
+            data_user.updata_user(user_name, date, "food_section", int(money_number))
+            text = "Đã thêm " + f"{money}" + " vào danh sách chi tiêu cho thực phẩm"
+        elif hous != None:
+
+            data_user.updata_user(user_name, date, "housing_section", int(money_number))
+            text = "Đã thêm " + f"{money}" + " vào danh sách chi tiêu cho sinh hoạt"
+        elif recreation != None:
+
+            data_user.updata_user(
+                user_name, date, "recreation_section", int(money_number)
+            )
+            text = "Đã thêm " + f"{money}" + " vào danh sách chi tiêu cho giải trí"
+        elif personal != None:
+
+            data_user.updata_user(user_name, date, "personal", int(money_number))
+            text = "bạn đã dùng " + f"{money}" + " vào danh sách chi tiêu cho mua sắm"
+        else:
+            text = "có vẻ như bạn muốn nhập liệu thông tin tiêu dùng, vui lòng nhập một cách cự thể hơn!"
+
+        dispatcher.utter_message(text)
+        return
+
+
+class ActionTotal(Action):
+    def name(self) -> Text:
+        return "action_Total_money"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        money = None
+        food = None
+        hous = None
+        recreation = None
+        personal = None
+        day_entity = next(tracker.get_latest_entity_values("day"), None)
+        if day_entity == "hôm nay" or day_entity == None:
+            date = getdate.get_today()
+        elif day_entity == "hôm qua":
+            date = getdate.get_yesterday()
+        else:
+            date = day_entity
+
+        try:
+            food = next(tracker.get_latest_entity_values("food"), None)
+        except:
+            print("problem with food!")
+        try:
+            personal = next(tracker.get_latest_entity_values("personal"), None)
+        except:
+            print("problem with personal!")
+        try:
+            recreation = next(tracker.get_latest_entity_values("recreation"), None)
+        except:
+            print("problem with recreation!")
+        try:
+            housing = next(tracker.get_latest_entity_values("housing"), None)
+        except:
+            print("problem with housing!")
+
+        if food != None:
+            try:
+                total_food = data_user.get_user_data(
+                    user_name, date, "food_section", "Total"
+                )
+                text = (
+                    "Hôm nay bạn đã sử dụng tổng cộng "
+                    + f"{total_food}"
+                    + "k "
+                    + "cho việc "
+                    + f"{food}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        elif housing != None:
+            try:
+                total_housing = data_user.get_user_data(
+                    user_name, date, "housing_section", "Total"
+                )
+                text = (
+                    "Hôm nay bạn đã sử dụng tổng cộng "
+                    + f"{total_housing}"
+                    + "k "
+                    + "cho việc "
+                    + f"{housing}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        elif recreation != None:
+            try:
+                total_recreation = data_user.get_user_data(
+                    user_name, date, "recreation_section", "Total"
+                )
+                text = (
+                    "Hôm nay bạn đã sử dụng tổng cộng "
+                    + f"{total_recreation}"
+                    + "k "
+                    + "cho việc "
+                    + f"{recreation}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        elif personal != None:
+            try:
+                total_personal = data_user.get_user_data(
+                    user_name, date, "personaln_section", "Total"
+                )
+                text = (
+                    "Hôm nay bạn đã sử dụng tổng cộng "
+                    + f"{total_personal}"
+                    + "k "
+                    + "cho việc "
+                    + f"{personal}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        else:
+            try:
+                total = data_user.get_total_day(user_name, date)
+                text = (
+                    "Hôm nay bạn đã sử dụng tổng cộng " + f"{total}" + "k ngày hôm nay"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        dispatcher.utter_message(text)
+        return

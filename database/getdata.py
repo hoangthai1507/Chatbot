@@ -1,4 +1,5 @@
 from firebase import firebase
+
 # from datetime import date
 #
 # yesterday = datetime.date.fromordinal(datetime.date.today().toordinal() - 1)
@@ -7,7 +8,7 @@ from firebase import firebase
 
 # today = date.today()
 Firebase = firebase.FirebaseApplication(
-    "https://chatbot-b8f03-default-rtdb.firebaseio.com/", None
+    "https://chatbot-73e7d-default-rtdb.firebaseio.com/", None
 )
 
 # name_data = input("name data: ")
