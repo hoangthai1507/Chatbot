@@ -44,7 +44,7 @@ stories:
       - action: utter_food_price
 
       - intent: money_price
-      - action: utter_money_price
+      - action: action_money_price
 
       - intent: goodbye
       - action: utter_goodbye

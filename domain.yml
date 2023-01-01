@@ -38,12 +38,13 @@ entities:
   - housing_section
   - recreation_section
   - personal_section
-  - k_m_money
+  - money
+  - m_money
+  - k_money
   - food
   - housing
   - recreation
   - personal
-  - name_product
  
 
 responses:
@@ -69,8 +70,6 @@ responses:
   utter_food_price:
   - text: "Giá thịt hiện tại là 140.000/kg"
 
-  utter_money_price:
-    - text: "Giá đô hiện tại là 25.000 vnd"
 
   utter_menu:
   - text: "Em có thể cho bạn biết giá, các thuật ngữ, các thứ về kinh tế,..."
@@ -90,7 +89,6 @@ actions:
   - utter_affirm
   - utter_iamabot
   - utter_food_price
-  - utter_money_price
   - action_jenewry_price
   - utter_menu
   - utter_Inflation
@@ -98,5 +96,3 @@ actions:
   - action_coffee_price
   - action_term_explain
   - action_summarize_explain
-  - action_Subsistence
-  - action_Total_money
