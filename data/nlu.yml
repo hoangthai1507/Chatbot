@@ -194,70 +194,70 @@ nlu:
   examples: |
     - giá [mua](status) [DOJI HN](name_jenewry) [hôm nay](day)
     - giá [mua](status) [DOJI SG](name_jenewry) [hôm nay](day)
-    - giá [mua](status) [Phú Quý SJC](name_jenewry) [hôm nay](day)
+    - giá [mua](status) [Phú Qúy SJC](name_jenewry) [hôm nay](day)
     - giá [mua](status) [SJC Hà Nội](name_jenewry) [hôm nay](day)
     - giá [mua](status) [SJC TP HCM](name_jenewry) [hôm nay](day)
     - giá [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day)
     - giá [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day)
     - giá [bán](status) [DOJI HN](name_jenewry) [hôm nay](day)
     - giá [bán](status) [DOJI SG](name_jenewry) [hôm nay](day)
-    - giá [bán](status) [Phú Quý SJC](name_jenewry) [hôm nay](day)
+    - giá [bán](status) [Phú Qúy SJC](name_jenewry) [hôm nay](day)
     - giá [bán](status) [SJC Hà Nội](name_jenewry) [hôm nay](day)
     - giá [bán](status) [SJC TP HCM](name_jenewry) [hôm nay](day)
     - giá [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day)
     - giá [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day)
     - giá [mua](status) [DOJI HN](name_jenewry) [hôm qua](day)
     - giá [mua](status) [DOJI SG](name_jenewry) [hôm qua](day)
-    - giá [mua](status) [Phú Quý SJC](name_jenewry) [hôm qua](day)
+    - giá [mua](status) [Phú Qúy SJC](name_jenewry) [hôm qua](day)
     - giá [mua](status) [SJC Hà Nội](name_jenewry) [hôm qua](day)
     - giá [mua](status) [SJC TP HCM](name_jenewry) [hôm qua](day)
     - giá [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day)
     - giá [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day)
     - giá [bán](status) [DOJI HN](name_jenewry) [hôm qua](day)
     - giá [bán](status) [DOJI SG](name_jenewry) [hôm qua](day)
-    - giá [bán](status) [Phú Quý SJC](name_jenewry) [hôm qua](day)
+    - giá [bán](status) [Phú Qúy SJC](name_jenewry) [hôm qua](day)
     - giá [bán](status) [SJC Hà Nội](name_jenewry) [hôm qua](day)
     - giá [bán](status) [SJC TP HCM](name_jenewry) [hôm qua](day)
     - giá [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day)
     - giá [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day)
     - [mua](status) [DOJI HN](name_jenewry) [hôm nay](day) bao nhiêu
     - [mua](status) [DOJI SG](name_jenewry) [hôm nay](day) bao nhiêu
-    - [mua](status) [Phú Quý SJC](name_jenewry) [hôm nay](day) bao nhiêu
+    - [mua](status) [Phú Qúy SJC](name_jenewry) [hôm nay](day) bao nhiêu
     - [mua](status) [SJC Hà Nội](name_jenewry) [hôm nay](day) bao nhiêu
     - [mua](status) [SJC TP HCM](name_jenewry) [hôm nay](day) bao nhiêu
     - [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day) bao nhiêu
     - [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day) bao nhiêu
     - [bán](status) [DOJI HN](name_jenewry) [hôm nay](day) bao nhiêu
     - [bán](status) [DOJI SG](name_jenewry) [hôm nay](day) bao nhiêu
-    - [bán](status) [Phú Quý SJC](name_jenewry) [hôm nay](day) bao nhiêu
+    - [bán](status) [Phú Qúy SJC](name_jenewry) [hôm nay](day) bao nhiêu
     - [bán](status) [SJC Hà Nội](name_jenewry) [hôm nay](day) bao nhiêu
     - [bán](status) [SJC TP HCM](name_jenewry) [hôm nay](day) bao nhiêu
     - [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day) bao nhiêu
     - [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day) bao nhiêu
     - [mua](status) [DOJI HN](name_jenewry) [hôm qua](day) bao nhiêu
     - [mua](status) [DOJI SG](name_jenewry) [hôm qua](day) bao nhiêu
-    - [mua](status) [Phú Quý SJC](name_jenewry) [hôm qua](day) bao nhiêu
+    - [mua](status) [Phú Qúy SJC](name_jenewry) [hôm qua](day) bao nhiêu
     - [mua](status) [SJC Hà Nội](name_jenewry) [hôm qua](day) bao nhiêu
     - [mua](status) [SJC TP HCM](name_jenewry) [hôm qua](day) bao nhiêu
     - [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day) bao nhiêu
     - [mua](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day) bao nhiêu
     - [bán](status) [DOJI HN](name_jenewry) [hôm qua](day) bao nhiêu
     - [bán](status) [DOJI SG](name_jenewry) [hôm qua](day) bao nhiêu
-    - [bán](status) [Phú Quý SJC](name_jenewry) [hôm qua](day) bao nhiêu
+    - [bán](status) [Phú Qúy SJC](name_jenewry) [hôm qua](day) bao nhiêu
     - [bán](status) [SJC Hà Nội](name_jenewry) [hôm qua](day) bao nhiêu
     - [bán](status) [SJC TP HCM](name_jenewry) [hôm qua](day) bao nhiêu
     - [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day) bao nhiêu
     - [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day) bao nhiêu
     - [DOJI HN](name_jenewry) [thu lại](status) bao nhiêu
     - [DOJI SG](name_jenewry) [thu lại](status) bao nhiêu
-    - [Phú Quý SJC](name_jenewry) [thu lại](status) bao nhiêu
+    - [Phú Qúy SJC](name_jenewry) [thu lại](status) bao nhiêu
     - [SJC Hà Nội](name_jenewry) [thu lại](status) bao nhiêu
     - [SJC TP HCM](name_jenewry) [thu lại](status) bao nhiêu
     - [SJC Đà Nẵng](name_jenewry) [thu lại](status) bao nhiêu
     - [VIETINBANK GOLD](name_jenewry) [thu lại](status) bao nhiêu
     - [DOJI HN](name_jenewry) [mua lại](status) bao nhiêu
     - [DOJI SG](name_jenewry) [mua lại](status) bao nhiêu
-    - [Phú Quý SJC](name_jenewry) [mua lại](status) bao nhiêu
+    - [Phú Qúy SJC](name_jenewry) [mua lại](status) bao nhiêu
     - [SJC Hà Nội](name_jenewry) [mua lại](status) bao nhiêu
     - [SJC TP HCM](name_jenewry) [mua lại](status) bao nhiêu
     - [SJC Đà Nẵng](name_jenewry) [mua lại](status) bao nhiêu
@@ -266,7 +266,7 @@ nlu:
   examples: |
     - DOJI HN
     - DOJI SG
-    - Phú Quý SJC
+    - Phú Qúy SJC
     - SJC Hà Nội
     - SJC TP HCM
     - SJC Đà Nẵng
@@ -313,7 +313,7 @@ nlu:
     - vàng doji sg
     - vàng doji_sg
     - vàng doji sài gòn
-- synonym: Phú Quý SJC
+- synonym: Phú Qúy SJC
   examples: |
     - Vàng Miếng SJC
     - Vàng SJC
@@ -321,8 +321,10 @@ nlu:
     - vàng miếng sjc
     - vàng sjc
     - sjc
-    - Phú Qúy
-    - phú qúy
+    - Phú Quý
+    - phú quý
+    - Phú Quý SJC
+    - phú quý sjc
 - synonym: SJC Hà Nội
   examples: |
     - Vàng SJC Hà Nội
@@ -347,6 +349,10 @@ nlu:
     - sjc hcm
     - sjc thành phố hồ chí minh
     - sjc thành phố hcm
+    - sjc sài gòn
+    - sjc Sài Gòn
+    - SJC SÀI GÒN
+    - SJC Sài Gòn
 - synonym: SJC Đà Nẵng
   examples: |
     - Vàng SJC TP Đà Nẵng
@@ -433,6 +439,20 @@ nlu:
     - [SEK](name_money) [hôm qua](day) bao nhiêu
     - giá [SGD](name_money) [hôm qua](day)
     - [THB](name_money) [hôm qua](day) bao nhiêu
+    - [tiền krw](name_money) [hôm nay](day) bao nhiêu
+    - giá [tiền won](name_money) [hôm nay](day)
+    - [tiền KWD](name_money) [hôm nay](day) bao nhiêu
+    - giá [tiền MYR](name_money) [hôm nay](day)
+    - [tiền NOK](name_money) [hôm nay](day) bao nhiêu
+    - giá [tiền RUB](name_money) [hôm nay](day)
+    - [dollar SEK](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô la SGD](name_money) [hôm qua](day)
+    - [THB đô la](name_money) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [CAD](name_money) 
+    - [đô thụy sĩ](name_money)
+    - giá [chf dollar](name_money) 
+    - [đô đan mạch](name_money) 
+    - giá [eur](name_money) 
 
 - lookup: name_money
   examples: |
