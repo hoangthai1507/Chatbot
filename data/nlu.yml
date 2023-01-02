@@ -520,13 +520,6 @@ nlu:
     - THB
     - USD
 
-
-- synonym: THB
-  examples: |
-    - bạt
-    - baht
-    - Baht
-
 - synonym: AUD
   examples: |
     - aud
@@ -607,6 +600,19 @@ nlu:
     - tiền hong kong
     - tiền hongkong
 
+- synonym: INR
+  examples: |
+    - inr
+    - Rupee 
+    - rupee 
+    - đồng Rupee 
+    - đồng rupee
+    - Indian Rupee
+    - tiền ấn độ
+    - tiền đô ấn độ
+    - tiền Ấn Độ
+    - đô la Ấn Độ
+
 - synonym: JPY
   examples: |
     - jpy
@@ -622,6 +628,76 @@ nlu:
     - won hàn
     - tiền hàn quốc
     - tiền won
+
+- synonym: KWD
+  examples: |
+    - Kuwaiti Dinar
+    - Kuwaiti 
+    - Dinar
+    - dinar
+    - kuwait
+    - tiền Kuwait
+    - tiền kuwait
+    - kwd
+
+- synonym: MYR
+  examples: |  
+    - Ringgit 
+    - ring git
+    - ring gít
+    - Ringgit Malaysia
+    - myr
+    - tiền mã lai
+    - tiền Mã Lai
+    - tiền Malaysia
+    - đô mã lai
+
+- synonym: NOK
+  examples: |
+    - nok
+    - Krone 
+    - tiền nok
+    - Krone Na uy
+    - tiền na uy
+    - đô Na Uy
+    - Krone Na Uy
+
+- synonym: RUB
+  examples: |
+    - Rúp Nga
+    - tiền rub
+    - rub
+    - tiền Nga
+    - đô Nga
+    - đô nga
+    - tiền nước nga
+
+- synonym: SEK
+  examples: |
+    - Krona Thụy Điển
+    - Krona 
+    - sek
+    - tiền sek
+    - krona
+    - tiền Thụy Điển
+    - đô thụy điển
+    
+- synonym: SGD
+  examples: |    
+    - Đồng Đô la Singapore 
+    - Đô la Singapore
+    - đô la sing
+    - sgd
+    - tiền sgd
+    - đô la singapo
+    - sin ga po
+    - Ringgit Singapura
+
+- synonym: THB
+  examples: |
+    - bạt
+    - baht
+    - Baht
 
 - synonym: USD
   examples: |
