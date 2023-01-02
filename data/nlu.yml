@@ -138,6 +138,11 @@ nlu:
     - giá [do](name_fuel)?
     - giá [do 0,25%s](name_fuel) [hôm qua](day)
     - [do 0,005%s](name_fuel) [tăng hay giảm](compare)
+    - [dầu diesel](name_fuel) bao nhiêu 1 lit
+    - [dầu gazola](name_fuel) [hôm qua](day)
+    - [dầu do](name_fuel) bao nhiêu
+    - giá [do](name_fuel)?
+    - giá [do 0.25%s](name_fuel) [hôm qua](day)
 
 #- lookup: name_fuel
 #  examples: |
@@ -154,6 +159,7 @@ nlu:
     - dầu do
     - DO 0,25%S
     - DO 0,005%S
+    - do 0.25%s
 
 - synonym: Dầu hỏa
   examples: |
@@ -1322,18 +1328,14 @@ nlu:
     - tủ
     - kệ tủ
 
-- intent: Total_money
+- intent: Total_money_day
   examples: |
     - [hôm nay](day) tôi đã [ăn](food) bao nhiêu tiền
     - [hôm qua](day) tôi đã [mua sắm](personal) bao nhiêu tiền
     - [hôm trước](day) tôi đã [vui chơi](recreation) bao nhiêu tiền
-    - [tháng trước](month) tôi đã [sinh hoạt](housing) bao nhiêu tiền
-    - [tháng này](month) tôi đã [sinh hoạt](housing) bao nhiêu tiền
     - [hôm qua](day) tôi đã xài bao nhiêu tiền
-    - [tháng trước](month) tôi đã xài bao nhiêu tiền
     - [hôm nay](day) tôi đã xài bao nhiêu tiền
     - [hôm trước](day) tôi đã xài bao nhiêu tiền
-    - [tháng này](month) tôi đã xài bao nhiêu tiền
     - [hôm qua](day) trả tiền [sinh hoạt](housing) bao nhiêu
     - [hôm nay](day) trả tiền [vui chơi](recreation) bao nhiêu
     - [hôm trước](day) trả tiền [mua sắm](personal) bao nhiêu
@@ -1345,14 +1347,42 @@ nlu:
     - tiền [vui chơi](recreation) [hôm nay](day) xài hết bao nhiêu 
     - tiền để [ăn](food) [hôm nay](day) tôi xài hết bao nhiêu
     - tiền để [mua sắm](personal) [hôm qua](day) xài hết bao nhiêu
-    - hết bao nhiêu tiền cho [tháng trước](month)
-    - hết bao nhiêu tiền cho [tháng này](month)
-    - Xài hết bao nhiêu tiền cho [tháng trước](month)
-    - Xài hết bao nhiêu tiền cho [tháng trước](month)
-    - hết bao nhiêu tiền cho [ăn](food) [tháng này](month)
-    - hết bao nhiêu tiền cho [mua sắm](personal) [tháng trước](month)
-    - hết bao nhiêu tiền cho [vui chơi](recreation) [tháng này](month)
-    - hết bao nhiêu tiền cho [sinh hoạt](housing) [tháng trước](month)
+    - hết bao nhiêu tiền cho [hôm trước](day)
+    - hết bao nhiêu tiền cho [hôm nay](day)
+    - Xài hết bao nhiêu tiền cho [hôm qua](day)
+    - Xài hết bao nhiêu tiền cho [hôm trước](day)
+    - hết bao nhiêu tiền cho [ăn](food) [hôm nay](day)
+    - hết bao nhiêu tiền cho [mua sắm](personal) [hôm trước](day)
+    - hết bao nhiêu tiền cho [vui chơi](recreation) [hôm nay](day)
+    - hết bao nhiêu tiền cho [sinh hoạt](housing) [hôm trước](day)
+    
+- intent: Total_money_month
+  examples: |
+    - [ nay](day) tôi đã [ăn](food) bao nhiêu tiền
+    - [hôm qua](day) tôi đã [mua sắm](personal) bao nhiêu tiền
+    - [hôm trước](day) tôi đã [vui chơi](recreation) bao nhiêu tiền
+    - [hôm qua](day) tôi đã xài bao nhiêu tiền
+    - [hôm nay](day) tôi đã xài bao nhiêu tiền
+    - [hôm trước](day) tôi đã xài bao nhiêu tiền
+    - [hôm qua](day) trả tiền [sinh hoạt](housing) bao nhiêu
+    - [hôm nay](day) trả tiền [vui chơi](recreation) bao nhiêu
+    - [hôm trước](day) trả tiền [mua sắm](personal) bao nhiêu
+    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [ăn](food)
+    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [mua sắm](personal)
+    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [vui chơi](recreation)
+    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [sinh hoạt](housing)
+    - tiền [sinh hoạt](housing) [hôm qua](day) hết bao nhiêu
+    - tiền [vui chơi](recreation) [hôm nay](day) xài hết bao nhiêu 
+    - tiền để [ăn](food) [hôm nay](day) tôi xài hết bao nhiêu
+    - tiền để [mua sắm](personal) [hôm qua](day) xài hết bao nhiêu
+    - hết bao nhiêu tiền cho [hôm trước](day)
+    - hết bao nhiêu tiền cho [hôm nay](day)
+    - Xài hết bao nhiêu tiền cho [hôm qua](day)
+    - Xài hết bao nhiêu tiền cho [hôm trước](day)
+    - hết bao nhiêu tiền cho [ăn](food) [hôm nay](day)
+    - hết bao nhiêu tiền cho [mua sắm](personal) [hôm trước](day)
+    - hết bao nhiêu tiền cho [vui chơi](recreation) [hôm nay](day)
+    - hết bao nhiêu tiền cho [sinh hoạt](housing) [hôm trước](day)
 
 
 - intent: Salary
