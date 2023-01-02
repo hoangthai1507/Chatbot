@@ -1358,31 +1358,31 @@ nlu:
     
 - intent: Total_money_month
   examples: |
-    - [ nay](day) tôi đã [ăn](food) bao nhiêu tiền
-    - [hôm qua](day) tôi đã [mua sắm](personal) bao nhiêu tiền
-    - [hôm trước](day) tôi đã [vui chơi](recreation) bao nhiêu tiền
-    - [hôm qua](day) tôi đã xài bao nhiêu tiền
-    - [hôm nay](day) tôi đã xài bao nhiêu tiền
-    - [hôm trước](day) tôi đã xài bao nhiêu tiền
-    - [hôm qua](day) trả tiền [sinh hoạt](housing) bao nhiêu
-    - [hôm nay](day) trả tiền [vui chơi](recreation) bao nhiêu
-    - [hôm trước](day) trả tiền [mua sắm](personal) bao nhiêu
-    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [ăn](food)
-    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [mua sắm](personal)
-    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [vui chơi](recreation)
-    - [hôm qua](day) tôi xài hết bao nhiêu tiền để [sinh hoạt](housing)
-    - tiền [sinh hoạt](housing) [hôm qua](day) hết bao nhiêu
-    - tiền [vui chơi](recreation) [hôm nay](day) xài hết bao nhiêu 
-    - tiền để [ăn](food) [hôm nay](day) tôi xài hết bao nhiêu
-    - tiền để [mua sắm](personal) [hôm qua](day) xài hết bao nhiêu
-    - hết bao nhiêu tiền cho [hôm trước](day)
-    - hết bao nhiêu tiền cho [hôm nay](day)
-    - Xài hết bao nhiêu tiền cho [hôm qua](day)
-    - Xài hết bao nhiêu tiền cho [hôm trước](day)
-    - hết bao nhiêu tiền cho [ăn](food) [hôm nay](day)
-    - hết bao nhiêu tiền cho [mua sắm](personal) [hôm trước](day)
-    - hết bao nhiêu tiền cho [vui chơi](recreation) [hôm nay](day)
-    - hết bao nhiêu tiền cho [sinh hoạt](housing) [hôm trước](day)
+    - [tháng này](month) tôi đã [ăn](food) bao nhiêu tiền
+    - [tháng qua](month) tôi đã [mua sắm](personal) bao nhiêu tiền
+    - [tháng trước](month) tôi đã [vui chơi](recreation) bao nhiêu tiền
+    - [tháng qua](month) tôi đã xài bao nhiêu tiền
+    - [tháng này](month) tôi đã xài bao nhiêu tiền
+    - [tháng trước](month) tôi đã xài bao nhiêu tiền
+    - [tháng qua](month) trả tiền [sinh hoạt](housing) bao nhiêu
+    - [tháng này](month) trả tiền [vui chơi](recreation) bao nhiêu
+    - [tháng trước](month) trả tiền [mua sắm](personal) bao nhiêu
+    - [tháng qua](month) tôi xài hết bao nhiêu tiền để [ăn](food)
+    - [tháng qua](month) tôi xài hết bao nhiêu tiền để [mua sắm](personal)
+    - [tháng qua](month) tôi xài hết bao nhiêu tiền để [vui chơi](recreation)
+    - [tháng qua](month) tôi xài hết bao nhiêu tiền để [sinh hoạt](housing)
+    - tiền [sinh hoạt](housing) [tháng qua](month) hết bao nhiêu
+    - tiền [vui chơi](recreation) [tháng này](month) xài hết bao nhiêu 
+    - tiền để [ăn](food) [tháng này](month) tôi xài hết bao nhiêu
+    - tiền để [mua sắm](personal) [tháng qua](month) xài hết bao nhiêu
+    - hết bao nhiêu tiền cho [tháng trước](month)
+    - hết bao nhiêu tiền cho [tháng này](month)
+    - Xài hết bao nhiêu tiền cho [tháng qua](month)
+    - Xài hết bao nhiêu tiền cho [tháng trước](month)
+    - hết bao nhiêu tiền cho [ăn](food) [tháng này](month)
+    - hết bao nhiêu tiền cho [mua sắm](personal) [tháng trước](month)
+    - hết bao nhiêu tiền cho [vui chơi](recreation) [tháng này](month)
+    - hết bao nhiêu tiền cho [sinh hoạt](housing) [tháng trước](month)
 
 
 - intent: Salary
