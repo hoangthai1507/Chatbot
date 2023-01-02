@@ -1528,4 +1528,16 @@ nlu:
     - [tháng này](month) nhận [80k](k_money) [800](money) tiền lương
     - [tháng qua](month) nhận [700k](k_money) [500](money) tiền lương    
     - [tháng này](month) nhận [8 triệu](m_money) [500k](k_money) tiền lương
-    - [tháng trước](month) nhận [2 triệu](m_money) [500k](k_money) [750](money) tiền lương     
+    - [tháng trước](month) nhận [2 triệu](m_money) [500k](k_money) [750](money) tiền lương
+  
+- intent: Statistical
+  examples: |    
+    - cho tôi xem [thống kê](chart) tháng này
+    - cho tôi xem [thống kê](chart)
+    - cho tôi xem [thống kê](chart)
+    - cho tôi xem [biểu đồ](chart) tháng này
+    - cho tôi xem [biểu đồ](chart)
+    - [biểu đồ](chart) tháng này
+    - [thống kê](chart) tháng này
+    - [thống kê](chart) tiền của tôi
+    - [biểu đồ](chart) tiền của tôi
