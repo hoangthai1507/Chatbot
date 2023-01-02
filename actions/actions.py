@@ -460,7 +460,9 @@ class ActionSubsistence(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        money = None
+        k_money = None
+        m_money = None
+        money = 0
         food = None
         hous = None
         recreation = None
@@ -472,16 +474,16 @@ class ActionSubsistence(Action):
             date = getdate.get_yesterday()
         else:
             date = day_entity
+        print(date)
+        print(type(date))
         try:
-            money = next(tracker.get_latest_entity_values("k_m_money"), None)
-            money_number = [float(x) for x in re.findall(r"-?\d+\.?\d*", money)][0]
-
+            k_money = next(tracker.get_latest_entity_values("k_money"), None)
         except:
-            print("problem with money!")
-            dispatcher.utter_message(
-                "có vấn đề xẩy ra với việc nhập giá tiền, vui lòng nhập lại"
-            )
-            return
+            print("no k money")
+        try:
+            m_money = next(tracker.get_latest_entity_values("m_money"), None)
+        except:
+            print("no m money")
         try:
             food = next(tracker.get_latest_entity_values("food_section"), None)
         except:
@@ -496,33 +498,117 @@ class ActionSubsistence(Action):
             )
         except:
             print("problem with recreation!")
-            return
         try:
             personal = next(tracker.get_latest_entity_values("personal_section"), None)
         except:
             print("problem with recreation!")
+        try:
+            money = data_user.change_money(k_money, m_money)
+        except:
+            print("problem with money!")
             return
-
         if food != None:
 
-            data_user.updata_user(user_name, date, "food_section", int(money_number))
-            text = "Đã thêm " + f"{money}" + " vào danh sách chi tiêu cho thực phẩm"
+            data_user.updata_user(
+                user_name, data_user.StrToDate(date).month, date, "food_section", money
+            )
+            text = (
+                "Đã thêm "
+                + "{0:,}".format(money)
+                + " vào danh sách chi tiêu cho thực phẩm"
+            )
         elif hous != None:
 
-            data_user.updata_user(user_name, date, "housing_section", int(money_number))
-            text = "Đã thêm " + f"{money}" + " vào danh sách chi tiêu cho sinh hoạt"
+            data_user.updata_user(
+                user_name,
+                data_user.StrToDate(date).month,
+                date,
+                "housing_section",
+                money,
+            )
+            text = (
+                "Đã thêm "
+                + "{0:,}".format(money)
+                + " vào danh sách chi tiêu cho sinh hoạt"
+            )
         elif recreation != None:
 
             data_user.updata_user(
-                user_name, date, "recreation_section", int(money_number)
+                user_name,
+                data_user.StrToDate(date).month,
+                date,
+                "recreation_section",
+                money,
             )
-            text = "Đã thêm " + f"{money}" + " vào danh sách chi tiêu cho giải trí"
+            text = (
+                "Đã thêm "
+                + "{0:,}".format(money)
+                + " vào danh sách chi tiêu cho giải trí"
+            )
         elif personal != None:
-
-            data_user.updata_user(user_name, date, "personal", int(money_number))
-            text = "bạn đã dùng " + f"{money}" + " vào danh sách chi tiêu cho mua sắm"
+            data_user.updata_user(
+                user_name, data_user.StrToDate(date).month, date, "personal", money
+            )
+            text = (
+                "bạn đã dùng "
+                + "{0:,}".format(money)
+                + " vào danh sách chi tiêu cho mua sắm"
+            )
         else:
             text = "có vẻ như bạn muốn nhập liệu thông tin tiêu dùng, vui lòng nhập một cách cự thể hơn!"
+
+        dispatcher.utter_message(text)
+        check = data_user.check_spending(
+            user_name, data_user.StrToDate(date).month, date
+        )
+        if check != "":
+            dispatcher.utter_message(check)
+        return
+
+
+class ActionSalary(Action):
+    def name(self) -> Text:
+        return "action_Salary_money"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        k_money = None
+        m_money = None
+        month_entity = next(tracker.get_latest_entity_values("month"), None)
+        if month_entity == "tháng này" or month_entity == None:
+            date = getdate.get_today()
+        elif month_entity == "tháng trước" or month_entity == "tháng qua":
+            date = getdate.last_month()
+        else:
+            date = month_entity
+        try:
+            k_money = next(tracker.get_latest_entity_values("k_money"), None)
+        except:
+            print("no k money")
+        try:
+            m_money = next(tracker.get_latest_entity_values("m_money"), None)
+        except:
+            print("no m money")
+        try:
+            money = data_user.change_money(k_money, m_money)
+        except:
+            print("problem with money!")
+            return
+        if money != None:
+            data_user.updata_salary_user(user_name, date, money)
+            text = (
+                "Đẫ cập nhật lương tháng "
+                + f"{data_user.StrToDate(date).month}"
+                + " là "
+                + "{0:,}".format(money)
+                + "vnd"
+            )
+        else:
+            text = "Có sự cố trong quá trình cập nhật lương, vui lòng nhập lại!"
 
         dispatcher.utter_message(text)
         return
@@ -538,122 +624,260 @@ class ActionTotal(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        data = {"title": "Biểu đồ tiền đã dùng ", "labels": ["ăn ún", "sinh hoạt", "giải trí", "mua sắm"],
-                "backgroundColor": ["#36a2eb", "#ffcd56", "#ff6384", "#009688", "#c45850"],
-                "chartsData": [5, 10, 22, 3], "chartType": "doughnut", "displayLegend": "true"}
+        money = None
+        food = None
+        housing = None
+        recreation = None
+        personal = None
+        day_entity = next(tracker.get_latest_entity_values("day"), None)
+        if day_entity == "hôm nay" or day_entity == None:
+            date = getdate.get_today()
+        elif day_entity == "hôm qua":
+            date = getdate.get_yesterday()
+        else:
+            date = day_entity
 
-        message = {"payload": "chart", "data": data}
+        try:
+            food = next(tracker.get_latest_entity_values("food"), None)
+        except:
+            print("problem with food!")
+        try:
+            personal = next(tracker.get_latest_entity_values("personal"), None)
+        except:
+            print("problem with personal!")
+        try:
+            recreation = next(tracker.get_latest_entity_values("recreation"), None)
+        except:
+            print("problem with recreation!")
+        try:
+            housing = next(tracker.get_latest_entity_values("housing"), None)
+        except:
+            print("problem with housing!")
 
-        dispatcher.utter_message(text="thống kê tiền đã sài của bạn", json_message=message)
+        if food != None:
+            try:
+                total_food = data_user.get_spending_day(
+                    user_name, date, "food_section", "Total"
+                )
+                text = (
+                    "Ngày "
+                    + f"{data_user.StrToDate(date).date}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total_food)
+                    + "vnd "
+                    + "cho việc "
+                    + f"{food}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        elif housing != None:
+            try:
+                total_housing = data_user.get_spending_day(
+                    user_name, date, "housing_section", "Total"
+                )
+                text = (
+                    "Ngày "
+                    + f"{data_user.StrToDate(date).date}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total_housing)
+                    + "vnd "
+                    + "cho việc "
+                    + f"{housing}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        elif recreation != None:
+            try:
+                total_recreation = data_user.get_spending_day(
+                    user_name, date, "recreation_section", "Total"
+                )
+                text = (
+                    "Ngày "
+                    + f"{data_user.StrToDate(date).date}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total_recreation)
+                    + "vnd "
+                    + "cho việc "
+                    + f"{recreation}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        elif personal != None:
+            try:
+                total_personal = data_user.get_spending_day(
+                    user_name, date, "personaln_section", "Total"
+                )
+                text = (
+                    "Ngày "
+                    + f"{data_user.StrToDate(date).date}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total_personal)
+                    + "vnd "
+                    + "cho việc "
+                    + f"{personal}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        else:
+            try:
+                total = data_user.get_total_day(user_name, date)
+                text = (
+                    "Ngày "
+                    + f"{data_user.StrToDate(date).date}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total)
+                    + "vnd ngày hôm nay"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
+                )
+                return
+        dispatcher.utter_message(text)
+        return
 
-        # money = None
-        # food = None
-        # hous = None
-        # recreation = None
-        # personal = None
-        # day_entity = next(tracker.get_latest_entity_values("day"), None)
-        # if day_entity == "hôm nay" or day_entity == None:
-        #     date = getdate.get_today()
-        # elif day_entity == "hôm qua":
-        #     date = getdate.get_yesterday()
-        # else:
-        #     date = day_entity
-        #
-        # try:
-        #     food = next(tracker.get_latest_entity_values("food"), None)
-        # except:
-        #     print("problem with food!")
-        # try:
-        #     personal = next(tracker.get_latest_entity_values("personal"), None)
-        # except:
-        #     print("problem with personal!")
-        # try:
-        #     recreation = next(tracker.get_latest_entity_values("recreation"), None)
-        # except:
-        #     print("problem with recreation!")
-        # try:
-        #     housing = next(tracker.get_latest_entity_values("housing"), None)
-        # except:
-        #     print("problem with housing!")
-        #
-        # if food != None:
-        #     try:
-        #         total_food = data_user.get_user_data(
-        #             user_name, date, "food_section", "Total"
-        #         )
-        #         text = (
-        #             "Hôm nay bạn đã sử dụng tổng cộng "
-        #             + f"{total_food}"
-        #             + "k "
-        #             + "cho việc "
-        #             + f"{food}"
-        #         )
-        #     except:
-        #         dispatcher.utter_message(
-        #             "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
-        #         )
-        #         return
-        # elif housing != None:
-        #     try:
-        #         total_housing = data_user.get_user_data(
-        #             user_name, date, "housing_section", "Total"
-        #         )
-        #         text = (
-        #             "Hôm nay bạn đã sử dụng tổng cộng "
-        #             + f"{total_housing}"
-        #             + "k "
-        #             + "cho việc "
-        #             + f"{housing}"
-        #         )
-        #     except:
-        #         dispatcher.utter_message(
-        #             "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
-        #         )
-        #         return
-        # elif recreation != None:
-        #     try:
-        #         total_recreation = data_user.get_user_data(
-        #             user_name, date, "recreation_section", "Total"
-        #         )
-        #         text = (
-        #             "Hôm nay bạn đã sử dụng tổng cộng "
-        #             + f"{total_recreation}"
-        #             + "k "
-        #             + "cho việc "
-        #             + f"{recreation}"
-        #         )
-        #     except:
-        #         dispatcher.utter_message(
-        #             "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
-        #         )
-        #         return
-        # elif personal != None:
-        #     try:
-        #         total_personal = data_user.get_user_data(
-        #             user_name, date, "personaln_section", "Total"
-        #         )
-        #         text = (
-        #             "Hôm nay bạn đã sử dụng tổng cộng "
-        #             + f"{total_personal}"
-        #             + "k "
-        #             + "cho việc "
-        #             + f"{personal}"
-        #         )
-        #     except:
-        #         dispatcher.utter_message(
-        #             "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
-        #         )
-        #         return
-        # else:
-        #     try:
-        #         total = data_user.get_total_day(user_name, date)
-        #         text = (
-        #             "Hôm nay bạn đã sử dụng tổng cộng " + f"{total}" + "k ngày hôm nay"
-        #         )
-        #     except:
-        #         dispatcher.utter_message(
-        #             "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong ngày hôm nay!"
-        #         )
-        #         return
-        # dispatcher.utter_message(text)
-        # return
+
+class ActionTotalMonth(Action):
+    def name(self) -> Text:
+        return "action_Total_money_month"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        food = None
+        housing = None
+        recreation = None
+        personal = None
+        month_entity = next(tracker.get_latest_entity_values("month"), None)
+        if month_entity == "tháng này" or month_entity == None:
+            month = getdate.get_today()
+        elif month_entity == "tháng trước" or month_entity == "tháng qua":
+            month = getdate.last_month()
+        else:
+            month = month_entity
+
+        try:
+            food = next(tracker.get_latest_entity_values("food"), None)
+        except:
+            print("problem with food!")
+        try:
+            personal = next(tracker.get_latest_entity_values("personal"), None)
+        except:
+            print("problem with personal!")
+        try:
+            recreation = next(tracker.get_latest_entity_values("recreation"), None)
+        except:
+            print("problem with recreation!")
+        try:
+            housing = next(tracker.get_latest_entity_values("housing"), None)
+        except:
+            print("problem with housing!")
+
+        if food != None:
+            try:
+                total_food = data_user.get_spending_month(
+                    user_name, data_user.StrToDate(month).month, "food_section"
+                )
+                text = (
+                    "Tháng "
+                    + f"{data_user.StrToDate(month).month}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total_food)
+                    + "vnd "
+                    + "cho việc "
+                    + f"{food}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong tháng này!"
+                )
+                return
+        elif housing != None:
+            try:
+                total_housing = data_user.get_spending_month(
+                    user_name, data_user.StrToDate(month).month, "housing_section"
+                )
+                text = (
+                    "Tháng "
+                    + f"{data_user.StrToDate(month).month}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total_housing)
+                    + "vnd "
+                    + "cho việc "
+                    + f"{housing}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong tháng này!"
+                )
+                return
+        elif recreation != None:
+            try:
+                total_recreation = data_user.get_spending_month(
+                    user_name, data_user.StrToDate(month).month, "recreation_section"
+                )
+                text = (
+                    "Tháng "
+                    + f"{data_user.StrToDate(month).month}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total_recreation)
+                    + "vnd "
+                    + "cho việc "
+                    + f"{recreation}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong tháng này!"
+                )
+                return
+        elif personal != None:
+            try:
+                total_personal = data_user.get_spending_month(
+                    user_name, data_user.StrToDate(month).month, "personal_section"
+                )
+                text = (
+                    "Tháng "
+                    + f"{data_user.StrToDate(month).month}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total_personal)
+                    + "vnd "
+                    + "cho việc "
+                    + f"{personal}"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong tháng này!"
+                )
+                return
+        else:
+            try:
+                total = data_user.get_total_month(user_name, month)
+                text = (
+                    "Tháng "
+                    + f"{data_user.StrToDate(month).month}"
+                    + " bạn đã sử dụng tổng cộng "
+                    + "{0:,}".format(total)
+                    + "vnd"
+                )
+            except:
+                dispatcher.utter_message(
+                    "Có lỗi trong quá trình trích xuất thông tin, hoặc là bạn chưa nhập thông tin này trong tháng này!"
+                )
+                return
+        dispatcher.utter_message(text)
+        return
