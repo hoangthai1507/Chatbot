@@ -265,37 +265,49 @@ class ActionGold(Action):
 
         if status and day_entity and name_product:
             if "mua" in status:
-                price = price_buy_today if day_entity == "hôm nay" else price_buy_yesterday
+                price = price_buy_today if day == getdate.get_today() else price_buy_yesterday
                 text = (
                         f"giá mua vàng " + name_product + " hôm " + f"{day} là "
-                        + f"{price} triệu vnd."
+                        + f"{price},000 vnd."
                         + "\n"
                 )
             else :
-                price = price_sell_today if day_entity == "hôm nay" else price_sell_yesterday
+                price = price_sell_today if day == getdate.get_today() else price_sell_yesterday
                 text = (
                         f"giá bán vàng " + name_product + " hôm " + f"{day} là "
-                        + f"{price} triệu vnd."
+                        + f"{price},000 vnd."
                         + "\n"
                 )
         elif status and name_product:
             price = price_buy_today if "mua" in status else price_sell_today
             text = (
                     f"giá mua vàng " + name_product + " hôm " + f"{day} là "
-                    + f"{price} triệu vnd."
+                    + f"{price},000 vnd."
                     + "\n"
             )
         elif name_product:
             price_b = price_buy_today
             price_s = price_sell_today
-            text = (
-                    f"giá mua vàng " + name_product + " hôm nay " + f"({day}) là "
-                    + f"{price_b} triệu vnd."
-                    + "\n"
-                    + f"giá bán vàng " + name_product + " hôm nay " + f"({day}) là "
-                    + f"{price_s} triệu vnd."
-                    + "\n"
-            )
+            if day == getdate.get_today():
+                text = (
+                        f"giá mua vàng " + name_product + " hôm nay " + f"({day}) là "
+                        + f"{price_b},000 vnd."
+                        + "\n"
+                        + f"giá bán vàng " + name_product + " hôm nay " + f"({day}) là "
+                        + f"{price_s},000 vnd."
+                        + "\n"
+                )
+            else :
+                price_b = price_buy_yesterday
+                price_s = price_sell_yesterday
+                text = (
+                        f"giá mua vàng " + name_product + " hôm qua " + f"({day}) là "
+                        + f"{price_b},000 vnd."
+                        + "\n"
+                        + f"giá bán vàng " + name_product + " hôm qua " + f"({day}) là "
+                        + f"{price_s},000 vnd."
+                        + "\n"
+                )
         dispatcher.utter_message(text)
 
 
