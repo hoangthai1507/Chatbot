@@ -452,7 +452,40 @@ nlu:
     - [đô thụy sĩ](name_money)
     - giá [chf dollar](name_money) 
     - [đô đan mạch](name_money) 
-    - giá [eur](name_money) 
+    - giá [eur](name_money)
+    - giá [THB](name_money)
+    - giá [bạt Thái Lan](name_money)
+    - [bạt](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền úc](name_money)
+    - giá [tiền aud](name_money)
+    - [đô úc](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô canada](name_money)
+    - giá [tiền canada](name_money)
+    - [đô cad](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô thụy sĩ](name_money)
+    - giá [tiền thụy sĩ](name_money)
+    - [đô thụy sĩ](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô đan mạch](name_money)
+    - giá [tiền đan mạch](name_money)
+    - [đô đan mạch](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô đức](name_money)
+    - giá [tiền đức](name_money)
+    - [đô euro](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền bảng anh](name_money)
+    - giá [bảng anh](name_money)
+    - [tiền nước anh](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền hồng kông](name_money)
+    - giá [tiền hong kong](name_money)
+    - [tiền hongkong](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền nhật](name_money)
+    - giá [yên](name_money)
+    - [tiền yên](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền won](name_money)
+    - giá [won](name_money)
+    - [tiền hàn quốc](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền đô](name_money)
+    - giá [đô mỹ](name_money)
+    - [dollar](name_money) [hôm qua](day) bao nhiêu
 
 - lookup: name_money
   examples: |
@@ -475,6 +508,12 @@ nlu:
     - THB
     - USD
 
+
+- synonym: THB
+  examples: |
+    - bạt
+    - baht
+    - Baht
 
 - synonym: AUD
   examples: |
@@ -525,6 +564,9 @@ nlu:
     - dollar euro 
     - euro dollar
     - âu kim
+    - tiền đức
+    - đô Đức
+    - đô đức
 
 - synonym: GBP
   examples: |
@@ -538,6 +580,7 @@ nlu:
     - pound
     - pence
     - penny
+    - tiền bảng anh
 
 - synonym: HKD
   examples: |
@@ -549,13 +592,16 @@ nlu:
     - dollar hong kong 
     - hong kong dollar
     - hong kong đô la  
+    - tiền hong kong
+    - tiền hongkong
 
 - synonym: JPY
   examples: |
     - jpy
     - tiền nhật
     - yên
-    - yên nhật                                 
+    - yên nhật
+    - tiền yên
 
 - synonym: KRW
   examples: |
@@ -563,6 +609,7 @@ nlu:
     - won
     - won hàn
     - tiền hàn quốc
+    - tiền won
 
 - synonym: USD
   examples: |
