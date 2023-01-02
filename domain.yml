@@ -20,6 +20,7 @@ intents:
   - Total_money_day
   - Salary
   - Total_money_month
+  - Statistical
 
 
 entities:
@@ -55,6 +56,7 @@ entities:
   - name_meat
   - name_stock
   - name_jenewry_summarize
+  - chart
 
 responses:
   utter_greet:
