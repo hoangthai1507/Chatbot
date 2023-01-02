@@ -1280,13 +1280,13 @@ nlu:
     - [hôm nay](day) tôi đã [ăn](food) bao nhiêu tiền
     - [hôm qua](day) tôi đã [mua sắm](personal) bao nhiêu tiền
     - [hôm trước](day) tôi đã [vui chơi](recreation) bao nhiêu tiền
-    - [tuần trước](day) tôi đã [sinh hoạt](housing) bao nhiêu tiền
-    - [tuần này](day) tôi đã [sinh hoạt](housing) bao nhiêu tiền
+    - [tháng trước](month) tôi đã [sinh hoạt](housing) bao nhiêu tiền
+    - [tháng này](month) tôi đã [sinh hoạt](housing) bao nhiêu tiền
     - [hôm qua](day) tôi đã xài bao nhiêu tiền
-    - [tuần trước](day) tôi đã xài bao nhiêu tiền
+    - [tháng trước](month) tôi đã xài bao nhiêu tiền
     - [hôm nay](day) tôi đã xài bao nhiêu tiền
     - [hôm trước](day) tôi đã xài bao nhiêu tiền
-    - [tuần này](day) tôi đã xài bao nhiêu tiền
+    - [tháng này](month) tôi đã xài bao nhiêu tiền
     - [hôm qua](day) trả tiền [sinh hoạt](housing) bao nhiêu
     - [hôm nay](day) trả tiền [vui chơi](recreation) bao nhiêu
     - [hôm trước](day) trả tiền [mua sắm](personal) bao nhiêu
@@ -1298,9 +1298,9 @@ nlu:
     - tiền [vui chơi](recreation) [hôm nay](day) xài hết bao nhiêu 
     - tiền để [ăn](food) [hôm nay](day) tôi xài hết bao nhiêu
     - tiền để [mua sắm](personal) [hôm qua](day) xài hết bao nhiêu
-    - hết bao nhiêu tiền cho [tuần trước](day)
-    - hết bao nhiêu tiền cho [tuần này](day)
-    - Xài hết bao nhiêu tiền cho [tuần trước](day)
+    - hết bao nhiêu tiền cho [tháng trước](month)
+    - hết bao nhiêu tiền cho [tháng này](month)
+    - Xài hết bao nhiêu tiền cho [tháng trước](month)
     - Xài hết bao nhiêu tiền cho [tháng trước](month)
     - hết bao nhiêu tiền cho [ăn](food) [tháng này](month)
     - hết bao nhiêu tiền cho [mua sắm](personal) [tháng trước](month)
