@@ -17,8 +17,9 @@ intents:
   - Terms
   - Summarize
   - Subsistence
-  - Total_money
+  - Total_money_day
   - Salary
+  - Total_money_month
 
 
 entities:
