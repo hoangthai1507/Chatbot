@@ -159,3 +159,54 @@ def check_spending(user_name, month, today):
     elif Salary < Total_spending:
         text = "Bạn đã sử dụng lố tiền lương tháng này!! Vui lòng hạn chế sủ dụng tiền lại hoặc cố gắng tìm thêm thu nhập cho tháng này!! :>"
         return text
+    
+def statistical_day(user_name, today):
+    List_data = []
+    food = None
+    personal = None
+    recreation = None
+    housing = None
+    try:
+        food = get_spending_day(user_name, today, "food_section", "Total")
+    except:
+        food = 0
+    try:
+        personal = get_spending_day(user_name, today, "personal_section", "Total")
+    except:
+        personal = 0
+    try:
+        recreation = get_spending_day(user_name, today, "recreation_section", "Total")
+    except:
+        recreation = 0
+    try:
+        housing = get_spending_day(user_name, today, "housing_section", "Total")
+    except:
+        housing = 0
+    List_data.append(food, personal, recreation, housing)
+    return List_data
+
+
+def statistical_month(user_name, month):
+    List_data = []
+    food = None
+    personal = None
+    recreation = None
+    housing = None
+    try:
+        food = get_spending_month(user_name, month, "food_section")
+    except:
+        food = 0
+    try:
+        personal = get_spending_month(user_name, month, "personal_section")
+    except:
+        personal = 0
+    try:
+        recreation = get_spending_month(user_name, month, "recreation_section")
+    except:
+        recreation = 0
+    try:
+        housing = get_spending_month(user_name, month, "housing_section")
+    except:
+        housing = 0
+    List_data.append(food, personal, recreation, housing)
+    return List_data
