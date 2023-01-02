@@ -287,6 +287,7 @@ nlu:
     - SJC TP HCM
     - SJC Đà Nẵng
     - VIETINBANK GOLD
+
 - synonym: DOJI HN
   examples: |
     - DOJI Hà Nội
@@ -325,6 +326,11 @@ nlu:
     - doji sài gòn
     - doji sg
     - doji_sg
+    - doji hồ chí minh
+    - doji Hồ Chí Minh
+    - doji hcm
+    - doji thành phố hồ chí minh
+    - doji thành phố
     
 - synonym: Phú Qúy SJC
   examples: |
@@ -340,6 +346,8 @@ nlu:
     - SJC HN
     - sjc hà nội
     - sjc hn
+    - sjc thủ đô
+
     
 - synonym: SJC TP HCM
   examples: |
@@ -1485,6 +1493,18 @@ nlu:
     - hết bao nhiêu tiền cho [mua sắm](personal) [tháng trước](month)
     - hết bao nhiêu tiền cho [vui chơi](recreation) [tháng này](month)
     - hết bao nhiêu tiền cho [sinh hoạt](housing) [tháng trước](month)
+    - [12](month) tôi đã [ăn](food) bao nhiêu tiền
+    - [12](month) tôi đã [mua sắm](personal) bao nhiêu tiền
+    - [12](month) tôi xài hết bao nhiêu tiền để [sinh hoạt](housing)
+    - tiền [sinh hoạt](housing) [12](month) hết bao nhiêu
+    - tiền để [mua sắm](personal) [12](month) xài hết bao nhiêu
+    - hết bao nhiêu tiền cho [1](month)
+    - hết bao nhiêu tiền cho [1](month)
+    - Xài hết bao nhiêu tiền cho [12](month)
+    - Xài hết bao nhiêu tiền cho [1](month)
+    - hết bao nhiêu tiền cho [ăn](food) [1](month)
+    - hết bao nhiêu tiền cho [mua sắm](personal) [1](month)
+
     
 - intent: Total_money_day
   examples: |
@@ -1513,6 +1533,31 @@ nlu:
     - hết bao nhiêu tiền cho [mua sắm](personal) [hôm trước](day)
     - hết bao nhiêu tiền cho [vui chơi](recreation) [hôm nay](day)
     - hết bao nhiêu tiền cho [sinh hoạt](housing) [hôm trước](day)
+    - [2022-12-30](day) tôi đã [ăn](food) bao nhiêu tiền
+    - [2022-12-30](day) tôi đã [mua sắm](personal) bao nhiêu tiền
+    - [2022-12-1](day) tôi đã [vui chơi](recreation) bao nhiêu tiền
+    - [2022-12-2](day) tôi đã xài bao nhiêu tiền
+    - [2022-12-3](day) tôi đã xài bao nhiêu tiền
+    - [2022-12-5](day) tôi đã xài bao nhiêu tiền
+    - [2022-12-8](day) trả tiền [sinh hoạt](housing) bao nhiêu
+    - [2022-12-12](day) trả tiền [vui chơi](recreation) bao nhiêu
+    - [2022-12-22](day) trả tiền [mua sắm](personal) bao nhiêu
+    - [2022-12-13](day) tôi xài hết bao nhiêu tiền để [ăn](food)
+    - [2022-12-15](day) tôi xài hết bao nhiêu tiền để [mua sắm](personal)
+    - [2022-12-9](day) tôi xài hết bao nhiêu tiền để [vui chơi](recreation)
+    - [2022-12-7](day) tôi xài hết bao nhiêu tiền để [sinh hoạt](housing)
+    - tiền [sinh hoạt](housing) [2022-12-24](day) hết bao nhiêu
+    - tiền [vui chơi](recreation) [2022-12-25](day) xài hết bao nhiêu 
+    - tiền để [ăn](food) [2022-12-31](day) tôi xài hết bao nhiêu
+    - tiền để [mua sắm](personal) [2022-12-6](day) xài hết bao nhiêu
+    - hết bao nhiêu tiền cho [2022-12-11](day)
+    - hết bao nhiêu tiền cho [2022-12-17](day)
+    - Xài hết bao nhiêu tiền cho [2022-12-23](day)
+    - Xài hết bao nhiêu tiền cho [2022-12-26](day)
+    - hết bao nhiêu tiền cho [ăn](food) [2022-12-28](day)
+    - hết bao nhiêu tiền cho [mua sắm](personal) [2022-12-20](day)
+    - hết bao nhiêu tiền cho [vui chơi](recreation) [2022-12-10](day)
+    - hết bao nhiêu tiền cho [sinh hoạt](housing) [2022-12-19](day)
 
 
 - intent: Salary
@@ -1557,3 +1602,8 @@ nlu:
     - [thống kê](chart) tháng này
     - [thống kê](chart) tiền của tôi
     - [biểu đồ](chart) tiền của tôi
+    - thể hiện tôi xem [thống kê](chart) tháng này
+    - xem [thống kê](chart)
+    - hiện cho tôi xem [thống kê](chart)
+    - xuất [biểu đồ](chart) tháng này
+    - cho xem [biểu đồ](chart)
