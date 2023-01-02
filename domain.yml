@@ -17,7 +17,8 @@ intents:
   - Terms
   - Summarize
   - Subsistence
-  - Total_money
+  - Total_money_day
+  - Total_money_month
   - Salary
 
 
@@ -107,3 +108,5 @@ actions:
   - action_summarize_explain
   - action_Subsistence
   - action_Total_money
+  - action_Total_money_month
+  - action_Salary_money
