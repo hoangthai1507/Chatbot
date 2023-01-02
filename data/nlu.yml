@@ -410,6 +410,7 @@ nlu:
     - sjc Sài Gòn
     - SJC SÀI GÒN
     - SJC Sài Gòn
+    - vàng sjc sài gòn
 - synonym: SJC Đà Nẵng
   examples: |
     - Vàng SJC TP Đà Nẵng
