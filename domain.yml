@@ -54,7 +54,6 @@ entities:
   - name_meat
   - name_stock
   - name_jenewry_summarize
- 
 
 responses:
   utter_greet:
