@@ -1516,16 +1516,17 @@ nlu:
     - [tháng này](month) nhận [180k](k_money) tiền lương
     - [tháng trước](month) nhận [170k](k_money) tiền lương 
     - Tiền [lương](salary_money) [tháng này](month) [75 triệu](m_money) [500k](k_money)
-    - Tiền [lương](salary_money) [tháng trước](month) [6 tỷ](b_money) [30 triệu](m_money)
-    - [Lương](salary_money) [tháng này](month) [1 tỷ](b_money) [515k](k_money)
-    - [Lương](salary_money) [tháng trước](month) [2 tỉ](b_money) [350 triệu](m_money) 
-    - [tháng này](month) nhận [8 tỷ](b_money) tiền lương
-    - [tháng trước](month) nhận [8 tỷ](b_money) [700k](k_money) tiền lương
-    - Tiền [lương](salary_money) [tháng này](month) [500 triệu](m_money)
-    - Tiền [lương](salary_money) [tháng qua](month) [80 triệu](m_money)
-    - [Lương](salary_money) [tháng này](month) [500](money) [15 ngàn](k_money) 
-    - [Lương](salary_money) [tháng qua](month) [700](money) [50k](k_money) 
-    - [tháng này](month) nhận [80k](k_money) [800](money) tiền lương
-    - [tháng qua](month) nhận [700k](k_money) [500](money) tiền lương    
-    - [tháng này](month) nhận [8 triệu](m_money) [500k](k_money) tiền lương
-    - [tháng trước](month) nhận [2 triệu](m_money) [500k](k_money) [750](money) tiền lương     
+    - Tiền [lương](salary_money) [năm trước](year) [6 tỷ](b_money) [30 triệu](m_money)
+    - [Lương](salary_money) [năm nay](year) [1 tỷ](b_money) [515k](k_money)
+    - [Lương](salary_money) [năm trước](year) [2 tỉ](b_money) [350 triệu](m_money) 
+    - [Năm nay](year) nhận [8 tỷ](b_money) tiền lương
+    - [Năm trước](year) nhận [8 tỷ](b_money) [700k](k_money) tiền lương
+    - Tiền [lương](salary_money) [năm nay](day) [500 triệu](m_money)
+    - Tiền [lương](salary_money) [năm qua](day) [80 triệu](m_money)
+    - [Lương](salary_money) [hôm nay](day) [500](money) [15 ngàn](k_money) 
+    - [Lương](salary_money) [hôm qua](day) [700](money) [50k](k_money) 
+    - [Hôm nay](day) nhận [80k](k_money) [800](money) tiền lương
+    - [Hôm qua](day) nhận [700k](k_money) [500](money) tiền lương    
+    - [Tuần này](day) nhận [8 triệu](m_money) [500k](k_money) tiền lương
+    - [Tuần trước](day) nhận [2 triệu](m_money) [500k](k_money) [750](money) tiền lương     
+
