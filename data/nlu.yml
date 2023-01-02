@@ -138,6 +138,25 @@ nlu:
     - giá [do](name_fuel)?
     - giá [do 0,25%s](name_fuel) [hôm qua](day)
     - [do 0,005%s](name_fuel) [tăng hay giảm](compare)
+    - [dầu diesel](name_fuel) bao nhiêu 1 lit
+    - [dầu gazola](name_fuel) [hôm qua](day)
+    - [dầu do](name_fuel) bao nhiêu
+    - giá [do](name_fuel)?
+    - giá [do 0.25%s](name_fuel) [hôm qua](day)
+    - cho tôi biết giá [do 0.005%s](name_fuel) [hôm nay](day)
+    - [dầu lửa](name_fuel) bao nhiêu
+    - giá [dầu hôi](name_fuel)?
+    - giá [coal oil](name_fuel) [hôm qua](day)
+    - cho tôi biết giá [dầu ko](name_fuel) [hôm nay](day)
+    - [xăng sinh học](name_fuel) bao nhiêu
+    - giá [e5 ron 92](name_fuel)?
+    - giá [ron92](name_fuel) [hôm qua](day)
+    - cho tôi biết giá [xăng xinh học e5](name_fuel) [hôm nay](day)
+    - [xăng ron95-ii](name_fuel) bao nhiêu
+    - giá [xăng ron](name_fuel)?
+    - giá [a95](name_fuel) [hôm qua](day)
+    - cho tôi biết giá [xăng ron 95-v](name_fuel) [hôm nay](day)
+
 
 #- lookup: name_fuel
 #  examples: |
@@ -154,6 +173,8 @@ nlu:
     - dầu do
     - DO 0,25%S
     - DO 0,005%S
+    - do 0.25%s
+    - do 0.005%s
 
 - synonym: Dầu hỏa
   examples: |
@@ -262,6 +283,38 @@ nlu:
     - [SJC TP HCM](name_jenewry) [mua lại](status) bao nhiêu
     - [SJC Đà Nẵng](name_jenewry) [mua lại](status) bao nhiêu
     - [VIETINBANK GOLD](name_jenewry) [mua lại](status) bao nhiêu
+    - [SJC Đà Nẵng](name_jenewry) [thu lại](status) bao nhiêu
+    - [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm qua](day)
+    - cho tôi biết giá [VIETINBANK GOLD](name_jenewry) [mua lại](status) bao nhiêu
+    - [doji hà nội](name_jenewry) [thu lại](status) bao nhiêu
+    - [bán](status) [vàng doji hà nội](name_jenewry) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [vàng doji hn](name_jenewry) [hôm qua](day)
+    - cho tôi biết giá [doji hn](name_jenewry) [mua lại](status) bao nhiêu
+    - [doji sài gòn](name_jenewry) [thu lại](status) bao nhiêu
+    - [bán](status) [vàng doji sài gòn](name_jenewry) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [vàng doji sg](name_jenewry) [hôm qua](day)
+    - cho tôi biết giá [doji sg](name_jenewry) [mua lại](status) bao nhiêu
+    - [vàng miếng sjc](name_jenewry) [thu lại](status) bao nhiêu
+    - [bán](status) [vàng sjc](name_jenewry) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [phú quý](name_jenewry) [hôm qua](day)
+    - cho tôi biết giá [phú quý sjc](name_jenewry) [mua lại](status) bao nhiêu
+    - [vàng sjc hà nội](name_jenewry) [thu lại](status) bao nhiêu
+    - [bán](status) [vàng sjc hn](name_jenewry) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [sjc hn](name_jenewry) [hôm qua](day)
+    - cho tôi biết giá [vàng sjc hà nội](name_jenewry) [mua lại](status) bao nhiêu
+    - [vàng sjc tp hồ chí minh](name_jenewry) [thu lại](status) bao nhiêu
+    - [bán](status) [vàng sjc hồ chí minh](name_jenewry) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [sjc hcm](name_jenewry) [hôm qua](day)
+    - cho tôi biết giá [sjc sài gòn](name_jenewry) [mua lại](status) bao nhiêu
+    - [vàng sjc tp đà nẵng](name_jenewry) [thu lại](status) bao nhiêu
+    - [bán](status) [vàng sjc đn](name_jenewry) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [sjc đà nẵng](name_jenewry) [hôm qua](day)
+    - cho tôi biết giá [sjc thành phố đà nẵng](name_jenewry) [mua lại](status) bao nhiêu
+    - [vàng miếng sjc 999.9](name_jenewry) [thu lại](status) bao nhiêu
+    - [bán](status) [vàng 999.9](name_jenewry) [hôm qua](day) bao nhiêu
+    - giá [bán](status) [vàng miếng vietinbank gold](name_jenewry) [hôm qua](day)
+    - cho tôi biết giá [sjc vietinbank gold](name_jenewry) [mua lại](status) bao nhiêu
 - lookup: name_jenewry
   examples: |
     - DOJI HN
@@ -303,6 +356,9 @@ nlu:
     - vàng doji hn
     - vàng doji_hn
     - vàng doji hà nội
+    - doji hn
+    - doji hà nội
+    - vàng doji hà nội
 - synonym: DOJI SG
   examples: |
     - DOJI Sài Gòn
@@ -313,6 +369,7 @@ nlu:
     - vàng doji sg
     - vàng doji_sg
     - vàng doji sài gòn
+    - doji sg
 - synonym: Phú Qúy SJC
   examples: |
     - Vàng Miếng SJC
@@ -377,6 +434,9 @@ nlu:
     - sjc thành phố đà nẵng
     - sjc thành phố đn
     - sjc thành phố dn
+    - vàng sjc đn
+    - sjc đà nẵng
+    - sjc thành phố đà nẵng
 - synonym: VIETINBANK GOLD
   examples: |
     - Vàng Miếng SJC 999.9
@@ -395,6 +455,10 @@ nlu:
     - vàng 999.9
     - sjc vietinbank gold
     - sjc 999.9
+    - vàng miếng sjc 999.9
+    - vàng 999.9
+    - vàng miếng vietinbank gold
+    - sjc vietinbank gold
     
 - lookup: status
   examples: |
@@ -452,7 +516,48 @@ nlu:
     - [đô thụy sĩ](name_money)
     - giá [chf dollar](name_money) 
     - [đô đan mạch](name_money) 
-    - giá [eur](name_money) 
+    - giá [eur](name_money)
+    - giá [THB](name_money)
+    - giá [bạt Thái Lan](name_money)
+    - [bạt](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền úc](name_money)
+    - giá [tiền aud](name_money)
+    - [đô úc](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô canada](name_money)
+    - giá [tiền canada](name_money)
+    - [đô cad](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô thụy sĩ](name_money)
+    - giá [tiền thụy sĩ](name_money)
+    - [đô thụy sĩ](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô đan mạch](name_money)
+    - giá [tiền đan mạch](name_money)
+    - [đô đan mạch](name_money) [hôm qua](day) bao nhiêu
+    - giá [đô đức](name_money)
+    - giá [tiền đức](name_money)
+    - [đô euro](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền bảng anh](name_money)
+    - giá [bảng anh](name_money)
+    - [tiền nước anh](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền hồng kông](name_money)
+    - giá [tiền hong kong](name_money)
+    - [tiền hongkong](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền nhật](name_money)
+    - giá [yên](name_money)
+    - [tiền yên](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền won](name_money)
+    - giá [won](name_money)
+    - [tiền hàn quốc](name_money) [hôm qua](day) bao nhiêu
+    - giá [tiền đô](name_money)
+    - giá [đô mỹ](name_money)
+    - [dollar](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [dollar](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [tiền hàn quốc](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [tiền yên](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [tiền hongkong](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [tiền bảng anh](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [tiền đan mạch](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [tiền thụy sĩ](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [tiền canada](name_money) [hôm qua](day) bao nhiêu
 
 - lookup: name_money
   examples: |
@@ -475,6 +580,12 @@ nlu:
     - THB
     - USD
 
+
+- synonym: THB
+  examples: |
+    - bạt
+    - baht
+    - Baht
 
 - synonym: AUD
   examples: |
@@ -525,6 +636,9 @@ nlu:
     - dollar euro 
     - euro dollar
     - âu kim
+    - tiền đức
+    - đô Đức
+    - đô đức
 
 - synonym: GBP
   examples: |
@@ -538,6 +652,7 @@ nlu:
     - pound
     - pence
     - penny
+    - tiền bảng anh
 
 - synonym: HKD
   examples: |
@@ -549,13 +664,16 @@ nlu:
     - dollar hong kong 
     - hong kong dollar
     - hong kong đô la  
+    - tiền hong kong
+    - tiền hongkong
 
 - synonym: JPY
   examples: |
     - jpy
     - tiền nhật
     - yên
-    - yên nhật                                 
+    - yên nhật
+    - tiền yên
 
 - synonym: KRW
   examples: |
@@ -563,6 +681,7 @@ nlu:
     - won
     - won hàn
     - tiền hàn quốc
+    - tiền won
 
 - synonym: USD
   examples: |
@@ -612,6 +731,42 @@ nlu:
     - giá coffee [lâm đồng](name_coffee) dao động bao nhiêu
     - giá coffee [dak lak](name_coffee) [hôm nay](day) dao động bao nhiêu
     - giá coffee [dak nong](name_coffee) dao động bao nhiêu
+    - giá coffee [dak lak](name_coffee) dao động bao nhiêu
+    - giá coffee [đắc lắc](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [dac lac](name_coffee) bao nhiêu
+    - giá coffee [đắk lắk](name_coffee)
+    - giá coffee [đăk lăk](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [dak lak](name_coffee) [hôm nay](day)
+    - giá coffee [gia lai](name_coffee) dao động bao nhiêu
+    - giá coffee [gia lai](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [gia lai](name_coffee) bao nhiêu
+    - giá coffee [gia lai](name_coffee)
+    - giá coffee [gia lai](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [gia lai](name_coffee) [hôm nay](day)
+    - giá coffee [lâm đồng](name_coffee) dao động bao nhiêu
+    - giá coffee [lam dong](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [lâm đồng](name_coffee) bao nhiêu
+    - giá coffee [lâm đồng](name_coffee)
+    - giá coffee [lâm đồng](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [lâm đồng](name_coffee) [hôm nay](day)
+    - giá coffee [hồ tiêu](name_coffee) dao động bao nhiêu
+    - giá coffee [ho tieu](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [hồ tiêu](name_coffee) bao nhiêu
+    - giá coffee [hồ tiêu](name_coffee)
+    - giá coffee [ho tieu](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [hồ tiêu](name_coffee) [hôm nay](day)
+    - giá coffee [dak nông](name_coffee) dao động bao nhiêu
+    - giá coffee [đăk nông](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [đắk nông](name_coffee) bao nhiêu
+    - giá coffee [đắc nông](name_coffee)
+    - giá coffee [đăk nong](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [đắk nong](name_coffee) [hôm nay](day)
+    - giá coffee [fob](name_coffee) dao động bao nhiêu
+    - giá coffee [fob hcm](name_coffee) [hôm nay](day) dao động bao nhiêu
+    - giá coffee [fob tp hcm](name_coffee) bao nhiêu
+    - giá coffee [fob hồ chí minh](name_coffee)
+    - giá coffee [fob tp hồ chí minh](name_coffee) [hôm nay](day)
+    - cho tôi biết giá coffee [fob hồ chí minh](name_coffee) [hôm nay](day)
 
 #- lookup: name_coffee
 #  examples: |
@@ -629,6 +784,7 @@ nlu:
     - đắk lắk
     - đắc lắc
     - dac lac
+    - đăk lăk
 
 - synonym: Gia Lai
   examples: |
@@ -645,6 +801,7 @@ nlu:
   examples: |
     - Hồ Tiêu
     - hồ tiêu
+    - ho tieu
 
 - synonym: Đắk Nông
   examples: |
@@ -654,12 +811,21 @@ nlu:
     - đắc nông
     - dac nông
     - đắc nong
+    - dak nông
+    - đăk nông
+    - đắk nông
+    - đắc nông
+    - đăk nong
+    - đắk nong
 
 - synonym: FOB
   examples: |
     - fob
     - fob hcm
     - FOB HCM
+    - fob tp hcm
+    - fob hồ chí minh
+    - fob tp hồ chí minh
   
 - intent: Terms
   examples: |
@@ -1275,18 +1441,43 @@ nlu:
     - tủ
     - kệ tủ
 
-- intent: Total_money
+    
+- intent: Total_money_month
+  examples: |
+    - [tháng này](month) tôi đã [ăn](food) bao nhiêu tiền
+    - [tháng qua](month) tôi đã [mua sắm](personal) bao nhiêu tiền
+    - [tháng trước](month) tôi đã [vui chơi](recreation) bao nhiêu tiền
+    - [tháng qua](month) tôi đã xài bao nhiêu tiền
+    - [tháng này](month) tôi đã xài bao nhiêu tiền
+    - [tháng trước](month) tôi đã xài bao nhiêu tiền
+    - [tháng qua](month) trả tiền [sinh hoạt](housing) bao nhiêu
+    - [tháng này](month) trả tiền [vui chơi](recreation) bao nhiêu
+    - [tháng trước](month) trả tiền [mua sắm](personal) bao nhiêu
+    - [tháng qua](month) tôi xài hết bao nhiêu tiền để [ăn](food)
+    - [tháng qua](month) tôi xài hết bao nhiêu tiền để [mua sắm](personal)
+    - [tháng qua](month) tôi xài hết bao nhiêu tiền để [vui chơi](recreation)
+    - [tháng qua](month) tôi xài hết bao nhiêu tiền để [sinh hoạt](housing)
+    - tiền [sinh hoạt](housing) [tháng qua](month) hết bao nhiêu
+    - tiền [vui chơi](recreation) [tháng này](month) xài hết bao nhiêu 
+    - tiền để [ăn](food) [tháng này](month) tôi xài hết bao nhiêu
+    - tiền để [mua sắm](personal) [tháng qua](month) xài hết bao nhiêu
+    - hết bao nhiêu tiền cho [tháng trước](month)
+    - hết bao nhiêu tiền cho [tháng này](month)
+    - Xài hết bao nhiêu tiền cho [tháng qua](month)
+    - Xài hết bao nhiêu tiền cho [tháng trước](month)
+    - hết bao nhiêu tiền cho [ăn](food) [tháng này](month)
+    - hết bao nhiêu tiền cho [mua sắm](personal) [tháng trước](month)
+    - hết bao nhiêu tiền cho [vui chơi](recreation) [tháng này](month)
+    - hết bao nhiêu tiền cho [sinh hoạt](housing) [tháng trước](month)
+    
+- intent: Total_money_day
   examples: |
     - [hôm nay](day) tôi đã [ăn](food) bao nhiêu tiền
     - [hôm qua](day) tôi đã [mua sắm](personal) bao nhiêu tiền
     - [hôm trước](day) tôi đã [vui chơi](recreation) bao nhiêu tiền
-    - [tuần trước](day) tôi đã [sinh hoạt](housing) bao nhiêu tiền
-    - [tuần này](day) tôi đã [sinh hoạt](housing) bao nhiêu tiền
     - [hôm qua](day) tôi đã xài bao nhiêu tiền
-    - [tuần trước](day) tôi đã xài bao nhiêu tiền
     - [hôm nay](day) tôi đã xài bao nhiêu tiền
     - [hôm trước](day) tôi đã xài bao nhiêu tiền
-    - [tuần này](day) tôi đã xài bao nhiêu tiền
     - [hôm qua](day) trả tiền [sinh hoạt](housing) bao nhiêu
     - [hôm nay](day) trả tiền [vui chơi](recreation) bao nhiêu
     - [hôm trước](day) trả tiền [mua sắm](personal) bao nhiêu
@@ -1298,14 +1489,14 @@ nlu:
     - tiền [vui chơi](recreation) [hôm nay](day) xài hết bao nhiêu 
     - tiền để [ăn](food) [hôm nay](day) tôi xài hết bao nhiêu
     - tiền để [mua sắm](personal) [hôm qua](day) xài hết bao nhiêu
-    - hết bao nhiêu tiền cho [tuần trước](day)
-    - hết bao nhiêu tiền cho [tuần này](day)
-    - Xài hết bao nhiêu tiền cho [tuần trước](day)
-    - Xài hết bao nhiêu tiền cho [tháng trước](month)
-    - hết bao nhiêu tiền cho [ăn](food) [tháng này](month)
-    - hết bao nhiêu tiền cho [mua sắm](personal) [tháng trước](month)
-    - hết bao nhiêu tiền cho [vui chơi](recreation) [tháng này](month)
-    - hết bao nhiêu tiền cho [sinh hoạt](housing) [tháng trước](month)
+    - hết bao nhiêu tiền cho [hôm trước](day)
+    - hết bao nhiêu tiền cho [hôm nay](day)
+    - Xài hết bao nhiêu tiền cho [hôm qua](day)
+    - Xài hết bao nhiêu tiền cho [hôm trước](day)
+    - hết bao nhiêu tiền cho [ăn](food) [hôm nay](day)
+    - hết bao nhiêu tiền cho [mua sắm](personal) [hôm trước](day)
+    - hết bao nhiêu tiền cho [vui chơi](recreation) [hôm nay](day)
+    - hết bao nhiêu tiền cho [sinh hoạt](housing) [hôm trước](day)
 
 
 - intent: Salary
@@ -1316,26 +1507,25 @@ nlu:
     - [Lương](salary_money) [tháng trước](month) [25 triệu](m_money) [350k](k_money) 
     - [Tháng này](month) nhận [8 triệu](m_money) tiền lương
     - [Tháng trước](month) nhận [8 triệu](m_money) [700k](k_money) tiền lương
-    - Tiền [lương](salary_money) [hôm nay](day) [50k](k_money)
-    - Tiền [lương](salary_money) [hôm qua](day) [80](k_money)
-    - [Lương](salary_money) [hôm nay](day) [515k](k_money)
-    - [Lương](salary_money) [hôm qua](day) [350k](k_money) 
-    - [Hôm nay](day) nhận [80k](k_money) tiền lương
-    - [Hôm qua](day) nhận [700k](k_money) tiền lương    
-    - [Tuần này](day) nhận [180k](k_money) tiền lương
-    - [Tuần trước](day) nhận [170k](k_money) tiền lương 
+    - Tiền [lương](salary_money) [tháng này](month) [50k](k_money)
+    - Tiền [lương](salary_money) [tháng qua](month) [80](k_money)
+    - [Lương](salary_money) [tháng này](month) [515k](k_money)
+    - [Lương](salary_money) [tháng qua](month) [350k](k_money) 
+    - [tháng này](month) nhận [80k](k_money) tiền lương
+    - [tháng qua](month) nhận [700k](k_money) tiền lương    
+    - [tháng này](month) nhận [180k](k_money) tiền lương
+    - [tháng trước](month) nhận [170k](k_money) tiền lương 
     - Tiền [lương](salary_money) [tháng này](month) [75 triệu](m_money) [500k](k_money)
-    - Tiền [lương](salary_money) [năm trước](year) [6 tỷ](b_money) [30 triệu](m_money)
-    - [Lương](salary_money) [năm nay](year) [1 tỷ](b_money) [515k](k_money)
-    - [Lương](salary_money) [năm trước](year) [2 tỉ](b_money) [350 triệu](m_money) 
-    - [Năm nay](year) nhận [8 tỷ](b_money) tiền lương
-    - [Năm trước](year) nhận [8 tỷ](b_money) [700k](k_money) tiền lương
-    - Tiền [lương](salary_money) [năm nay](day) [500 triệu](m_money)
-    - Tiền [lương](salary_money) [năm qua](day) [80 triệu](m_money)
-    - [Lương](salary_money) [hôm nay](day) [500](money) [15 ngàn](k_money) 
-    - [Lương](salary_money) [hôm qua](day) [700](money) [50k](k_money) 
-    - [Hôm nay](day) nhận [80k](k_money) [800](money) tiền lương
-    - [Hôm qua](day) nhận [700k](k_money) [500](money) tiền lương    
-    - [Tuần này](day) nhận [8 triệu](m_money) [500k](k_money) tiền lương
-    - [Tuần trước](day) nhận [2 triệu](m_money) [500k](k_money) [750](money) tiền lương     
-
+    - Tiền [lương](salary_money) [tháng trước](month) [6 tỷ](b_money) [30 triệu](m_money)
+    - [Lương](salary_money) [tháng này](month) [1 tỷ](b_money) [515k](k_money)
+    - [Lương](salary_money) [tháng trước](month) [2 tỉ](b_money) [350 triệu](m_money) 
+    - [tháng này](month) nhận [8 tỷ](b_money) tiền lương
+    - [tháng trước](month) nhận [8 tỷ](b_money) [700k](k_money) tiền lương
+    - Tiền [lương](salary_money) [tháng này](month) [500 triệu](m_money)
+    - Tiền [lương](salary_money) [tháng qua](month) [80 triệu](m_money)
+    - [Lương](salary_money) [tháng này](month) [500](money) [15 ngàn](k_money) 
+    - [Lương](salary_money) [tháng qua](month) [700](money) [50k](k_money) 
+    - [tháng này](month) nhận [80k](k_money) [800](money) tiền lương
+    - [tháng qua](month) nhận [700k](k_money) [500](money) tiền lương    
+    - [tháng này](month) nhận [8 triệu](m_money) [500k](k_money) tiền lương
+    - [tháng trước](month) nhận [2 triệu](m_money) [500k](k_money) [750](money) tiền lương     
