@@ -20,6 +20,7 @@ intents:
   - Total_money
   - Salary
   - Total_money_month
+  - Total_money_day
   - Statistical
 
 
