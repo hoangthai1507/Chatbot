@@ -217,25 +217,20 @@ nlu:
     - giá [mua](status) vàng [DOJI HN](name_jenewry) [hôm nay](day)
     - giá [mua](status) vàng [DOJI SG](name_jenewry) [hôm nay](day)
     - giá [mua](status) vàng [SJC Hà Nội](name_jenewry) [hôm nay](day)
-   
     - giá [bán](status) vàng [DOJI Thành Phố HN](name_jenewry) [hôm nay](day)
     - giá [bán](status) [SJC TP HCM](name_jenewry) [hôm nay](day)
     - giá [bán](status) [SJC Đà Nẵng](name_jenewry) [hôm nay](day)
     - giá [bán](status) [VIETINBANK GOLD](name_jenewry) [hôm nay](day)
-
     - giá [mua](status) [SJC Hà Nội](name_jenewry) [hôm qua](day)
     - giá [mua](status) [SJC Đà Nẵng](name_jenewry) [hôm qua](day)
-
     - giá [bán](status) [Phú Quý SJC](name_jenewry) [hôm qua](day)
     - giá [bán](status) [SJC Hà Nội](name_jenewry) [hôm qua](day)
     - [mua](status) [doji hà nội](name_jenewry) [hôm nay](day) bao nhiêu
     - [mua](status) vàng [doji tđ hn](name_jenewry) [hôm nay](day) bao nhiêu
     - [mua](status) [doji hà nội](name_jenewry) [hôm nay](day) bao nhiêu
-    
     - [bán](status) [DOJI HN](name_jenewry) [hôm nay](day) bao nhiêu
     - [bán](status) [DOJI Sài Gòn](name_jenewry) [hôm nay](day) bao nhiêu
     - [bán](status) vàng [doji sg](name_jenewry) [hôm nay](day) bao nhiêu
-
     - vàng [doji sài gòn](name_jenewry) [thu lại](status) bao nhiêu
     - [doji sg](name_jenewry) [thu lại](status) bao nhiêu
     - [phú quý sjc](name_jenewry) [thu lại](status) bao nhiêu
@@ -282,6 +277,7 @@ nlu:
     - [bán](status) [999.9](name_jenewry) [hôm qua](day) bao nhiêu
     - giá [bán](status) [vàng miếng vietinbank gold](name_jenewry) [hôm qua](day)
     - cho tôi biết giá [sjc vietinbank gold](name_jenewry) [mua lại](status) bao nhiêu
+
 - lookup: name_jenewry
   examples: |
     - DOJI HN
@@ -524,13 +520,6 @@ nlu:
     - THB
     - USD
 
-
-- synonym: THB
-  examples: |
-    - bạt
-    - baht
-    - Baht
-
 - synonym: AUD
   examples: |
     - aud
@@ -611,6 +600,19 @@ nlu:
     - tiền hong kong
     - tiền hongkong
 
+- synonym: INR
+  examples: |
+    - inr
+    - Rupee 
+    - rupee 
+    - đồng Rupee 
+    - đồng rupee
+    - Indian Rupee
+    - tiền ấn độ
+    - tiền đô ấn độ
+    - tiền Ấn Độ
+    - đô la Ấn Độ
+
 - synonym: JPY
   examples: |
     - jpy
@@ -626,6 +628,76 @@ nlu:
     - won hàn
     - tiền hàn quốc
     - tiền won
+
+- synonym: KWD
+  examples: |
+    - Kuwaiti Dinar
+    - Kuwaiti 
+    - Dinar
+    - dinar
+    - kuwait
+    - tiền Kuwait
+    - tiền kuwait
+    - kwd
+
+- synonym: MYR
+  examples: |  
+    - Ringgit 
+    - ring git
+    - ring gít
+    - Ringgit Malaysia
+    - myr
+    - tiền mã lai
+    - tiền Mã Lai
+    - tiền Malaysia
+    - đô mã lai
+
+- synonym: NOK
+  examples: |
+    - nok
+    - Krone 
+    - tiền nok
+    - Krone Na uy
+    - tiền na uy
+    - đô Na Uy
+    - Krone Na Uy
+
+- synonym: RUB
+  examples: |
+    - Rúp Nga
+    - tiền rub
+    - rub
+    - tiền Nga
+    - đô Nga
+    - đô nga
+    - tiền nước nga
+
+- synonym: SEK
+  examples: |
+    - Krona Thụy Điển
+    - Krona 
+    - sek
+    - tiền sek
+    - krona
+    - tiền Thụy Điển
+    - đô thụy điển
+    
+- synonym: SGD
+  examples: |    
+    - Đồng Đô la Singapore 
+    - Đô la Singapore
+    - đô la sing
+    - sgd
+    - tiền sgd
+    - đô la singapo
+    - sin ga po
+    - Ringgit Singapura
+
+- synonym: THB
+  examples: |
+    - bạt
+    - baht
+    - Baht
 
 - synonym: USD
   examples: |
