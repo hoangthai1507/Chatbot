@@ -140,6 +140,7 @@ class ActionMoney(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         name_product = next(tracker.get_latest_entity_values("name_money"), None)
+        print(name_product)
         day_entity = next(tracker.get_latest_entity_values("day"), None)
         status = next(tracker.get_latest_entity_values("status"), None)
         if day_entity == "hôm nay":
@@ -218,6 +219,7 @@ class ActionGold(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         name_product = next(tracker.get_latest_entity_values("name_jenewry"), None)
+        print(name_product)
         day_entity = next(tracker.get_latest_entity_values("day"), None)
         status = next(tracker.get_latest_entity_values("status"), None)
         if day_entity == "hôm nay" or day_entity == None:

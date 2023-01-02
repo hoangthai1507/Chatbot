@@ -53,6 +53,7 @@ entities:
   - name_product
   - name_meat
   - name_stock
+  - name_jenewry_summarize
  
 
 responses:
