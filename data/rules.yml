@@ -62,3 +62,8 @@ rules:
   steps:
   - intent: Total_money_month
   - action: action_Total_money_month
+
+- rule: xem du lieu chi tieu
+  steps:
+  - intent: Statistical
+  - action: action_Statistical

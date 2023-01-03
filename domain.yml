@@ -113,3 +113,4 @@ actions:
   - action_Total_money
   - action_Total_money_month
   - action_Salary_money
+  - action_Statistical

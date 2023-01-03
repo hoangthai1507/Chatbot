@@ -1598,17 +1598,17 @@ nlu:
   
 - intent: Statistical
   examples: |    
-    - cho tôi xem [thống kê](chart) tháng này
+    - cho tôi xem [thống kê](chart) tháng trước
     - cho tôi xem [thống kê](chart)
-    - cho tôi xem [thống kê](chart)
-    - cho tôi xem [biểu đồ](chart) tháng này
+    - cho tôi xem [thống kê](chart) tiền chi tiêu
+    - cho tôi xem [biểu đồ](chart) tháng trước
     - cho tôi xem [biểu đồ](chart)
     - [biểu đồ](chart) tháng này
     - [thống kê](chart) tháng này
     - [thống kê](chart) tiền của tôi
     - [biểu đồ](chart) tiền của tôi
-    - thể hiện tôi xem [thống kê](chart) tháng này
+    - thể hiện tôi xem [thống kê](chart) tháng trước
     - xem [thống kê](chart)
     - hiện cho tôi xem [thống kê](chart)
-    - xuất [biểu đồ](chart) tháng này
+    - xuất [biểu đồ](chart) tháng trước
     - cho xem [biểu đồ](chart)
