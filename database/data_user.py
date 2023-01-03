@@ -34,18 +34,22 @@ def StrToDate(Date):
 def get_spending_day(user_name, today, Type, value):  ####################
     child = "User/" + user_name + "/" + f"{StrToDate(today).month}" "/" + f"{today}"
     data = Firebase.get(child, Type)
+
     return data.get(value)
 
 
 def get_spending_month(user_name, month, value):
     child = "User/" + user_name + "/" + f"{month}"
     data = Firebase.get(child, "Summary")
+
     return data.get(value)
 
 
 def get_total_month(user_name, date):
     child = "User/" + user_name + "/" + f"{StrToDate(date).month}" + "/" + "Summary"
     data = Firebase.get(child, "Total spending")
+    if data == None:
+        data = 0
     return data
 
 

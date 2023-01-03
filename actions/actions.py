@@ -140,8 +140,8 @@ class ActionMoney(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         name_product = next(tracker.get_latest_entity_values("name_money"), None)
-        print(name_product)
         day_entity = next(tracker.get_latest_entity_values("day"), None)
+        print(day_entity)
         status = next(tracker.get_latest_entity_values("status"), None)
         if day_entity == "hôm nay":
             day = getdate.get_today()
@@ -152,6 +152,7 @@ class ActionMoney(Action):
 
         try:
             Price = getdata.get_price("price", name_product, day, "Price")
+            print(Price)
         except:
             dispatcher.utter_message(
                 text=f"có vẻ bạn đang hỏi về tiền ngoại tệ, bạn hãy thử đặt lại câu hỏi ngắn gọn hơn ạ !"
@@ -178,31 +179,30 @@ class ActionMoney(Action):
 
         if status == None:
             text = (
-                "giá " + name_product + " hôm " + f"{day}"
-                " là:\n"
-                + "giá mua: "
-                + f"{Price}"
+                "ngày " + f"{day}, {name_product} có các loại giá sau: \n"
+                + "giá mua là "
+                + f"{Price} vnd."
                 + "\n"
-                + "giá bán: "
-                + f"{Purchase_price}"
+                + "giá bán là "
+                + f"{Purchase_price} vnd."
                 + "\n"
-                + "giá chuyển nhượng: "
-                + f"{Transfer_price}"
+                + "giá chuyển nhượng là "
+                + f"{Transfer_price} vnd."
             )
         elif status == "mua" or status == "giá mua":
             text = (
-                "giá " + name_product + " hôm " + f"{day}"
-                " là: " + "giá mua: " + f"{Price}" + "\n"
+                "giá mua " + name_product + " hôm " + f"{day}"
+                " là: " + f"{Price} vnd." + "\n"
             )
         elif status == "bán" or status == "giá bán":
             text = (
-                "giá " + name_product + " hôm " + f"{day}"
-                " là: " + "giá bán: " + f"{Purchase_price}" + "\n"
+                "giá bán " + name_product + " hôm " + f"{day}"
+                " là: " + f"{Purchase_price} vnd." + "\n"
             )
         elif status == "giá chuyển nhượng":
             text = (
-                "giá " + name_product + " hôm " + f"{day}"
-                " là: " + "giá chuyển nhượng: " + f"{Transfer_price}" + "\n"
+                "giá chuyển nhượng " + name_product + " hôm " + f"{day}"
+                " là: " + f"{Transfer_price} vnd." + "\n"
             )
 
         dispatcher.utter_message(text)
@@ -327,7 +327,7 @@ class ActionAnaly(Action):
         stock = None
         date = next(tracker.get_latest_entity_values("day"), None)
         try:
-            gold = next(tracker.get_latest_entity_values("name_jenewry"), None)
+            gold = next(tracker.get_latest_entity_values("name_jenewry_summarize"), None)
         except:
             print("Not gold!")
         try:
@@ -367,10 +367,10 @@ class ActionAnaly(Action):
             text = (
                 "phân tích vàng hôm " + f"{day}"
                 " là:\n"
-                + "chi tiết giá vàng: "
+                + "Chi tiết : "
                 + f"{detail}"
-                + "\n"
-                + "tóm lược giá vàng: "
+                + "\n\n"
+                + "Tóm lược : "
                 + f"{summary}"
             )
 
@@ -381,17 +381,17 @@ class ActionAnaly(Action):
                 print("can not find detail of coffee!")
                 return
             try:
-                summary = getdata.get_analyse("coffee", day, "price_coffee_summary")
+                summary = getdata.get_analyse("coffee", day, "price_cofffee_summary")
             except:
                 print("can not find summary of coffee")
                 return
             text = (
                 "phân tích cà phê hôm " + f"{day}"
                 " là:\n"
-                + "chi tiết giá cà phê: "
+                + "Chi tiết : "
                 + f"{detail}"
-                + "\n"
-                + "tóm lược giá cà phê: "
+                + "\n\n"
+                + "Tóm lược : "
                 + f"{summary}"
             )
         elif meat != None:
@@ -408,10 +408,10 @@ class ActionAnaly(Action):
             text = (
                 "phân tích giá thịt hôm " + f"{day}"
                 " là:\n"
-                + "chi tiết giá thịt: "
+                + "Chi tiết : "
                 + f"{detail}"
-                + "\n"
-                + "tóm lược giá thịt: "
+                + "\n\n"
+                + "Tóm lược : "
                 + f"{summary}"
             )
 

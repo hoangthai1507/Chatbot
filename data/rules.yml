@@ -52,3 +52,13 @@ rules:
   steps:
   - intent: Total_money
   - action: action_Total_money
+
+- rule: hoi thong tin su dung tien theo ngay
+  steps:
+  - intent: Total_money_day
+  - action: action_Total_money
+
+- rule: hoi thong tin su dung tien theo thang
+  steps:
+  - intent: Total_money_month
+  - action: action_Total_money_month

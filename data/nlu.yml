@@ -420,7 +420,7 @@ nlu:
   examples: |
     - [đô mỹ](name_money) [hôm nay](day) bao nhiêu
     - giá [mua](status) [đô mỹ](name_money) [hôm nay](day)
-    - [đô mỹ](name_money) [mua](status) vào bao nhiêu
+    - [baht](name_money) [mua](status) vào bao nhiêu
     - [đô úc](name_money) [hôm nay](day) bao nhiêu
     - giá [bán](status) [đô úc](name_money) [hôm nay](day)
     - [đô úc](name_money) [bán](status) ra bao nhiêu
@@ -459,7 +459,7 @@ nlu:
     - giá [tiền RUB](name_money) [hôm nay](day)
     - [dollar SEK](name_money) [hôm qua](day) bao nhiêu
     - giá [đô la SGD](name_money) [hôm qua](day)
-    - [THB đô la](name_money) [hôm qua](day) bao nhiêu
+    - [baht](name_money) [hôm qua](day) bao nhiêu
     - giá [bán](status) [CAD](name_money) 
     - [đô thụy sĩ](name_money)
     - giá [chf dollar](name_money) 
@@ -483,8 +483,8 @@ nlu:
     - giá [đô đức](name_money)
     - giá [tiền đức](name_money)
     - [đô euro](name_money) [hôm qua](day) bao nhiêu
-    - giá [tiền bảng anh](name_money)
-    - giá [bảng anh](name_money)
+    - giá [baht thái](name_money)
+    - giá [bạt](name_money)
     - [tiền nước anh](name_money) [hôm qua](day) bao nhiêu
     - giá [tiền hồng kông](name_money)
     - giá [tiền hong kong](name_money)
@@ -501,7 +501,7 @@ nlu:
     - cho biết [dollar](name_money) [hôm qua](day) bao nhiêu
     - cho biết [tiền hàn quốc](name_money) [hôm qua](day) bao nhiêu
     - cho biết [tiền yên](name_money) [hôm qua](day) bao nhiêu
-    - cho biết [tiền hongkong](name_money) [hôm qua](day) bao nhiêu
+    - cho biết [euro](name_money) [hôm qua](day) bao nhiêu
     - cho biết [tiền bảng anh](name_money) [hôm qua](day) bao nhiêu
     - cho biết [tiền đan mạch](name_money) [hôm qua](day) bao nhiêu
     - cho biết [tiền thụy sĩ](name_money) [hôm qua](day) bao nhiêu
@@ -570,10 +570,11 @@ nlu:
 - synonym: EUR
   examples: |
     - eur
+    - euro
     - đô châu âu
     - tiền euro
     - tiền châu âu đô
-    - euro đô
+    - đô euro
     - dollar euro 
     - euro dollar
     - âu kim
@@ -706,6 +707,9 @@ nlu:
     - bạt
     - baht
     - Baht
+    - baht thái
+    - tiền thái lan
+    - tiền thái
 
 - synonym: USD
   examples: |
@@ -716,6 +720,7 @@ nlu:
     - dollar
     - dollar mỹ 
     - usd dollar
+    - đô la mỹ
 
 - intent: Coffee_price
   examples: |
