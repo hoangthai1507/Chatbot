@@ -1612,3 +1612,9 @@ nlu:
     - hiện cho tôi xem [thống kê](chart)
     - xuất [biểu đồ](chart) tháng trước
     - cho xem [biểu đồ](chart)
+    - thống kê tôi đã [ăn](food) bao nhiêu tiền
+    - biểu đồ tôi đã [mua sắm](personal) bao nhiêu tiền
+    - tôi đã [vui chơi](recreation) bao nhiêu tiền
+    - biểu đồ trả tiền [sinh hoạt](housing) tháng trước
+    - thống kê trả tiền [vui chơi](recreation) tháng trước
+    - cho tôi xem tiền [mua sắm](personal) tháng trước

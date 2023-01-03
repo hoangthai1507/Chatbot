@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>Chatbot Widget</title>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+
+    <!--Import Font Awesome Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"/>
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/materialize.min.css"/>
+
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <!-- Modal for rendering the charts, declare this if you want to render charts -->
+      <div id="modal1" class="modal">
+        <canvas id="modal-chart"></canvas>
+      </div>
+
+      <!-- Chatbot Widget -->
+      <div class="chat_widget">
+        <div class="chat_header">
+          <!--Add the name of the bot here -->
+          <span class="close-trigger" href="#">
+            <i id="close-chat-arrow" class="material-icons">close</i>
+          </span>
+          <span class="chat_header_title">Hannah bot</span>
+          <span class="dropdown-trigger" href="#" data-target="dropdown1">
+            <i class="material-icons">menu</i>
+          </span>
+
+          <!-- Dropdown menu-->
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#" id="close-chat"  >Close</a></li>
+            <li><a href="#" id="clear-chat"  >Clear</a></li>
+            <li><a href="#" id="restart-chat">Restart</a></li>
+            <li><a href="#" id="handoff-chat">Request Human</a></li>
+          </ul>
+        </div>
+
+        <!-- Chat content goes here -->
+        <div class="chats" id="chats">
+          <div class="clearfix"></div>
+        </div>
+
+        <!-- User input textbox -->
+        <div class="keypad">
+          <textarea autofocus id="userInput" placeholder="Type a message..." class="usrInput"></textarea>
+          <div id="sendButton"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bot profile -->
+      <div class="profile_div" id="profile_div">
+        <img class="imgProfile" src="https://images-platform.99static.com//X0F3CDfCL6LcdPsSJNtRXSGn86Q=/108x1101:902x1895/fit-in/500x500/99designs-contests-attachments/126/126736/attachment_126736972" />
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="/assets/js/materialize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+
+    <!--Main Script -->
+    <script type="text/javascript" src="/assets/js/script_full.js"></script>
+    <script type="text/javascript" src="/assets/js/chart.js"></script>
+  </body>
+</html>
