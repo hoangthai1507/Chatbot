@@ -33,6 +33,8 @@ def StrToDate(Date):
 
 def get_spending_day(user_name, today, Type, value):  ####################
     child = "User/" + user_name + "/" + f"{StrToDate(today).month}" "/" + f"{today}"
+    #child = "User/" + user_name + "/" + f"{today.month}" "/" + f"{today}"
+
     data = Firebase.get(child, Type)
 
     return data.get(value)
@@ -47,6 +49,8 @@ def get_spending_month(user_name, month, value):
 
 def get_total_month(user_name, date):
     child = "User/" + user_name + "/" + f"{StrToDate(date).month}" + "/" + "Summary"
+    #child = "User/" + user_name + "/" + f"{date.month}" + "/" + "Summary"
+
     data = Firebase.get(child, "Total spending")
     if data == None:
         data = 0
@@ -55,6 +59,8 @@ def get_total_month(user_name, date):
 
 def get_total_day(user_name, today):
     child = "User/" + user_name + "/" + f"{StrToDate(today).month}"
+    # child = "User/" + user_name + "/" + f"{today.month}"
+
     data = Firebase.get(child, f"{today}")
     return data.get("Total")
 
@@ -165,7 +171,6 @@ def check_spending(user_name, month, today):
         return text
     
 def statistical_day(user_name, today):
-    List_data = []
     food = None
     personal = None
     recreation = None
@@ -175,7 +180,7 @@ def statistical_day(user_name, today):
     except:
         food = 0
     try:
-        personal = get_spending_day(user_name, today, "personal_section", "Total")
+        personal = get_spending_day(user_name, today, "personal" or "personal_section", "Total")
     except:
         personal = 0
     try:
@@ -186,8 +191,7 @@ def statistical_day(user_name, today):
         housing = get_spending_day(user_name, today, "housing_section", "Total")
     except:
         housing = 0
-    List_data.append(food, personal, recreation, housing)
-    return List_data
+    return [food, personal, recreation, housing]
 
 
 def statistical_month(user_name, month):
@@ -212,5 +216,5 @@ def statistical_month(user_name, month):
         housing = get_spending_month(user_name, month, "housing_section")
     except:
         housing = 0
-    List_data.append(food, personal, recreation, housing)
-    return List_data
+    return [food, personal, recreation, housing]
+
