@@ -1,0 +1,58 @@
+[
+  {
+    "name": "b_money",
+    "pattern": "\\b[0-9]{1,9} [tỷ||tỉ]{2}\\b"
+  },
+  {
+    "name": "b_money",
+    "pattern": "\\b[0-9]{1,9}[k]{1}\\b"
+  },
+  {
+    "name": "k_money",
+    "pattern": "\\b[0-9]{1,9} [nghìn||ngàn]{4,5}\\b"
+  },
+  {
+    "name": "k_money",
+    "pattern": "\\b[0-9]{1,9}[k]{1}\\b"
+  },
+  {
+    "name": "m_money",
+    "pattern": "\\b[0-9]{1,9} [triệu]{5}\\b"
+  },
+  {
+    "name": "m_money",
+    "pattern": "\\b[0-9]{1,9}[m]{1}\\b"
+  },
+  {
+    "name": "money",
+    "pattern": "\\b[0-9]{1,9}\\b"
+  },
+  {
+    "name": "name_jenewry",
+    "pattern": "(\\bDOJI\\ HN\\b|\\bDOJI\\ SG\\b|\\bPhú\\ Qúy\\ SJC\\b|\\bSJC\\ Hà\\ Nội\\b|\\bSJC\\ TP\\ HCM\\b|\\bSJC\\ Đà\\ Nẵng\\b|\\bVIETINBANK\\ GOLD\\b)"
+  },
+  {
+    "name": "status",
+    "pattern": "(\\bmua\\b|\\bbán\\b|\\bgiá\\ mua\\b|\\bgiá\\ bán\\b|\\bgiá\\ chuyển\\ nhượng\\b)"
+  },
+  {
+    "name": "name_money",
+    "pattern": "(\\bAUD\\b|\\bCAD\\b|\\bCHF\\b|\\bDKK\\b|\\bEUR\\b|\\bGBP\\b|\\bHKD\\b|\\bINR\\b|\\bJPY\\b|\\bKRW\\b|\\bKWD\\b|\\bMYR\\b|\\bNOK\\b|\\bRUB\\b|\\bSEK\\b|\\bSGD\\b|\\bTHB\\b|\\bUSD\\b)"
+  },
+  {
+    "name": "food_section",
+    "pattern": "(\\bbún\\b|\\bphở\\b|\\bhủ\\ tiếu\\b|\\bcơm\\b|\\bmì\\b|\\bnem\\b|\\bchả\\b|\\bbánh\\b|\\bbột\\b|\\bcanh\\b|\\bsúp\\b|\\bthịt\\b|\\bheo\\b|\\blợn\\b|\\bbò\\b|\\bnước\\b|\\bđường\\b|\\bsinh\\ tố\\b|\\blúa\\ mạch\\b|\\blúa\\b|\\bgạo\\b|\\bcám\\b|\\bức\\b|\\bđùi\\b|\\btrà\\ sữa\\b|\\bcà\\ phê\\b|\\btrà\\b|\\bsữa\\b|\\bmilo\\b|\\bovatin\\b|\\bcacao\\b|\\bsủi\\ cảo\\b|\\bhẹ\\b|\\bgỏi\\b|\\bcao\\ lầu\\b|\\bốc\\b|\\bsushi\\b|\\bđồ\\ nướng\\b|\\bnướng\\b|\\blẩu\\b|\\bđá\\b|\\bsầu\\b|\\bthanh\\ long\\b|\\bmận\\b|\\bdâu\\b|\\bổi\\b|\\bnhãn\\b|\\broi\\b|\\bxoài\\b|\\bdưa\\b|\\bbơ\\b|\\bchôm\\ chôm\\b|\\bbưởi\\b|\\bcá\\b|\\btrứng\\b|\\bhải\\ sản\\b|\\bbuffet\\b|\\băn\\b|\\bbia\\b)"
+  },
+  {
+    "name": "housing_section",
+    "pattern": "(\\btiền\\ mạng\\b|\\bwifi\\b|\\bxăng\\b|\\bxe\\b|\\bbảo\\ hiểm\\b|\\bđiện\\b|\\bđiện\\ thoại\\b|\\bdi\\ động\\b|\\bnước\\b|\\bthuế\\b|\\bnhà\\b|\\btiền\\ nhà\\b|\\btiền\\ chung\\ cư\\b|\\btiền\\ thuê\\ trọ\\b|\\btiền\\ học\\b|\\btiết\\ kiệm\\ ngắn\\ hạn\\b|\\btiết\\ kiệm\\ dài\\ hạn\\b|\\btiết\\ kiệm\\b|\\bthuê\\ văn\\ phòng\\b)"
+  },
+  {
+    "name": "recreation_section",
+    "pattern": "(\\bxem\\ phim\\b|\\bkaraoke\\b|\\bnhảy\\b|\\bdu\\ lịch\\b|\\bgym\\b|\\byoga\\b|\\baerobic\\b|\\bvé\\ tour\\b|\\bvé\\ máy\\ bay\\b|\\bvé\\ tàu\\ hỏa\\b|\\bvé\\ tàu\\b|\\bvé\\ xe\\b|\\bkhách\\ sạn\\b|\\bnhà\\ hàng\\b|\\bquầy\\ bar\\b|\\brượu\\b|\\bbar\\b|\\bclub\\b|\\bphượt\\b|\\bbơi\\b|\\bcầu\\ lông\\b|\\bbóng\\ chuyền\\b|\\bbóng\\ ném\\b|\\bbóng\\ bàn\\b|\\bbóng\\ rổ\\b|\\bđá\\ cầu\\b|\\bnhảy\\ dây\\b|\\bđạp\\ xe\\b|\\bkhiêu\\ vũ\\b|\\btennis\\b|\\bvõ\\b|\\bgame\\b|\\bgame\\ trên\\ điện\\ thoại\\b)"
+  },
+  {
+    "name": "personal_section",
+    "pattern": "(\\bquần\\ áo\\b|\\bcắt\\ tóc\\b|\\blàm\\ nail\\b|\\bdecor\\ nhà\\b|\\bgiày\\b|\\bdép\\b|\\bbalo\\b|\\bdây\\ nịch\\b|\\btúi\\ xách\\b|\\bkhuyên\\ tai\\b|\\bnhẫn\\b|\\bnhẫn\\ vàng\\b|\\bvòng\\ bạc\\b|\\bdây\\ chuyền\\b|\\bdây\\ cổ\\b|\\blắc\\ tay\\b|\\blắc\\ chân\\b|\\bnước\\ hoa\\b|\\bkính\\b|\\blens\\b|\\báo\\ khoác\\b|\\báo\\b|\\bquần\\b|\\blaptop\\b|\\bmáy\\ tính\\b|\\bpc\\b|\\btay\\ nghe\\b|\\bchuột\\ máy\\ tính\\b|\\bbàn\\ phím\\b|\\bđèn\\b|\\bmáy\\b|\\btivi\\b|\\btủ\\ lạnh\\b|\\bđồng\\ hồ\\b|\\bxe\\b|\\bxe\\ hơi\\b|\\bmỹ\\ phẩm\\b|\\btập\\b|\\bsách\\b|\\bbút\\b|\\bthước\\b|\\bbàn\\b|\\bbàn\\ là\\b|\\bchăn\\b|\\bnệm\\b|\\bgối\\b|\\bvớ\\b|\\bgiấy\\b|\\btủ\\b|\\bkệ\\ tủ\\b)"
+  }
+]
